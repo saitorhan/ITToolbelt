@@ -9,7 +9,7 @@ namespace ITToolbelt.Dal.Abstract
         User Add(User user);
         User Update(User user);
 
-        bool Get(int id, string mail);
+        bool Get(int id, string username);
         bool Delete(int userId);
         bool SyncUsersWithAd(List<User> users);
     }

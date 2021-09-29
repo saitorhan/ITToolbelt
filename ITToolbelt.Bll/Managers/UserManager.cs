@@ -64,29 +64,25 @@ namespace ITToolbelt.Bll.Managers
             return new Tuple<bool, List<string>>(result, null);
         }
 
-        public Tuple<bool, List<string>> SyncUsersWithAD(string domain = null, string userName = null, string password = null)
+        public Tuple<bool, List<string>> SyncUsersWithAd(string domain = null, string userName = null, string password = null)
         {
             List<User> users = new List<User>();
 
-            PrincipalContext principalContext;
-            if (domain == null)
-            {
-                principalContext = new PrincipalContext(ContextType.Domain);
-            }
-            else
-            {
-                principalContext = new PrincipalContext(ContextType.Domain, domain, userName, password);
-            }
+            var principalContext = domain == null ? new PrincipalContext(ContextType.Domain) : new PrincipalContext(ContextType.Domain, domain, userName, password);
+
             UserPrincipal userPrincipal = new UserPrincipal(principalContext);
             userPrincipal.Enabled = true;
             PrincipalSearcher principalSearcher = new PrincipalSearcher(userPrincipal);
             List<UserPrincipal> principalSearchResult = principalSearcher.FindAll().Cast<UserPrincipal>().OrderBy(u => u.SamAccountName).ToList();
-            principalSearchResult.Where(u => u.EmailAddress != null).ToList().ForEach(psr =>
+            principalSearchResult.Where(u => u.EmailAddress != null && u.GivenName != null && u.Surname != null).ToList().ForEach(psr =>
             {
-                User user = new User();
-                user.Firstname = psr.Name;
-                user.Surname = psr.MiddleName;
-                user.Mail = psr.EmailAddress;
+                User user = new User
+                {
+                    Firstname = psr.GivenName,
+                    Surname = psr.Surname,
+                    Mail = psr.EmailAddress,
+                    Username = psr.SamAccountName
+                };
                 users.Add(user);
             });
 

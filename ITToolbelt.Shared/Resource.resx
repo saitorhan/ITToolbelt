@@ -190,9 +190,15 @@
     <value>Mail alanı en fazla 100 karakter olabilir.</value>
   </data>
   <data name="025" xml:space="preserve">
-    <value>Bu mail adresi daha önce kullanılmış.</value>
+    <value>Bu kullanıcı adı daha önce kullanılmış.</value>
   </data>
   <data name="026" xml:space="preserve">
     <value>İşlem başarılı.</value>
+  </data>
+  <data name="027" xml:space="preserve">
+    <value>Kullanıcı adı boş bırakılamaz</value>
+  </data>
+  <data name="028" xml:space="preserve">
+    <value>Kullanıcı adı alanı en fazla 50 karakter olabilir.</value>
   </data>
 </root>

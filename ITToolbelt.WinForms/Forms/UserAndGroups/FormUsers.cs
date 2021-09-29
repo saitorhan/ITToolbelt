@@ -29,6 +29,9 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
                 case WorkerStatus.RefreshData:
                     RefreshData();
                     break;
+                case WorkerStatus.GetFromDc:
+                    SyncUsersWithAD();
+                    break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
@@ -39,17 +42,28 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             toolStripProgressBarStatus.StartStopMarque();
         }
 
-        public void RefreshData()
+        private void RefreshData()
         {
             UserManager userManager = new UserManager(GlobalVariables.ConnectInfo);
             List<User> users = userManager.GetAll();
 
-            userBindingSource.DataSource = users;
+            if (dataGridViewUsers.InvokeRequired)
+            {
+                dataGridViewUsers.Invoke(new Action(delegate
+                {
+                    userBindingSource.DataSource = users;
+                }));
+            }
+            else
+            {
+                userBindingSource.DataSource = users;
+            }
         }
 
         enum WorkerStatus
         {
-            RefreshData
+            RefreshData,
+            GetFromDc
         }
 
         private void FormUsers_Load(object sender, EventArgs e)
@@ -135,6 +149,25 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
                 wStatus = WorkerStatus.RefreshData;
                 toolStripProgressBarStatus.StartStopMarque();
                 backgroundWorkerWorker.RunWorkerAsync();
+            }
+        }
+
+        private void buttonfromAd_Click(object sender, EventArgs e)
+        {
+            wStatus = WorkerStatus.GetFromDc;
+            toolStripProgressBarStatus.StartStopMarque();
+            backgroundWorkerWorker.RunWorkerAsync();
+        }
+
+        void SyncUsersWithAD()
+        {
+            UserManager userManager = new UserManager(GlobalVariables.ConnectInfo);
+            Tuple<bool, List<string>> syncUsersWithAd = userManager.SyncUsersWithAd();
+            syncUsersWithAd.ShowDialog();
+
+            if (syncUsersWithAd.Item1)
+            {
+                RefreshData();
             }
         }
     }

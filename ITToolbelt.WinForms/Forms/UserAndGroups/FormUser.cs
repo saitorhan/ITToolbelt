@@ -30,6 +30,7 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             textBoxName.Text = user.Firstname;
             textBoxSurname.Text = user.Surname;
             textBoxMail.Text = user.Mail;
+            textBoxUsername.Text = user.Username;
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -42,6 +43,7 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             User.Firstname = textBoxName.Text;
             User.Surname = textBoxSurname.Text;
             User.Mail = textBoxMail.Text;
+            User.Username = textBoxUsername.Text;
 
             UserManager userManager = new UserManager(GlobalVariables.ConnectInfo);
             Tuple<bool, List<string>> add = User.Id > 0 ? userManager.Update(User) : userManager.Add(User);

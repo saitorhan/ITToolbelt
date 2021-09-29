@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="buttonfromAd.Text" xml:space="preserve">
+    <value>AD'den Kullanıcı Al</value>
+  </data>
   <data name="buttonResfresh.Text" xml:space="preserve">
     <value>Yenile</value>
   </data>
@@ -132,8 +135,8 @@
   <data name="buttonAdd.Text" xml:space="preserve">
     <value>Ekle</value>
   </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>Kullanıcılar</value>
+  <data name="Username.HeaderText" xml:space="preserve">
+    <value>Kullanıcı Adı</value>
   </data>
   <data name="firstnameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Adı</value>
@@ -143,6 +146,9 @@
   </data>
   <data name="fullnameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Tam Adı</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Kullanıcılar</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

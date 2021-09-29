@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -14,7 +15,7 @@ namespace ITToolbelt.Entity.Db
         [MaxLength(50)]
         [DisplayName("Firsname")]
         public string Firstname { get; set; }
-        
+
         [Required]
         [MaxLength(50)]
         [DisplayName("Surname")]
@@ -24,8 +25,14 @@ namespace ITToolbelt.Entity.Db
         [MaxLength(100)]
         [DisplayName("Mail")]
         [DataType(DataType.EmailAddress)]
-        [Index(IsUnique = true)]
+        //  [Index(IsUnique = true)]
         public string Mail { get; set; }
+
+        [Required]
+        [MaxLength(50)]
+        [DisplayName("Username")]
+        [Index(IsUnique = true)]
+        public string Username { get; set; }
 
 
         public SystemUser SystemUser { get; set; }

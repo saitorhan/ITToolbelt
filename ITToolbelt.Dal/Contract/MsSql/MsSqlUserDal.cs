@@ -43,11 +43,11 @@ namespace ITToolbelt.Dal.Contract.MsSql
             }
         }
 
-        public bool Get(int id, string mail)
+        public bool Get(int id, string username)
         {
             using (ItToolbeltContext context = new ItToolbeltContext(ConnectInfo.ConnectionString))
             {
-                bool any = context.Users.Any(u => u.Id != id && u.Mail == mail);
+                bool any = context.Users.Any(u => u.Id != id && u.Username == username);
                 return !any;
             }
         }
@@ -73,7 +73,7 @@ namespace ITToolbelt.Dal.Contract.MsSql
             {
                 foreach (User user in users)
                 {
-                    User userFromDb = context.Users.SingleOrDefault(u => u.Mail == user.Mail);
+                    User userFromDb = context.Users.FirstOrDefault(u => u.Username == user.Username);
                     if (userFromDb == null)
                     {
                         context.Users.Add(user);
@@ -82,6 +82,7 @@ namespace ITToolbelt.Dal.Contract.MsSql
                     {
                         userFromDb.Firstname = user.Firstname;
                         userFromDb.Surname = user.Surname;
+                        userFromDb.Mail = user.Mail;
                     }
                 }
 

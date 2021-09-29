@@ -39,28 +39,30 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.textBoxSurname = new System.Windows.Forms.TextBox();
             this.textBoxMail = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this.buttonCancel);
             this.panel1.Controls.Add(this.buttonSave);
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Image = global::ITToolbelt.WinForms.Properties.Resources.delete;
             resources.ApplyResources(this.buttonCancel, "buttonCancel");
+            this.buttonCancel.Image = global::ITToolbelt.WinForms.Properties.Resources.delete;
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonSave
             // 
-            this.buttonSave.Image = global::ITToolbelt.WinForms.Properties.Resources.accept;
             resources.ApplyResources(this.buttonSave, "buttonSave");
+            this.buttonSave.Image = global::ITToolbelt.WinForms.Properties.Resources.accept;
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
@@ -95,14 +97,26 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             resources.ApplyResources(this.textBoxMail, "textBoxMail");
             this.textBoxMail.Name = "textBoxMail";
             // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // textBoxUsername
+            // 
+            resources.ApplyResources(this.textBoxUsername, "textBoxUsername");
+            this.textBoxUsername.Name = "textBoxUsername";
+            // 
             // FormUser
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.textBoxMail);
             this.Controls.Add(this.textBoxSurname);
+            this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -126,5 +140,7 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.TextBox textBoxSurname;
         private System.Windows.Forms.TextBox textBoxMail;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBoxUsername;
     }
 }

@@ -270,6 +270,7 @@
     <None Include="Resources\MySQL.png" />
     <None Include="Resources\delete.png" />
     <None Include="Resources\delete1.png" />
+    <None Include="Resources\download_to_computer.png" />
     <Content Include="toolbox.ico" />
   </ItemGroup>
   <ItemGroup>

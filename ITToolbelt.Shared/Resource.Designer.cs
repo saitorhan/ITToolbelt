@@ -277,7 +277,7 @@ namespace ITToolbelt.Shared {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Bu mail adresi daha önce kullanılmış..
+        ///   Looks up a localized string similar to Bu kullanıcı adı daha önce kullanılmış..
         /// </summary>
         public static string _025 {
             get {
@@ -291,6 +291,24 @@ namespace ITToolbelt.Shared {
         public static string _026 {
             get {
                 return ResourceManager.GetString("026", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kullanıcı adı boş bırakılamaz.
+        /// </summary>
+        public static string _027 {
+            get {
+                return ResourceManager.GetString("027", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kullanıcı adı alanı en fazla 50 karakter olabilir..
+        /// </summary>
+        public static string _028 {
+            get {
+                return ResourceManager.GetString("028", resourceCulture);
             }
         }
     }

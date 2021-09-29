@@ -32,6 +32,7 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsers));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonfromAd = new System.Windows.Forms.Button();
             this.buttonResfresh = new System.Windows.Forms.Button();
             this.buttonColumnSelection = new System.Windows.Forms.Button();
             this.buttonRemove = new System.Windows.Forms.Button();
@@ -39,17 +40,18 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             this.buttonAdd = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridViewUsers = new System.Windows.Forms.DataGridView();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripProgressBarStatus = new System.Windows.Forms.ToolStripProgressBar();
+            this.backgroundWorkerWorker = new System.ComponentModel.BackgroundWorker();
             this.ıdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.systemUserIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.systemUserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripProgressBarStatus = new System.Windows.Forms.ToolStripProgressBar();
-            this.backgroundWorkerWorker = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
@@ -59,6 +61,7 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.buttonfromAd);
             this.panel1.Controls.Add(this.buttonResfresh);
             this.panel1.Controls.Add(this.buttonColumnSelection);
             this.panel1.Controls.Add(this.buttonRemove);
@@ -66,6 +69,14 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             this.panel1.Controls.Add(this.buttonAdd);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
+            // 
+            // buttonfromAd
+            // 
+            resources.ApplyResources(this.buttonfromAd, "buttonfromAd");
+            this.buttonfromAd.Image = global::ITToolbelt.WinForms.Properties.Resources.download_to_computer;
+            this.buttonfromAd.Name = "buttonfromAd";
+            this.buttonfromAd.UseVisualStyleBackColor = true;
+            this.buttonfromAd.Click += new System.EventHandler(this.buttonfromAd_Click);
             // 
             // buttonResfresh
             // 
@@ -123,6 +134,7 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             this.dataGridViewUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ıdDataGridViewTextBoxColumn,
+            this.Username,
             this.systemUserIdDataGridViewTextBoxColumn,
             this.firstnameDataGridViewTextBoxColumn,
             this.surnameDataGridViewTextBoxColumn,
@@ -135,12 +147,40 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             this.dataGridViewUsers.ReadOnly = true;
             this.dataGridViewUsers.Tag = "96BFB004EE0C450BB4526A2D86349725";
             // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataSource = typeof(ITToolbelt.Entity.Db.User);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripProgressBarStatus});
+            resources.ApplyResources(this.statusStrip1, "statusStrip1");
+            this.statusStrip1.Name = "statusStrip1";
+            // 
+            // toolStripProgressBarStatus
+            // 
+            this.toolStripProgressBarStatus.Name = "toolStripProgressBarStatus";
+            resources.ApplyResources(this.toolStripProgressBarStatus, "toolStripProgressBarStatus");
+            // 
+            // backgroundWorkerWorker
+            // 
+            this.backgroundWorkerWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerWorker_DoWork);
+            this.backgroundWorkerWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerWorker_RunWorkerCompleted);
+            // 
             // ıdDataGridViewTextBoxColumn
             // 
             this.ıdDataGridViewTextBoxColumn.DataPropertyName = "Id";
             resources.ApplyResources(this.ıdDataGridViewTextBoxColumn, "ıdDataGridViewTextBoxColumn");
             this.ıdDataGridViewTextBoxColumn.Name = "ıdDataGridViewTextBoxColumn";
             this.ıdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Username
+            // 
+            this.Username.DataPropertyName = "Username";
+            resources.ApplyResources(this.Username, "Username");
+            this.Username.Name = "Username";
+            this.Username.ReadOnly = true;
             // 
             // systemUserIdDataGridViewTextBoxColumn
             // 
@@ -184,27 +224,6 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             this.fullnameDataGridViewTextBoxColumn.Name = "fullnameDataGridViewTextBoxColumn";
             this.fullnameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // userBindingSource
-            // 
-            this.userBindingSource.DataSource = typeof(ITToolbelt.Entity.Db.User);
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripProgressBarStatus});
-            resources.ApplyResources(this.statusStrip1, "statusStrip1");
-            this.statusStrip1.Name = "statusStrip1";
-            // 
-            // toolStripProgressBarStatus
-            // 
-            this.toolStripProgressBarStatus.Name = "toolStripProgressBarStatus";
-            resources.ApplyResources(this.toolStripProgressBarStatus, "toolStripProgressBarStatus");
-            // 
-            // backgroundWorkerWorker
-            // 
-            this.backgroundWorkerWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerWorker_DoWork);
-            this.backgroundWorkerWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerWorker_RunWorkerCompleted);
-            // 
             // FormUsers
             // 
             resources.ApplyResources(this, "$this");
@@ -235,17 +254,19 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridViewUsers;
         private System.Windows.Forms.BindingSource userBindingSource;
+        private System.Windows.Forms.Button buttonResfresh;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBarStatus;
+        private System.ComponentModel.BackgroundWorker backgroundWorkerWorker;
+        private System.Windows.Forms.Button buttonColumnSelection;
+        private System.Windows.Forms.Button buttonfromAd;
         private System.Windows.Forms.DataGridViewTextBoxColumn ıdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Username;
         private System.Windows.Forms.DataGridViewTextBoxColumn systemUserIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn surnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn systemUserDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fullnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button buttonResfresh;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBarStatus;
-        private System.ComponentModel.BackgroundWorker backgroundWorkerWorker;
-        private System.Windows.Forms.Button buttonColumnSelection;
     }
 }

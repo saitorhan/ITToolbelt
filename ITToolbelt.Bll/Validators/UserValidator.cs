@@ -21,17 +21,25 @@ namespace ITToolbelt.Bll.Validators
             RuleFor(x => x.Firstname).NotEmpty().WithMessage(Resource._001);
             RuleFor(x => x.Surname).NotEmpty().WithMessage(Resource._002);            
             RuleFor(x => x.Mail).NotEmpty().WithMessage(Resource._003);
+            RuleFor(x => x.Username).NotEmpty().WithMessage(Resource._027);
 
             RuleFor(u => u.Firstname).MaximumLength(50).WithMessage(Resource._022);
             RuleFor(u => u.Surname).MaximumLength(50).WithMessage(Resource._023);
             RuleFor(u => u.Mail).MaximumLength(50).WithMessage(Resource._024);
+            RuleFor(u => u.Username).MaximumLength(50).WithMessage(Resource._028);
 
-            RuleFor(u => new {u.Id, u.Mail}).Must((u) => EmailUnique(u.Id, u.Mail)).WithMessage(Resource._025);
+          //  RuleFor(u => new {u.Id, u.Mail}).Must((u) => EmailUnique(u.Id, u.Mail)).WithMessage(Resource._025);
+            RuleFor(u => new {u.Id, u.Username}).Must((u) => UsernameUnique(u.Id, u.Username)).WithMessage(Resource._025);
         }
 
         private bool EmailUnique(int id, string mail)
         {
             bool b = iUserDal.Get(id, mail);
+            return b;
+        }
+        private bool UsernameUnique(int id, string username)
+        {
+            bool b = iUserDal.Get(id, username);
             return b;
         }
     }
