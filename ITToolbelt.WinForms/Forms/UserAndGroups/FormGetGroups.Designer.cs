@@ -98,6 +98,7 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormGetGroups";
+            this.Load += new System.EventHandler(this.FormGetGroups_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGroups)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource)).EndInit();

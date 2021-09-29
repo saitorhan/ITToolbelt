@@ -183,12 +183,6 @@
   <data name="&gt;&gt;buttonOk.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="nameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Group Name</value>
-  </data>
-  <data name="descriptionDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Description</value>
-  </data>
   <metadata name="groupBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -216,6 +210,15 @@
   <data name="&gt;&gt;dataGridViewGroups.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="nameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Group Name</value>
+  </data>
+  <data name="descriptionDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <metadata name="groupBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

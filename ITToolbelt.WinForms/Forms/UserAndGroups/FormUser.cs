@@ -45,6 +45,21 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             User.Mail = textBoxMail.Text;
             User.Username = textBoxUsername.Text;
 
+            List<Group> groups = groupBindingSource.DataSource as List<Group>;
+            if (groups != null)
+            {
+                User.UserGroups = new List<UserGroup>();
+                foreach (Group group in groups)
+                {
+                    UserGroup userGroup = new UserGroup { GroupId = @group.Id };
+                    if (User.Id > 0)
+                    {
+                        userGroup.UserId = User.Id;
+                    }
+                    User.UserGroups.Add(userGroup);
+                }
+            }
+
             UserManager userManager = new UserManager(GlobalVariables.ConnectInfo);
             Tuple<bool, List<string>> add = User.Id > 0 ? userManager.Update(User) : userManager.Add(User);
             add.ShowDialog();
@@ -56,10 +71,13 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
 
         private void buttonGroupAdd_Click(object sender, EventArgs e)
         {
-            FormGetGroups formGetGroups = new FormGetGroups();
+            List<Group> groups = groupBindingSource.DataSource as List<Group> ?? new List<Group>();
+
+            List<int> list = groups.Select(g => g.Id).ToList();
+
+            FormGetGroups formGetGroups = new FormGetGroups(list);
             formGetGroups.ShowDialog();
 
-            List<Group> groups = groupBindingSource.DataSource as List<Group> ?? new List<Group>();
 
             foreach (Group selectedGroup in formGetGroups.Groups)
             {

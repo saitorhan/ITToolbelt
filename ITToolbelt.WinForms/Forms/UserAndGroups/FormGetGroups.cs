@@ -14,9 +14,11 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
 {
     public partial class FormGetGroups : Form
     {
+        private List<int> Ids { get; }
         public List<Group> Groups { get; set; }
-        public FormGetGroups()
+        public FormGetGroups(List<int> ids)
         {
+            Ids = ids;
             InitializeComponent();
             GroupManager groupManager = new GroupManager(GlobalVariables.ConnectInfo);
             List<Group> groups = groupManager.GetAll();
@@ -37,6 +39,27 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             }
 
             Close();
+        }
+
+        private void FormGetGroups_Load(object sender, EventArgs e)
+        {
+            if (Ids == null)
+            {
+                return;
+            }
+
+            foreach (int id in Ids)
+            {
+                foreach (DataGridViewRow row in dataGridViewGroups.Rows)
+                {
+                    Group item = row.DataBoundItem as Group;
+                    if (item.Id == id)
+                    {
+                        row.Selected = true;
+                        break;
+                    }
+                }
+            }
         }
     }
 }
