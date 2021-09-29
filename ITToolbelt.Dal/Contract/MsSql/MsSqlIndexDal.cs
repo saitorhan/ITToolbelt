@@ -93,7 +93,7 @@ namespace ITToolbelt.Dal.Contract.MsSql
                     sqlCommand.CommandText = sql;
                     sqlConnection.Open();
                     int nonQuery = sqlCommand.ExecuteNonQuery();
-                    return nonQuery > 1;
+                    return true;
                 }
                 catch (Exception e)
                 {
