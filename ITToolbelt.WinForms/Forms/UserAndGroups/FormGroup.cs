@@ -71,23 +71,23 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
 
         private void buttonGroupAdd_Click(object sender, EventArgs e)
         {
-            List<Group> groups = userBindingSource.DataSource as List<Group> ?? new List<Group>();
+            List<User> users = userBindingSource.DataSource as List<User> ?? new List<User>();
 
-            List<int> list = groups.Select(g => g.Id).ToList();
+            List<int> list = users.Select(g => g.Id).ToList();
 
-            FormGetGroups formGetGroups = new FormGetGroups(list);
+            FormGetUsers formGetGroups = new FormGetUsers(list);
             formGetGroups.ShowDialog();
 
 
-            foreach (Group selectedGroup in formGetGroups.Groups)
+            foreach (User user in formGetGroups.Users)
             {
-                if (groups.All(g => g.Id != selectedGroup.Id))
+                if (users.All(g => g.Id != user.Id))
                 {
-                    groups.Add(selectedGroup);
+                    users.Add(user);
                 }
             }
 
-            userBindingSource.DataSource = groups;
+            userBindingSource.DataSource = users;
             dataGridViewGroups.DataSource = null;
             dataGridViewGroups.DataSource = userBindingSource;
         }

@@ -157,6 +157,12 @@
     <Compile Include="Forms\MainAppForms\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UserAndGroups\FormGetUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserAndGroups\FormGetUsers.Designer.cs">
+      <DependentUpon>FormGetUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UserAndGroups\FormGroups.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +238,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainAppForms\FormMain.tr-TR.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserAndGroups\FormGetUsers.resx">
+      <DependentUpon>FormGetUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserAndGroups\FormGetUsers.tr-TR.resx">
+      <DependentUpon>FormGetUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserAndGroups\FormGroups.resx">
       <DependentUpon>FormGroups.cs</DependentUpon>
