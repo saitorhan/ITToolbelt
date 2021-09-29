@@ -22,5 +22,15 @@ namespace ITToolbelt.Dal.Contract.MsSql
                 return groups;
             }
         }
+
+        public List<Group> GetUserGroups(int userId)
+        {
+            using (ItToolbeltContext context = new ItToolbeltContext(ConnectInfo.ConnectionString))
+            {
+                List<Group> groups = context.UserGroups.Include("Group").Where(ug => ug.UserId == userId)
+                    .Select(ug => ug.Group).ToList();
+                return groups;
+            }
+        }
     }
 }

@@ -31,6 +31,10 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             textBoxSurname.Text = user.Surname;
             textBoxMail.Text = user.Mail;
             textBoxUsername.Text = user.Username;
+
+            GroupManager groupManager = new GroupManager(GlobalVariables.ConnectInfo);
+            List<Group> userGroups = groupManager.GetUserGroups(user.Id);
+            groupBindingSource.DataSource = userGroups;
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)

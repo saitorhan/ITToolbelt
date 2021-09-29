@@ -20,5 +20,10 @@ namespace ITToolbelt.Bll.Managers
         {
             return iGroupDal.GelAll();
         }
+
+        public List<Group> GetUserGroups(int userId)
+        {
+            return iGroupDal.GetUserGroups(userId);
+        }
     }
 }
