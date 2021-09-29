@@ -89,5 +89,26 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             backgroundWorkerWorker.RunWorkerAsync();
 
         }
+
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewUsers.SelectedRows.Count == 0 || !(dataGridViewUsers.SelectedRows[0].DataBoundItem is User))
+            {
+                return;
+            }
+
+            User user = dataGridViewUsers.SelectedRows[0].DataBoundItem as User;
+            if (user == null)
+            {
+                return;
+            }
+
+            FormUser formUser = new FormUser(user);
+            formUser.ShowDialog();
+
+            wStatus = WorkerStatus.RefreshData;
+            toolStripProgressBarStatus.StartStopMarque();
+            backgroundWorkerWorker.RunWorkerAsync();
+        }
     }
 }
