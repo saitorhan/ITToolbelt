@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ITToolbelt.Bll.Managers;
 using ITToolbelt.Entity.Db;
+using ITToolbelt.WinForms.ExtensionMethods;
 
 namespace ITToolbelt.WinForms.Forms.UserAndGroups
 {
@@ -20,6 +21,15 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             InitializeComponent();
 
             User = new User();
+        }
+        public FormUser(User user)
+        {
+            InitializeComponent();
+
+            User = user;
+            textBoxName.Text = user.Firstname;
+            textBoxSurname.Text = user.Surname;
+            textBoxMail.Text = user.Mail;
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -34,7 +44,12 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             User.Mail = textBoxMail.Text;
 
             UserManager userManager = new UserManager(GlobalVariables.ConnectInfo);
-            Tuple<bool, List<string>, User> add = userManager.Add(User);
+            Tuple<bool, List<string>> add = userManager.Add(User);
+            add.ShowDialog();
+            if (add.Item1)
+            {
+                Close();
+            }
         }
     }
 }

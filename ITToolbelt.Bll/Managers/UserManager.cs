@@ -26,7 +26,7 @@ namespace ITToolbelt.Bll.Managers
             return users;
         }
 
-        public Tuple<bool, List<string>, User> Add(User user)
+        public Tuple<bool, List<string>> Add(User user)
         {
             List<string> messages = new List<string>();
             UserValidator userValidator = new UserValidator(iUserDal);
@@ -35,11 +35,11 @@ namespace ITToolbelt.Bll.Managers
             {
                 IEnumerable<string> enumerable = validationResult.Errors.Select(m => m.ErrorMessage);
                 messages.AddRange(enumerable);
-                return new Tuple<bool, List<string>, User>(false, messages, user);
+                return new Tuple<bool, List<string>>(false, messages);
             }
 
             User add = iUserDal.Add(user);
-            return new Tuple<bool, List<string>, User>(add != null, null, add ?? user);
+            return new Tuple<bool, List<string>>(add != null, null);
         }
     }
 }

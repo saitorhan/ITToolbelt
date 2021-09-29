@@ -119,6 +119,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExtensionMethods\ObjectExtensions.cs" />
     <Compile Include="ExtensionMethods\VisualControls.cs" />
     <Compile Include="Forms\ControlSpesifications\FormGridColumnSelection.cs">
       <SubType>Form</SubType>
