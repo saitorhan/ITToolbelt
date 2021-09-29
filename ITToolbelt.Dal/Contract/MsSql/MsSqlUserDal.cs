@@ -66,5 +66,27 @@ namespace ITToolbelt.Dal.Contract.MsSql
                 return context.SaveChanges();
             }
         }
+
+        public bool SyncUsersWithAd(List<User> users)
+        {
+            using (ItToolbeltContext context = new ItToolbeltContext(ConnectInfo.ConnectionString))
+            {
+                foreach (User user in users)
+                {
+                    User userFromDb = context.Users.SingleOrDefault(u => u.Mail == user.Mail);
+                    if (userFromDb == null)
+                    {
+                        context.Users.Add(user);
+                    }
+                    else
+                    {
+                        userFromDb.Firstname = user.Firstname;
+                        userFromDb.Surname = user.Surname;
+                    }
+                }
+
+                return context.SaveChanges();
+            }
+        }
     }
 }

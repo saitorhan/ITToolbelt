@@ -11,5 +11,6 @@ namespace ITToolbelt.Dal.Abstract
 
         bool Get(int id, string mail);
         bool Delete(int userId);
+        bool SyncUsersWithAd(List<User> users);
     }
 }
