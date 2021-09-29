@@ -243,6 +243,7 @@
     <EmbeddedResource Include="Properties\Resources.tr.resx" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ITToolbelt.Entity.Db.Connection.datasource" />
+    <None Include="Properties\DataSources\ITToolbelt.Entity.Db.Group.datasource" />
     <None Include="Properties\DataSources\ITToolbelt.Entity.Db.User.datasource" />
     <None Include="Properties\DataSources\ITToolbelt.Entity.EntityClass.Index.datasource" />
     <None Include="Properties\Settings.settings">
@@ -271,6 +272,8 @@
     <None Include="Resources\delete.png" />
     <None Include="Resources\delete1.png" />
     <None Include="Resources\download_to_computer.png" />
+    <None Include="Resources\add_user.png" />
+    <None Include="Resources\delete_user.png" />
     <Content Include="toolbox.ico" />
   </ItemGroup>
   <ItemGroup>
