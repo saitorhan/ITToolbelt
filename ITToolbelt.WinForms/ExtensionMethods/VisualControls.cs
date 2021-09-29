@@ -71,7 +71,13 @@ namespace ITToolbelt.WinForms.ExtensionMethods
                 }
 
                 IEnumerable<XAttribute> xAttributes = xElement.Attributes();
-                column.DisplayIndex = Int32.Parse(xAttributes.FirstOrDefault(a => a.Name == "order").Value);
+                int i = Int32.Parse(xAttributes.FirstOrDefault(a => a.Name == "order").Value);
+                if (i >= dataGridView.Columns.Count)
+                {
+                    continue;
+                }
+
+                column.DisplayIndex = i;
                 column.Visible = bool.Parse(xAttributes.FirstOrDefault(a => a.Name == "visible").Value);
             }
         }

@@ -339,17 +339,11 @@
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="ıdDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Id</value>
-  </data>
   <metadata name="Username.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="Username.HeaderText" xml:space="preserve">
     <value>Username</value>
-  </data>
-  <data name="systemUserIdDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>SystemUserId</value>
   </data>
   <data name="firstnameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Firstname</value>
@@ -359,9 +353,6 @@
   </data>
   <data name="mailDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Mail</value>
-  </data>
-  <data name="systemUserDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>SystemUser</value>
   </data>
   <data name="fullnameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Full Name</value>
@@ -1615,22 +1606,10 @@
   <data name="&gt;&gt;backgroundWorkerWorker.Type" xml:space="preserve">
     <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ıdDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>ıdDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;ıdDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;Username.Name" xml:space="preserve">
     <value>Username</value>
   </data>
   <data name="&gt;&gt;Username.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;systemUserIdDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>systemUserIdDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;systemUserIdDataGridViewTextBoxColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;firstnameDataGridViewTextBoxColumn.Name" xml:space="preserve">
@@ -1649,12 +1628,6 @@
     <value>mailDataGridViewTextBoxColumn</value>
   </data>
   <data name="&gt;&gt;mailDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;systemUserDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>systemUserDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;systemUserDataGridViewTextBoxColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;fullnameDataGridViewTextBoxColumn.Name" xml:space="preserve">
