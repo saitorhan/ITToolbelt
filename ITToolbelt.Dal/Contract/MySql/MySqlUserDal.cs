@@ -119,5 +119,15 @@ namespace ITToolbelt.Dal.Contract.MySql
                 return context.SaveChanges();
             }
         }
+
+        public List<User> GetUserGroups(int groupId)
+        {
+            using (ItToolbeltContextMySql context = new ItToolbeltContextMySql(ConnectInfo.ConnectionString))
+            {
+                List<User> users = context.UserGroups.Include("User").Where(ug => ug.GroupId == groupId)
+                    .Select(ug => ug.User).ToList();
+                return users;
+            }
+        }
     }
 }

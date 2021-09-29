@@ -157,6 +157,18 @@
     <Compile Include="Forms\MainAppForms\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UserAndGroups\FormGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserAndGroups\FormGroups.Designer.cs">
+      <DependentUpon>FormGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserAndGroups\FormGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserAndGroups\FormGroup.Designer.cs">
+      <DependentUpon>FormGroup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UserAndGroups\FormGetGroups.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +232,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainAppForms\FormMain.tr-TR.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserAndGroups\FormGroups.resx">
+      <DependentUpon>FormGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserAndGroups\FormGroups.tr-TR.resx">
+      <DependentUpon>FormGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserAndGroups\FormGroup.resx">
+      <DependentUpon>FormGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserAndGroups\FormGroup.tr-TR.resx">
+      <DependentUpon>FormGroup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserAndGroups\FormGetGroups.resx">
       <DependentUpon>FormGetGroups.cs</DependentUpon>
@@ -301,6 +325,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Forms\Temp\" />
     <Folder Include="UserControls\" />
   </ItemGroup>
   <ItemGroup>

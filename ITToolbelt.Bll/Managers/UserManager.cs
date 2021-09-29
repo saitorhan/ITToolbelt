@@ -101,5 +101,10 @@ namespace ITToolbelt.Bll.Managers
             bool result = iUserDal.SyncUsersWithAd(users);
             return new Tuple<bool, List<string>>(result, null);
         }
+
+        public List<User> GetUserGroups(int groupId)
+        {
+            return iUserDal.GetUserGroups(groupId);
+        }
     }
 }

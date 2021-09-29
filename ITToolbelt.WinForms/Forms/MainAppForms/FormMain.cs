@@ -60,5 +60,11 @@ namespace ITToolbelt.WinForms.Forms.MainAppForms
             Form form = new FormUsers();
             OpenForm(form);
         }
+
+        private void groupsToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            Form form = new FormGroups();
+            OpenForm(form);
+        }
     }
 }
