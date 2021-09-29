@@ -7,9 +7,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("IT Toolbelt")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("HP Inc.")]
-[assembly: AssemblyProduct("ITToolbelt.WinForms")]
-[assembly: AssemblyCopyright("Copyright © HP Inc. 2021")]
+[assembly: AssemblyCompany("Kodla Geliştir")]
+[assembly: AssemblyProduct("IT Toolbelt")]
+[assembly: AssemblyCopyright("Sait ORHAN")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

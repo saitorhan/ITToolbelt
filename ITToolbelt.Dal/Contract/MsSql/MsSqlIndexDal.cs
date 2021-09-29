@@ -90,6 +90,7 @@ namespace ITToolbelt.Dal.Contract.MsSql
 
                 try
                 {
+                    sqlCommand.CommandText = sql;
                     sqlConnection.Open();
                     int nonQuery = sqlCommand.ExecuteNonQuery();
                     return nonQuery > 1;
