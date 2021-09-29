@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using ITToolbelt.Dal.Abstract;
 using ITToolbelt.Entity.Db;
@@ -29,6 +30,15 @@ namespace ITToolbelt.Dal.Contract.MsSql
             {
                 User add = context.Users.Add(user);
                 return context.SaveChanges() ? add : null;
+            }
+        }
+
+        public User Update(User user)
+        {
+            using (ItToolbeltContext context = new ItToolbeltContext(ConnectInfo.ConnectionString))
+            {
+                context.Entry(user).State = EntityState.Modified;
+                return context.SaveChanges() ? user : null;
             }
         }
 

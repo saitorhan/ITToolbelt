@@ -7,6 +7,7 @@ namespace ITToolbelt.Dal.Abstract
     {
         List<User> GetAll();
         User Add(User user);
+        User Update(User user);
 
         bool Get(int id, string mail);
     }

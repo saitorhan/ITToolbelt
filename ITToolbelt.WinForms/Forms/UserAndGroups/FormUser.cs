@@ -44,7 +44,7 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             User.Mail = textBoxMail.Text;
 
             UserManager userManager = new UserManager(GlobalVariables.ConnectInfo);
-            Tuple<bool, List<string>> add = userManager.Add(User);
+            Tuple<bool, List<string>> add = User.Id > 0 ? userManager.Update(User) : userManager.Add(User);
             add.ShowDialog();
             if (add.Item1)
             {
