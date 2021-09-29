@@ -53,5 +53,47 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
                 Close();
             }
         }
+
+        private void buttonGroupAdd_Click(object sender, EventArgs e)
+        {
+            FormGetGroups formGetGroups = new FormGetGroups();
+            formGetGroups.ShowDialog();
+
+            List<Group> groups = groupBindingSource.DataSource as List<Group> ?? new List<Group>();
+
+            foreach (Group selectedGroup in formGetGroups.Groups)
+            {
+                if (groups.All(g => g.Id != selectedGroup.Id))
+                {
+                    groups.Add(selectedGroup);
+                }
+            }
+
+            groupBindingSource.DataSource = groups;
+            dataGridViewGroups.DataSource = null;
+            dataGridViewGroups.DataSource = groupBindingSource;
+        }
+
+        private void buttonRemoveGroup_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewGroups.SelectedRows.Count == 0)
+            {
+                return;
+            }
+
+            Group item = dataGridViewGroups.SelectedRows[0].DataBoundItem as Group;
+            if (item == null)
+            {
+                return;
+            }
+
+            List<Group> groups = groupBindingSource.DataSource as List<Group>;
+
+            groups.Remove(item);
+
+            groupBindingSource.DataSource = groups;
+            dataGridViewGroups.DataSource = null;
+            dataGridViewGroups.DataSource = groupBindingSource;
+        }
     }
 }

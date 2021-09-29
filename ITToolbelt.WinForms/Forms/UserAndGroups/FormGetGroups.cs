@@ -21,6 +21,8 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             GroupManager groupManager = new GroupManager(GlobalVariables.ConnectInfo);
             List<Group> groups = groupManager.GetAll();
             groupBindingSource.DataSource = groups;
+
+            Groups = new List<Group>();
         }
 
         private void buttonOk_Click(object sender, EventArgs e)

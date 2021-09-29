@@ -32,10 +32,6 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUser));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonRemoveGroup = new System.Windows.Forms.Button();
-            this.buttonGroupAdd = new System.Windows.Forms.Button();
-            this.buttonCancel = new System.Windows.Forms.Button();
-            this.buttonSave = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,6 +45,10 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buttonRemoveGroup = new System.Windows.Forms.Button();
+            this.buttonGroupAdd = new System.Windows.Forms.Button();
+            this.buttonCancel = new System.Windows.Forms.Button();
+            this.buttonSave = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGroups)).BeginInit();
@@ -63,36 +63,6 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             this.panel1.Controls.Add(this.buttonSave);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            // 
-            // buttonRemoveGroup
-            // 
-            this.buttonRemoveGroup.Image = global::ITToolbelt.WinForms.Properties.Resources.delete_user;
-            resources.ApplyResources(this.buttonRemoveGroup, "buttonRemoveGroup");
-            this.buttonRemoveGroup.Name = "buttonRemoveGroup";
-            this.buttonRemoveGroup.UseVisualStyleBackColor = true;
-            // 
-            // buttonGroupAdd
-            // 
-            this.buttonGroupAdd.Image = global::ITToolbelt.WinForms.Properties.Resources.add_user;
-            resources.ApplyResources(this.buttonGroupAdd, "buttonGroupAdd");
-            this.buttonGroupAdd.Name = "buttonGroupAdd";
-            this.buttonGroupAdd.UseVisualStyleBackColor = true;
-            // 
-            // buttonCancel
-            // 
-            this.buttonCancel.Image = global::ITToolbelt.WinForms.Properties.Resources.delete;
-            resources.ApplyResources(this.buttonCancel, "buttonCancel");
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.UseVisualStyleBackColor = true;
-            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
-            // 
-            // buttonSave
-            // 
-            this.buttonSave.Image = global::ITToolbelt.WinForms.Properties.Resources.accept;
-            resources.ApplyResources(this.buttonSave, "buttonSave");
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.UseVisualStyleBackColor = true;
-            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // label1
             // 
@@ -173,6 +143,38 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             // groupBindingSource
             // 
             this.groupBindingSource.DataSource = typeof(ITToolbelt.Entity.Db.Group);
+            // 
+            // buttonRemoveGroup
+            // 
+            this.buttonRemoveGroup.Image = global::ITToolbelt.WinForms.Properties.Resources.delete_user;
+            resources.ApplyResources(this.buttonRemoveGroup, "buttonRemoveGroup");
+            this.buttonRemoveGroup.Name = "buttonRemoveGroup";
+            this.buttonRemoveGroup.UseVisualStyleBackColor = true;
+            this.buttonRemoveGroup.Click += new System.EventHandler(this.buttonRemoveGroup_Click);
+            // 
+            // buttonGroupAdd
+            // 
+            this.buttonGroupAdd.Image = global::ITToolbelt.WinForms.Properties.Resources.add_user;
+            resources.ApplyResources(this.buttonGroupAdd, "buttonGroupAdd");
+            this.buttonGroupAdd.Name = "buttonGroupAdd";
+            this.buttonGroupAdd.UseVisualStyleBackColor = true;
+            this.buttonGroupAdd.Click += new System.EventHandler(this.buttonGroupAdd_Click);
+            // 
+            // buttonCancel
+            // 
+            this.buttonCancel.Image = global::ITToolbelt.WinForms.Properties.Resources.delete;
+            resources.ApplyResources(this.buttonCancel, "buttonCancel");
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Image = global::ITToolbelt.WinForms.Properties.Resources.accept;
+            resources.ApplyResources(this.buttonSave, "buttonSave");
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // FormUser
             // 
