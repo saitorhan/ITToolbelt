@@ -204,4 +204,10 @@
   <data name="029" xml:space="preserve">
     <value>İşlem başarısız.</value>
   </data>
+  <data name="030" xml:space="preserve">
+    <value>Açıklama alanı en fazla 500 karakter olabilir</value>
+  </data>
+  <data name="031" xml:space="preserve">
+    <value>Bu grup adı daha önce kaydedilmiş</value>
+  </data>
 </root>

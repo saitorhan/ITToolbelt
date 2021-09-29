@@ -320,5 +320,23 @@ namespace ITToolbelt.Shared {
                 return ResourceManager.GetString("029", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Açıklama alanı en fazla 500 karakter olabilir.
+        /// </summary>
+        public static string _030 {
+            get {
+                return ResourceManager.GetString("030", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bu grup adı daha önce kaydedilmiş.
+        /// </summary>
+        public static string _031 {
+            get {
+                return ResourceManager.GetString("031", resourceCulture);
+            }
+        }
     }
 }
