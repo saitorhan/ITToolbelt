@@ -303,6 +303,42 @@
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="ıdDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="systemUserIdDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>SystemUserId</value>
+  </data>
+  <data name="firstnameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Firstname</value>
+  </data>
+  <data name="surnameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Surname</value>
+  </data>
+  <data name="mailDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Mail</value>
+  </data>
+  <data name="systemUserDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>SystemUser</value>
+  </data>
+  <data name="fullnameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Full Name</value>
+  </data>
+  <metadata name="userBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="dataGridViewUsers.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="dataGridViewUsers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 16</value>
+  </data>
+  <data name="dataGridViewUsers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1261, 632</value>
+  </data>
+  <data name="dataGridViewUsers.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;dataGridViewUsers.Name" xml:space="preserve">
     <value>dataGridViewUsers</value>
   </data>
@@ -342,60 +378,12 @@
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="userBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="dataGridViewUsers.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="dataGridViewUsers.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 16</value>
-  </data>
-  <data name="dataGridViewUsers.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1261, 632</value>
-  </data>
-  <data name="dataGridViewUsers.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewUsers.Name" xml:space="preserve">
-    <value>dataGridViewUsers</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewUsers.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewUsers.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewUsers.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="ıdDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Id</value>
-  </data>
-  <data name="systemUserIdDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>SystemUserId</value>
-  </data>
-  <data name="firstnameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Firstname</value>
-  </data>
-  <data name="surnameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Surname</value>
-  </data>
-  <data name="mailDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Mail</value>
-  </data>
-  <data name="systemUserDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>SystemUser</value>
-  </data>
-  <data name="fullnameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Full Name</value>
-  </data>
-  <metadata name="userBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>170, 17</value>
   </metadata>
+  <data name="toolStripProgressBarStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 16</value>
+  </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 729</value>
   </data>
@@ -419,9 +407,6 @@
   </data>
   <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="toolStripProgressBarStatus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 16</value>
   </data>
   <metadata name="backgroundWorkerWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>286, 17</value>

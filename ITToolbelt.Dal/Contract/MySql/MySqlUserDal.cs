@@ -51,5 +51,20 @@ namespace ITToolbelt.Dal.Contract.MySql
                 return any;
             }
         }
+
+        public bool Delete(int userId)
+        {
+            using (ItToolbeltContextMySql context = new ItToolbeltContextMySql(ConnectInfo.ConnectionString))
+            {
+                User user = context.Users.SingleOrDefault(u => u.Id == userId);
+                if (user == null)
+                {
+                    return false;
+                }
+
+                context.Users.Remove(user);
+                return context.SaveChanges();
+            }
+        }
     }
 }

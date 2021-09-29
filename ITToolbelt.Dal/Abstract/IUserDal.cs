@@ -10,5 +10,6 @@ namespace ITToolbelt.Dal.Abstract
         User Update(User user);
 
         bool Get(int id, string mail);
+        bool Delete(int userId);
     }
 }

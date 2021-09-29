@@ -56,5 +56,11 @@ namespace ITToolbelt.Bll.Managers
             User add = iUserDal.Update(user);
             return new Tuple<bool, List<string>>(add != null, null);
         }
+
+        public Tuple<bool, List<string>> Delete(int userId)
+        {
+            bool result = iUserDal.Delete(userId);
+            return new Tuple<bool, List<string>>(result, null);
+        }
     }
 }

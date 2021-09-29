@@ -110,5 +110,32 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             toolStripProgressBarStatus.StartStopMarque();
             backgroundWorkerWorker.RunWorkerAsync();
         }
+
+        private void buttonRemove_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewUsers.SelectedRows.Count == 0 || !(dataGridViewUsers.SelectedRows[0].DataBoundItem is User))
+            {
+                return;
+            }
+
+            User user = dataGridViewUsers.SelectedRows[0].DataBoundItem as User;
+            if (user == null)
+            {
+                return;
+            }
+            if (GlobalMethods.DeleteConfirm(user.Fullname) != DialogResult.Yes)
+            {
+                return;
+            }
+            UserManager userManager = new UserManager(GlobalVariables.ConnectInfo);
+            Tuple<bool, List<string>> delete = userManager.Delete(user.Id);
+            delete.ShowDialog();
+            if (delete.Item1)
+            {
+                wStatus = WorkerStatus.RefreshData;
+                toolStripProgressBarStatus.StartStopMarque();
+                backgroundWorkerWorker.RunWorkerAsync();
+            }
+        }
     }
 }

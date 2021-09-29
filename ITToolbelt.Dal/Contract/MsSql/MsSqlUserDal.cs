@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using ITToolbelt.Dal.Abstract;
@@ -48,6 +49,21 @@ namespace ITToolbelt.Dal.Contract.MsSql
             {
                 bool any = context.Users.Any(u => u.Id != id && u.Mail == mail);
                 return !any;
+            }
+        }
+
+        public bool Delete(int userId)
+        {
+            using (ItToolbeltContext context = new ItToolbeltContext(ConnectInfo.ConnectionString))
+            {
+                User user = context.Users.SingleOrDefault(u => u.Id == userId);
+                if (user == null)
+                {
+                    return false;
+                }
+
+                context.Users.Remove(user);
+                return context.SaveChanges();
             }
         }
     }
