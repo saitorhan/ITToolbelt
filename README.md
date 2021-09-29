@@ -1,6 +1,6 @@
 # ITToolbelt
 
-Proje ile ilgili soru ve önerilerinizi saitorhan@kodlagelistir.com adresine iletebilirsiniz.
+You can send your questions and suggestions about the project to saitorhan@kodlagelistir.com.
 
 
 ## YouTube Channal Videos
