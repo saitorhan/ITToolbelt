@@ -59,17 +59,18 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this.buttonResfresh);
             this.panel1.Controls.Add(this.buttonColumnSelection);
             this.panel1.Controls.Add(this.buttonRemove);
             this.panel1.Controls.Add(this.buttonUpdate);
             this.panel1.Controls.Add(this.buttonAdd);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // buttonResfresh
             // 
             resources.ApplyResources(this.buttonResfresh, "buttonResfresh");
+            this.buttonResfresh.Image = global::ITToolbelt.WinForms.Properties.Resources.refresh;
             this.buttonResfresh.Name = "buttonResfresh";
             this.buttonResfresh.UseVisualStyleBackColor = true;
             this.buttonResfresh.Click += new System.EventHandler(this.buttonResfresh_Click);
@@ -77,38 +78,41 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             // buttonColumnSelection
             // 
             resources.ApplyResources(this.buttonColumnSelection, "buttonColumnSelection");
+            this.buttonColumnSelection.Image = global::ITToolbelt.WinForms.Properties.Resources.edit_page;
             this.buttonColumnSelection.Name = "buttonColumnSelection";
             this.buttonColumnSelection.UseVisualStyleBackColor = true;
             this.buttonColumnSelection.Click += new System.EventHandler(this.buttonColumnSelection_Click);
             // 
             // buttonRemove
             // 
+            this.buttonRemove.Image = global::ITToolbelt.WinForms.Properties.Resources.delete;
             resources.ApplyResources(this.buttonRemove, "buttonRemove");
             this.buttonRemove.Name = "buttonRemove";
             this.buttonRemove.UseVisualStyleBackColor = true;
             // 
             // buttonUpdate
             // 
+            this.buttonUpdate.Image = global::ITToolbelt.WinForms.Properties.Resources.edit_page;
             resources.ApplyResources(this.buttonUpdate, "buttonUpdate");
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.UseVisualStyleBackColor = true;
             // 
             // buttonAdd
             // 
+            this.buttonAdd.Image = global::ITToolbelt.WinForms.Properties.Resources.add;
             resources.ApplyResources(this.buttonAdd, "buttonAdd");
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.dataGridViewUsers);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
             // dataGridViewUsers
             // 
-            resources.ApplyResources(this.dataGridViewUsers, "dataGridViewUsers");
             this.dataGridViewUsers.AllowUserToAddRows = false;
             this.dataGridViewUsers.AllowUserToDeleteRows = false;
             this.dataGridViewUsers.AllowUserToOrderColumns = true;
@@ -123,6 +127,7 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             this.systemUserDataGridViewTextBoxColumn,
             this.fullnameDataGridViewTextBoxColumn});
             this.dataGridViewUsers.DataSource = this.userBindingSource;
+            resources.ApplyResources(this.dataGridViewUsers, "dataGridViewUsers");
             this.dataGridViewUsers.Name = "dataGridViewUsers";
             this.dataGridViewUsers.ReadOnly = true;
             this.dataGridViewUsers.Tag = "96BFB004EE0C450BB4526A2D86349725";
@@ -182,15 +187,15 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             // 
             // statusStrip1
             // 
-            resources.ApplyResources(this.statusStrip1, "statusStrip1");
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripProgressBarStatus});
+            resources.ApplyResources(this.statusStrip1, "statusStrip1");
             this.statusStrip1.Name = "statusStrip1";
             // 
             // toolStripProgressBarStatus
             // 
-            resources.ApplyResources(this.toolStripProgressBarStatus, "toolStripProgressBarStatus");
             this.toolStripProgressBarStatus.Name = "toolStripProgressBarStatus";
+            resources.ApplyResources(this.toolStripProgressBarStatus, "toolStripProgressBarStatus");
             // 
             // backgroundWorkerWorker
             // 
