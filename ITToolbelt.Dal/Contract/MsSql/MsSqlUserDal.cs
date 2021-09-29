@@ -37,7 +37,7 @@ namespace ITToolbelt.Dal.Contract.MsSql
             using (ItToolbeltContext context = new ItToolbeltContext(ConnectInfo.ConnectionString))
             {
                 bool any = context.Users.Any(u => u.Id != id && u.Mail == mail);
-                return any;
+                return !any;
             }
         }
     }

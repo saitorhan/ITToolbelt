@@ -78,5 +78,16 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             FormGridColumnSelection formGridColumn = new FormGridColumnSelection(dataGridViewUsers.Columns);
             formGridColumn.ShowDialog();
         }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            FormUser formUser = new FormUser();
+            formUser.ShowDialog();
+
+            wStatus = WorkerStatus.RefreshData;
+            toolStripProgressBarStatus.StartStopMarque();
+            backgroundWorkerWorker.RunWorkerAsync();
+
+        }
     }
 }

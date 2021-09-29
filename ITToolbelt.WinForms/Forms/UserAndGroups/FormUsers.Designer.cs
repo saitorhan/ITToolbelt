@@ -103,6 +103,7 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             resources.ApplyResources(this.buttonAdd, "buttonAdd");
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // groupBox1
             // 

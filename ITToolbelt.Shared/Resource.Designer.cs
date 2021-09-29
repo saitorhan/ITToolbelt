@@ -284,5 +284,14 @@ namespace ITToolbelt.Shared {
                 return ResourceManager.GetString("025", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to İşlem başarılı..
+        /// </summary>
+        public static string _026 {
+            get {
+                return ResourceManager.GetString("026", resourceCulture);
+            }
+        }
     }
 }

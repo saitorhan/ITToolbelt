@@ -192,4 +192,7 @@
   <data name="025" xml:space="preserve">
     <value>Bu mail adresi daha önce kullanılmış.</value>
   </data>
+  <data name="026" xml:space="preserve">
+    <value>İşlem başarılı.</value>
+  </data>
 </root>
