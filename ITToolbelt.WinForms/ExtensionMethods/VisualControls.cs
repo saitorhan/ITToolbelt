@@ -64,8 +64,13 @@ namespace ITToolbelt.WinForms.ExtensionMethods
 
             foreach (DataGridViewColumn column in dataGridView.Columns)
             {
-                IEnumerable<XAttribute> xAttributes = xElements.Elements("Column").FirstOrDefault(e => e.Attribute("name").Value == column.DataPropertyName)
-                    .Attributes();
+                XElement xElement = xElements.Elements("Column").FirstOrDefault(e => e.Attribute("name").Value == column.DataPropertyName);
+                if (xElement == null)
+                {
+                    continue;
+                }
+
+                IEnumerable<XAttribute> xAttributes = xElement.Attributes();
                 column.DisplayIndex = Int32.Parse(xAttributes.FirstOrDefault(a => a.Name == "order").Value);
                 column.Visible = bool.Parse(xAttributes.FirstOrDefault(a => a.Name == "visible").Value);
             }

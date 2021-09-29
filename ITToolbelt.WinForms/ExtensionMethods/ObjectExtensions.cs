@@ -19,9 +19,16 @@ namespace ITToolbelt.WinForms.ExtensionMethods
             }
             else
             {
-                foreach (string s in tuple.Item2)
+                if (tuple.Item2 != null && tuple.Item2.Count > 0)
                 {
-                    stringBuilder.AppendLine(s);
+                    foreach (string s in tuple.Item2)
+                    {
+                        stringBuilder.AppendLine(s);
+                    }
+                }
+                else
+                {
+                    stringBuilder.Append(Resource._029);
                 }
             }
 

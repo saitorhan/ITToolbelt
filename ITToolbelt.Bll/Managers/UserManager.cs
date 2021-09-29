@@ -8,6 +8,7 @@ using ITToolbelt.Bll.Validators;
 using ITToolbelt.Dal.Abstract;
 using ITToolbelt.Entity.Db;
 using ITToolbelt.Entity.EntityClass;
+using ITToolbelt.Shared;
 using Ninject;
 
 namespace ITToolbelt.Bll.Managers
@@ -73,7 +74,18 @@ namespace ITToolbelt.Bll.Managers
             UserPrincipal userPrincipal = new UserPrincipal(principalContext);
             userPrincipal.Enabled = true;
             PrincipalSearcher principalSearcher = new PrincipalSearcher(userPrincipal);
-            List<UserPrincipal> principalSearchResult = principalSearcher.FindAll().Cast<UserPrincipal>().OrderBy(u => u.SamAccountName).ToList();
+            List<UserPrincipal> principalSearchResult;
+
+            try
+            {
+                principalSearchResult = principalSearcher.FindAll().Cast<UserPrincipal>().OrderBy(u => u.SamAccountName).ToList();
+            }
+            catch(Exception exception)
+            {
+                List<string> errors = new List<string> { Resource._029, exception.Message };
+                return new Tuple<bool, List<string>>(false, errors);
+            }
+
             principalSearchResult.Where(u => u.EmailAddress != null && u.GivenName != null && u.Surname != null).ToList().ForEach(psr =>
             {
                 User user = new User

@@ -311,5 +311,14 @@ namespace ITToolbelt.Shared {
                 return ResourceManager.GetString("028", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to İşlem başarısız..
+        /// </summary>
+        public static string _029 {
+            get {
+                return ResourceManager.GetString("029", resourceCulture);
+            }
+        }
     }
 }

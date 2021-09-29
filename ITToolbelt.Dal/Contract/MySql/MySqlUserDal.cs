@@ -20,8 +20,15 @@ namespace ITToolbelt.Dal.Contract.MySql
         {
             using (ItToolbeltContextMySql context = new ItToolbeltContextMySql(ConnectInfo.ConnectionString))
             {
-                List<User> users = context.Users.ToList();
-                return users;
+                try
+                {
+                    List<User> users = context.Users.ToList();
+                    return users;
+                }
+                catch (Exception e)
+                {
+                    return null;
+                }
             }
         }
 
@@ -47,8 +54,15 @@ namespace ITToolbelt.Dal.Contract.MySql
         {
             using (ItToolbeltContextMySql context = new ItToolbeltContextMySql(ConnectInfo.ConnectionString))
             {
-                bool any = context.Users.Any(u => u.Id != id && u.Username == username);
-                return any;
+                try
+                {
+                    bool any = context.Users.Any(u => u.Id != id && u.Username == username);
+                    return any;
+                }
+                catch (Exception e)
+                {
+                    return false;
+                }
             }
         }
 

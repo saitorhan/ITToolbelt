@@ -30,7 +30,7 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
                     RefreshData();
                     break;
                 case WorkerStatus.GetFromDc:
-                    SyncUsersWithAD();
+                    SyncUsersWithAd();
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -159,7 +159,7 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             backgroundWorkerWorker.RunWorkerAsync();
         }
 
-        void SyncUsersWithAD()
+        void SyncUsersWithAd()
         {
             UserManager userManager = new UserManager(GlobalVariables.ConnectInfo);
             Tuple<bool, List<string>> syncUsersWithAd = userManager.SyncUsersWithAd();

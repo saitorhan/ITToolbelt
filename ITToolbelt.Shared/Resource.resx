@@ -201,4 +201,7 @@
   <data name="028" xml:space="preserve">
     <value>Kullanıcı adı alanı en fazla 50 karakter olabilir.</value>
   </data>
+  <data name="029" xml:space="preserve">
+    <value>İşlem başarısız.</value>
+  </data>
 </root>
