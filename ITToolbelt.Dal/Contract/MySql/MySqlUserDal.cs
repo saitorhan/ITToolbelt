@@ -22,7 +22,7 @@ namespace ITToolbelt.Dal.Contract.MySql
             {
                 try
                 {
-                    List<User> users = context.Users.ToList();
+                    List<User> users = context.Users.OrderBy(u => u.Username).ToList();
                     return users;
                 }
                 catch (Exception e)
@@ -125,7 +125,7 @@ namespace ITToolbelt.Dal.Contract.MySql
             using (ItToolbeltContextMySql context = new ItToolbeltContextMySql(ConnectInfo.ConnectionString))
             {
                 List<User> users = context.UserGroups.Include("User").Where(ug => ug.GroupId == groupId)
-                    .Select(ug => ug.User).ToList();
+                    .Select(ug => ug.User).OrderBy(u => u.Username).ToList();
                 return users;
             }
         }

@@ -61,7 +61,7 @@ namespace ITToolbelt.Dal.Contract.MySql
                 context.SaveChanges();
             }
 
-            return connections;
+            return connections.OrderBy(c => c.Name).ToList();
         }
 
         public static void GetServerProperties(Connection connection)
@@ -146,7 +146,7 @@ namespace ITToolbelt.Dal.Contract.MySql
                     }
                 }
 
-                return databases;
+                return databases.OrderBy(d => d.Name).ToList();
             }
         }
 
@@ -198,7 +198,7 @@ namespace ITToolbelt.Dal.Contract.MySql
                     }
                 }
 
-                return tables;
+                return tables.OrderBy(t => t.TableName).ToList();
             }
         }
 

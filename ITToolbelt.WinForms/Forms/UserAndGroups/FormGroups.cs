@@ -161,8 +161,8 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
 
         void SyncUsersWithAd()
         {
-            UserManager userManager = new UserManager(GlobalVariables.ConnectInfo);
-            Tuple<bool, List<string>> syncUsersWithAd = userManager.SyncUsersWithAd();
+            GroupManager groupManager = new GroupManager(GlobalVariables.ConnectInfo);
+            Tuple<bool, List<string>> syncUsersWithAd = groupManager.SyncUsersWithAd();
             syncUsersWithAd.ShowDialog();
 
             if (syncUsersWithAd.Item1)

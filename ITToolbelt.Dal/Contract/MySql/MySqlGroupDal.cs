@@ -20,7 +20,7 @@ namespace ITToolbelt.Dal.Contract.MySql
         {
             using (ItToolbeltContextMySql context = new ItToolbeltContextMySql(ConnectInfo.ConnectionString))
             {
-                List<Group> groups = context.Groups.ToList();
+                List<Group> groups = context.Groups.OrderBy(g => g.Name).ToList();
                 return groups;
             }
         }
@@ -95,8 +95,29 @@ namespace ITToolbelt.Dal.Contract.MySql
             using (ItToolbeltContextMySql context = new ItToolbeltContextMySql(ConnectInfo.ConnectionString))
             {
                 List<Group> groups = context.UserGroups.Include("Group").Where(ug => ug.UserId == userId)
-                    .Select(ug => ug.Group).ToList();
+                    .Select(ug => ug.Group).OrderBy(g => g.Name).ToList();
                 return groups;
+            }
+        }
+
+        public bool SyncGroupsWithAd(List<Group> groups)
+        {
+            using (ItToolbeltContextMySql context = new ItToolbeltContextMySql(ConnectInfo.ConnectionString))
+            {
+                foreach (Group group in groups)
+                {
+                    Group userFromDb = context.Groups.FirstOrDefault(u => u.Name == group.Name);
+                    if (userFromDb == null)
+                    {
+                        context.Groups.Add(group);
+                    }
+                    else
+                    {
+                        userFromDb.Description = group.Description;
+                    }
+                }
+
+                return context.SaveChanges();
             }
         }
     }

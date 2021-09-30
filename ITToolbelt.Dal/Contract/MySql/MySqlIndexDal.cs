@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using ITToolbelt.Dal.Abstract;
 using ITToolbelt.Entity.EntityClass;
 using MySql.Data.MySqlClient;
@@ -65,7 +66,7 @@ namespace ITToolbelt.Dal.Contract.MySql
                     }
                 }
 
-                return indexes;
+                return indexes.OrderBy(i => i.IndexName).ToList();
             }
         }
 
@@ -89,7 +90,7 @@ namespace ITToolbelt.Dal.Contract.MySql
 
         public List<Column> GetColumns(Index index)
         {
-            List<Column> indexes;
+            List<Column> columns;
             using (MySqlConnection sqlConnection = new MySqlConnection(ConnectInfo.ConnectionString))
             {
                 MySqlCommand sqlCommand = new MySqlCommand { Connection = sqlConnection };
@@ -104,7 +105,7 @@ namespace ITToolbelt.Dal.Contract.MySql
                     MySqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
                     if (sqlDataReader.HasRows)
                     {
-                        indexes = new List<Column>();
+                        columns = new List<Column>();
                     }
                     else
                     {
@@ -120,7 +121,7 @@ namespace ITToolbelt.Dal.Contract.MySql
                            // IsInclude = sqlDataReader.GetBoolean(2),
                            // SortType = sqlDataReader.GetString(3)
                         };
-                        indexes.Add(database);
+                        columns.Add(database);
                     }
                 }
                 catch (Exception e)
@@ -136,7 +137,7 @@ namespace ITToolbelt.Dal.Contract.MySql
                     }
                 }
 
-                return indexes;
+                return columns.OrderBy(c => c.ColumnName).ToList();
             }
         }
     }

@@ -63,7 +63,7 @@ namespace ITToolbelt.Dal.Contract.MsSql
                 context.SaveChanges();
             }
 
-            return connections;
+            return connections.OrderBy(c => c.Name).ToList();
         }
 
         public static void GetServerProperties(Connection connection)
@@ -159,7 +159,7 @@ namespace ITToolbelt.Dal.Contract.MsSql
                     }
                 }
 
-                return databases;
+                return databases.OrderBy(d => d.Name).ToList();
             }
         }
 
@@ -216,7 +216,7 @@ namespace ITToolbelt.Dal.Contract.MsSql
                     }
                 }
 
-                return tables;
+                return tables.OrderBy(t => t.TableName).ToList();
             }
 
         }

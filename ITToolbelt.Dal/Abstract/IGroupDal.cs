@@ -13,5 +13,6 @@ namespace ITToolbelt.Dal.Abstract
         bool Delete(int groupId);
 
         List<Group> GetUserGroups(int userId);
+        bool SyncGroupsWithAd(List<Group> groups);
     }
 }
