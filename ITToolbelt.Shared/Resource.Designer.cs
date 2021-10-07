@@ -338,5 +338,14 @@ namespace ITToolbelt.Shared {
                 return ResourceManager.GetString("031", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bu bilgisayar adı daha önce kaydedilmiş.
+        /// </summary>
+        public static string _032 {
+            get {
+                return ResourceManager.GetString("032", resourceCulture);
+            }
+        }
     }
 }

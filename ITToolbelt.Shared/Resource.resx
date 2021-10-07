@@ -210,4 +210,7 @@
   <data name="031" xml:space="preserve">
     <value>Bu grup adı daha önce kaydedilmiş</value>
   </data>
+  <data name="032" xml:space="preserve">
+    <value>Bu bilgisayar adı daha önce kaydedilmiş</value>
+  </data>
 </root>
