@@ -22,6 +22,7 @@ namespace ITToolbelt.Dal.Contract.MsSql
         public DbSet<SystemUser> SystemUsers { get; set; }
         public DbSet<Group> Groups { get; set; }
         public DbSet<UserGroup> UserGroups { get; set; }
+        public DbSet<Computer> Computers { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -31,6 +32,8 @@ namespace ITToolbelt.Dal.Contract.MsSql
                 .HasForeignKey(ug => ug.UserId);
             modelBuilder.Entity<Group>().HasMany(u => u.UserGroups).WithRequired(ug => ug.Group)
                 .HasForeignKey(ug => ug.GroupId);
+            modelBuilder.Entity<User>().HasMany(u => u.Computers).WithOptional(c => c.User)
+                .HasForeignKey(c => c.UserId);
 
             base.OnModelCreating(modelBuilder);
         }

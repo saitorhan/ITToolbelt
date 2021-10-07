@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Db\Computer.cs" />
     <Compile Include="Db\Connection.cs" />
     <Compile Include="Db\Group.cs" />
     <Compile Include="Db\SystemUser.cs" />

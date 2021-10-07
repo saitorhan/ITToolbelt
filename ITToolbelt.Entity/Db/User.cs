@@ -41,5 +41,7 @@ namespace ITToolbelt.Entity.Db
         [NotMapped]
         [DisplayName("Full Name")]
         public string Fullname => $"{Firstname} {Surname}";
+
+        public List<Computer> Computers { get; set; }
     }
 }
