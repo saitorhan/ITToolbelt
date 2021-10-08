@@ -29,6 +29,7 @@ namespace ITToolbelt.WinForms.Forms.Computers
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormComputer));
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonCancel = new System.Windows.Forms.Button();
@@ -37,7 +38,11 @@ namespace ITToolbelt.WinForms.Forms.Computers
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.textBoxDesc = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBoxUser = new System.Windows.Forms.ComboBox();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -83,10 +88,30 @@ namespace ITToolbelt.WinForms.Forms.Computers
             resources.ApplyResources(this.textBoxDesc, "textBoxDesc");
             this.textBoxDesc.Name = "textBoxDesc";
             // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // comboBoxUser
+            // 
+            this.comboBoxUser.DataSource = this.userBindingSource;
+            this.comboBoxUser.DisplayMember = "Fullname";
+            this.comboBoxUser.FormattingEnabled = true;
+            resources.ApplyResources(this.comboBoxUser, "comboBoxUser");
+            this.comboBoxUser.Name = "comboBoxUser";
+            this.comboBoxUser.ValueMember = "Id";
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataSource = typeof(ITToolbelt.Entity.Db.User);
+            // 
             // FormComputer
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.comboBoxUser);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxDesc);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.label3);
@@ -97,6 +122,7 @@ namespace ITToolbelt.WinForms.Forms.Computers
             this.MinimizeBox = false;
             this.Name = "FormComputer";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,5 +137,8 @@ namespace ITToolbelt.WinForms.Forms.Computers
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.TextBox textBoxDesc;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBoxUser;
+        private System.Windows.Forms.BindingSource userBindingSource;
     }
 }

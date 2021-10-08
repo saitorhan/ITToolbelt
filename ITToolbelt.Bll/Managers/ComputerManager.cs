@@ -59,6 +59,7 @@ namespace ITToolbelt.Bll.Managers
                 return new Tuple<bool, List<string>>(false, messages);
             }
 
+            computer.User = null;
             Computer add = iComputerDal.Update(computer);
             return new Tuple<bool, List<string>>(add != null, null);
         }

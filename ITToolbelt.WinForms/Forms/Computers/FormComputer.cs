@@ -14,20 +14,23 @@ namespace ITToolbelt.WinForms.Forms.Computers
 {
     public partial class FormComputer : Form
     {
-        private Computer Group;
+        private Computer Computer;
         public FormComputer()
         {
             InitializeComponent();
 
-            Group = new Computer();
+            Computer = new Computer();
+            GetUsers();
         }
-        public FormComputer(Computer group)
+        public FormComputer(Computer computer)
         {
             InitializeComponent();
 
-            Group = group;
-            textBoxName.Text = group.Name;
-            textBoxDesc.Text = group.Desc;
+            Computer = computer;
+            textBoxName.Text = computer.Name;
+            textBoxDesc.Text = computer.Desc;
+
+            GetUsers();
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -37,15 +40,32 @@ namespace ITToolbelt.WinForms.Forms.Computers
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            Group.Name = textBoxName.Text;
-            Group.Desc = textBoxDesc.Text;
-            
+            Computer.Name = textBoxName.Text;
+            Computer.Desc = textBoxDesc.Text;
+            User user = comboBoxUser.SelectedItem as User;
+            Computer.UserId = user?.Id;
+
             ComputerManager userManager = new ComputerManager(GlobalVariables.ConnectInfo);
-            Tuple<bool, List<string>> add = Group.Id > 0 ? userManager.Update(Group) : userManager.Add(Group);
+            Tuple<bool, List<string>> add = Computer.Id > 0 ? userManager.Update(Computer) : userManager.Add(Computer);
             add.ShowDialog();
             if (add.Item1)
             {
                 Close();
+            }
+        }
+
+        private void GetUsers()
+        {
+            UserManager userManager = new UserManager(GlobalVariables.ConnectInfo);
+            List<User> users = userManager.GetAll();
+            userBindingSource.DataSource = users;
+
+            if (Computer?.UserId == null) return;
+            foreach (User item in comboBoxUser.Items)
+            {
+                if (item.Id != Computer.UserId) continue;
+                comboBoxUser.SelectedItem = item;
+                return;
             }
         }
     }
