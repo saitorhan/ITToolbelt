@@ -43,7 +43,7 @@ namespace ITToolbelt.WinForms.Forms.Computers
             Computer.Name = textBoxName.Text;
             Computer.Desc = textBoxDesc.Text;
             User user = comboBoxUser.SelectedItem as User;
-            Computer.UserId = user?.Id;
+            Computer.UserId = user == null || user.Id < 0 ? (int?)null : user.Id;
 
             ComputerManager userManager = new ComputerManager(GlobalVariables.ConnectInfo);
             Tuple<bool, List<string>> add = Computer.Id > 0 ? userManager.Update(Computer) : userManager.Add(Computer);
@@ -58,6 +58,7 @@ namespace ITToolbelt.WinForms.Forms.Computers
         {
             UserManager userManager = new UserManager(GlobalVariables.ConnectInfo);
             List<User> users = userManager.GetAll();
+            users.Insert(0, new User{Id = -1, Firstname = String.Empty, Surname = String.Empty});
             userBindingSource.DataSource = users;
 
             if (Computer?.UserId == null) return;

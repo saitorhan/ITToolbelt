@@ -97,6 +97,7 @@ namespace ITToolbelt.WinForms.Forms.Computers
             // 
             this.comboBoxUser.DataSource = this.userBindingSource;
             this.comboBoxUser.DisplayMember = "Fullname";
+            this.comboBoxUser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxUser.FormattingEnabled = true;
             resources.ApplyResources(this.comboBoxUser, "comboBoxUser");
             this.comboBoxUser.Name = "comboBoxUser";
