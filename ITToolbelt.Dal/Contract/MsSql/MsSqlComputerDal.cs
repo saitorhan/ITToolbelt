@@ -89,16 +89,16 @@ namespace ITToolbelt.Dal.Contract.MsSql
         {
             using (ItToolbeltContext context = new ItToolbeltContext(ConnectInfo.ConnectionString))
             {
-                foreach (Computer group in computers)
+                foreach (Computer computer in computers)
                 {
-                    Group userFromDb = context.Groups.FirstOrDefault(u => u.Name == group.Name);
-                    if (userFromDb == null)
+                    Computer compFromDb = context.Computers.FirstOrDefault(u => u.Name == computer.Name);
+                    if (compFromDb == null)
                     {
-                        context.Computers.Add(group);
+                        context.Computers.Add(computer);
                     }
                     else
                     {
-                        userFromDb.Description = group.Desc;
+                        compFromDb.Desc = computer.Desc;
                     }
                 }
 
@@ -112,6 +112,21 @@ namespace ITToolbelt.Dal.Contract.MsSql
             {
                 List<Computer> computers = context.Computers.Where(ug => ug.UserId == null).ToList();
                 return computers;
+            }
+        }
+
+        public bool RemoveUserFromComputer(int computerId)
+        {
+            using (ItToolbeltContext context = new ItToolbeltContext(ConnectInfo.ConnectionString))
+            {
+                Computer computer = context.Computers.FirstOrDefault(c => c.Id == computerId);
+                if (computer == null)
+                {
+                    return false;
+                }
+
+                computer.UserId = null;
+                return context.SaveChanges();
             }
         }
     }

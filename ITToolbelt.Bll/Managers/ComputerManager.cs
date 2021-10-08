@@ -109,5 +109,12 @@ namespace ITToolbelt.Bll.Managers
             List<Computer> computers = iComputerDal.GetFreeComputers();
             return computers;
         }
+
+        public Tuple<bool, List<string>> RemoveUserFromComputer(int computerId)
+        {
+            bool result = iComputerDal.RemoveUserFromComputer(computerId);
+
+            return new Tuple<bool, List<string>>(result, null);
+        }
     }
 }

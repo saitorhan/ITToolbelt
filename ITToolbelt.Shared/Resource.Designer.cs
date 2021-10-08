@@ -347,5 +347,14 @@ namespace ITToolbelt.Shared {
                 return ResourceManager.GetString("032", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} bilgisayarından {1} isimli kullanıcı kaldırılacak. Bu işlem geri alınamaz. Onaylıyor musunuz?.
+        /// </summary>
+        public static string _033 {
+            get {
+                return ResourceManager.GetString("033", resourceCulture);
+            }
+        }
     }
 }

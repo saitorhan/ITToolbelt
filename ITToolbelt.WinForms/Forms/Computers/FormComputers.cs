@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ITToolbelt.Bll.Managers;
 using ITToolbelt.Entity.Db;
+using ITToolbelt.Shared;
 using ITToolbelt.WinForms.ExtensionMethods;
 using ITToolbelt.WinForms.Forms.ControlSpesifications;
 
@@ -47,9 +48,9 @@ namespace ITToolbelt.WinForms.Forms.Computers
             ComputerManager computerManager = new ComputerManager(GlobalVariables.ConnectInfo);
             List<Computer> groups = computerManager.GetAll();
 
-            if (dataGridViewGroups.InvokeRequired)
+            if (dataGridViewComputers.InvokeRequired)
             {
-                dataGridViewGroups.Invoke(new Action(delegate
+                dataGridViewComputers.Invoke(new Action(delegate
                 {
                     computerBindingSource.DataSource = groups;
                 }));
@@ -68,7 +69,7 @@ namespace ITToolbelt.WinForms.Forms.Computers
 
         private void FormUsers_Load(object sender, EventArgs e)
         {
-            dataGridViewGroups.LoadGridColumnStatus();
+            dataGridViewComputers.LoadGridColumnStatus();
 
             wStatus = WorkerStatus.RefreshData;
             toolStripProgressBarStatus.StartStopMarque();
@@ -84,12 +85,12 @@ namespace ITToolbelt.WinForms.Forms.Computers
 
         private void FormUsers_FormClosing(object sender, FormClosingEventArgs e)
         {
-            dataGridViewGroups.SaveGridColumnStatus();
+            dataGridViewComputers.SaveGridColumnStatus();
         }
 
         private void buttonColumnSelection_Click(object sender, EventArgs e)
         {
-            FormGridColumnSelection formGridColumn = new FormGridColumnSelection(dataGridViewGroups.Columns);
+            FormGridColumnSelection formGridColumn = new FormGridColumnSelection(dataGridViewComputers.Columns);
             formGridColumn.ShowDialog();
         }
 
@@ -106,19 +107,19 @@ namespace ITToolbelt.WinForms.Forms.Computers
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            if (dataGridViewGroups.SelectedRows.Count == 0 || !(dataGridViewGroups.SelectedRows[0].DataBoundItem is Computer))
+            if (dataGridViewComputers.SelectedRows.Count == 0 || !(dataGridViewComputers.SelectedRows[0].DataBoundItem is Computer))
             {
                 return;
             }
 
-            Computer computer = dataGridViewGroups.SelectedRows[0].DataBoundItem as Computer;
+            Computer computer = dataGridViewComputers.SelectedRows[0].DataBoundItem as Computer;
             if (computer == null)
             {
                 return;
             }
 
-            FormComputer formUser = new FormComputer(computer);
-            formUser.ShowDialog();
+            FormComputer formComputer = new FormComputer(computer);
+            formComputer.ShowDialog();
 
             wStatus = WorkerStatus.RefreshData;
             toolStripProgressBarStatus.StartStopMarque();
@@ -127,12 +128,12 @@ namespace ITToolbelt.WinForms.Forms.Computers
 
         private void buttonRemove_Click(object sender, EventArgs e)
         {
-            if (dataGridViewGroups.SelectedRows.Count == 0 || !(dataGridViewGroups.SelectedRows[0].DataBoundItem is Computer))
+            if (dataGridViewComputers.SelectedRows.Count == 0 || !(dataGridViewComputers.SelectedRows[0].DataBoundItem is Computer))
             {
                 return;
             }
 
-            Computer computer = dataGridViewGroups.SelectedRows[0].DataBoundItem as Computer;
+            Computer computer = dataGridViewComputers.SelectedRows[0].DataBoundItem as Computer;
             if (computer == null)
             {
                 return;
@@ -141,8 +142,9 @@ namespace ITToolbelt.WinForms.Forms.Computers
             {
                 return;
             }
-            ComputerManager groupManager = new ComputerManager(GlobalVariables.ConnectInfo);
-            Tuple<bool, List<string>> delete = groupManager.Delete(computer.Id);
+
+            ComputerManager computerManager = new ComputerManager(GlobalVariables.ConnectInfo);
+            Tuple<bool, List<string>> delete = computerManager.Delete(computer.Id);
             delete.ShowDialog();
             if (delete.Item1)
             {
@@ -161,14 +163,62 @@ namespace ITToolbelt.WinForms.Forms.Computers
 
         void SyncComputersWithAd()
         {
-            ComputerManager groupManager = new ComputerManager(GlobalVariables.ConnectInfo);
-            Tuple<bool, List<string>> syncUsersWithAd = groupManager.SyncComputersWithAd();
+            ComputerManager computerManager = new ComputerManager(GlobalVariables.ConnectInfo);
+            Tuple<bool, List<string>> syncUsersWithAd = computerManager.SyncComputersWithAd();
             syncUsersWithAd.ShowDialog();
 
             if (syncUsersWithAd.Item1)
             {
                 RefreshData();
             }
+        }
+
+        private void buttonFreeComputer_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewComputers.SelectedRows.Count == 0 || !(dataGridViewComputers.SelectedRows[0].DataBoundItem is Computer))
+            {
+                return;
+            }
+
+            Computer computer = dataGridViewComputers.SelectedRows[0].DataBoundItem as Computer;
+            if (computer == null)
+            {
+                return;
+            }
+            if (MessageBox.Show(String.Format(Resource._033, computer.Name, computer.User?.Fullname), Resource._009, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) != DialogResult.Yes)
+            {
+                return;
+            }
+
+            ComputerManager computerManager = new ComputerManager(GlobalVariables.ConnectInfo);
+            Tuple<bool, List<string>> delete = computerManager.RemoveUserFromComputer(computer.Id);
+            delete.ShowDialog();
+            if (delete.Item1)
+            {
+                wStatus = WorkerStatus.RefreshData;
+                toolStripProgressBarStatus.StartStopMarque();
+                backgroundWorkerWorker.RunWorkerAsync();
+            }
+        }
+
+        private void dataGridViewGroups_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridViewComputers.SelectedRows.Count == 0)
+            {
+                return;
+            }
+
+            foreach (DataGridViewRow selectedRow in dataGridViewComputers.SelectedRows)
+            {
+                Computer index = selectedRow.DataBoundItem as Computer;
+                if (index.UserId != null)
+                {
+                    buttonFreeComputer.Enabled = true;
+                    return;
+                }
+            }
+
+            buttonFreeComputer.Enabled = false;
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using ITToolbelt.Dal.Abstract;
+using ITToolbelt.Dal.Contract.MsSql;
 using ITToolbelt.Dal.Contract.MySql;
 using ITToolbelt.Entity.Db;
 using ITToolbelt.Entity.EntityClass;
@@ -90,16 +91,16 @@ namespace ITToolbelt.Dal.Contract.MySql
         {
             using (ItToolbeltContextMySql context = new ItToolbeltContextMySql(ConnectInfo.ConnectionString))
             {
-                foreach (Computer group in computers)
+                foreach (Computer computer in computers)
                 {
-                    Group userFromDb = context.Groups.FirstOrDefault(u => u.Name == group.Name);
-                    if (userFromDb == null)
+                    Computer compFromDb = context.Computers.FirstOrDefault(u => u.Name == computer.Name);
+                    if (compFromDb == null)
                     {
-                        context.Computers.Add(group);
+                        context.Computers.Add(computer);
                     }
                     else
                     {
-                        userFromDb.Description = group.Desc;
+                        compFromDb.Desc = computer.Desc;
                     }
                 }
 
@@ -113,6 +114,21 @@ namespace ITToolbelt.Dal.Contract.MySql
             {
                 List<Computer> computers = context.Computers.Where(ug => ug.UserId == null).ToList();
                 return computers;
+            }
+        }
+
+        public bool RemoveUserFromComputer(int computerId)
+        {
+            using (ItToolbeltContextMySql context = new ItToolbeltContextMySql(ConnectInfo.ConnectionString))
+            {
+                Computer computer = context.Computers.FirstOrDefault(c => c.Id == computerId);
+                if (computer == null)
+                {
+                    return false;
+                }
+
+                computer.UserId = null;
+                return context.SaveChanges();
             }
         }
     }

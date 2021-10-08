@@ -213,4 +213,7 @@
   <data name="032" xml:space="preserve">
     <value>Bu bilgisayar adı daha önce kaydedilmiş</value>
   </data>
+  <data name="033" xml:space="preserve">
+    <value>{0} bilgisayarından {1} isimli kullanıcı kaldırılacak. Bu işlem geri alınamaz. Onaylıyor musunuz?</value>
+  </data>
 </root>
