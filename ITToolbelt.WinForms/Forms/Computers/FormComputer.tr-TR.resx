@@ -117,33 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="buttonRemoveGroup.Location" type="System.Drawing.Point, System.Drawing">
-    <value>586, 12</value>
-  </data>
-  <data name="buttonRemoveGroup.Text" xml:space="preserve">
-    <value>Kullanıcı Kaldır</value>
-  </data>
-  <data name="buttonGroupAdd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>685, 12</value>
-  </data>
-  <data name="buttonGroupAdd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 75</value>
-  </data>
-  <data name="buttonGroupAdd.Text" xml:space="preserve">
-    <value>Kullanıcı Ekle</value>
-  </data>
   <data name="buttonCancel.Text" xml:space="preserve">
     <value>İptal</value>
   </data>
   <data name="buttonSave.Text" xml:space="preserve">
     <value>Kaydet</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 13</value>
+    <value>72, 13</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Grup Adı:</value>
+    <value>Bilgisayar Adı:</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 13</value>
@@ -151,11 +136,11 @@
   <data name="label3.Text" xml:space="preserve">
     <value>Açıklama:</value>
   </data>
-  <data name="fullnameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Adı Soyadı</value>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 13</value>
   </data>
-  <data name="usernameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Kullanıcı Adı</value>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Kullanıcı:</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1291,9 +1276,9 @@
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Inherit</value>
+    <value>NoControl</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Grup</value>
+    <value>Bilgisayar</value>
   </data>
 </root>
