@@ -136,6 +136,12 @@
   <data name="userGoupsToolStripMenuItem.Text" xml:space="preserve">
     <value>Kullanıcı &amp;&amp; Gruplar</value>
   </data>
+  <data name="computersToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 20</value>
+  </data>
+  <data name="computersToolStripMenuItem.Text" xml:space="preserve">
+    <value>Bilgisayarlar</value>
+  </data>
   <data name="connectionsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>153, 22</value>
   </data>

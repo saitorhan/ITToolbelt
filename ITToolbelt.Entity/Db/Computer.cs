@@ -20,9 +20,5 @@ namespace ITToolbelt.Entity.Db
         public string Desc { get; set; }
         public int? UserId { get; set; }
         public User User { get; set; }
-
-        [DisplayName("User")] 
-        [NotMapped] 
-        public string UserName => User == null ? String.Empty : User.Fullname;
     }
 }

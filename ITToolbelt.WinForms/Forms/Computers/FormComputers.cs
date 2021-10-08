@@ -30,7 +30,7 @@ namespace ITToolbelt.WinForms.Forms.Computers
                     RefreshData();
                     break;
                 case WorkerStatus.GetFromDc:
-                    SyncUsersWithAd();
+                    SyncComputersWithAd();
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -44,8 +44,8 @@ namespace ITToolbelt.WinForms.Forms.Computers
 
         private void RefreshData()
         {
-            GroupManager groupManager = new GroupManager(GlobalVariables.ConnectInfo);
-            List<Group> groups = groupManager.GetAll();
+            ComputerManager computerManager = new ComputerManager(GlobalVariables.ConnectInfo);
+            List<Computer> groups = computerManager.GetAll();
 
             if (dataGridViewGroups.InvokeRequired)
             {
@@ -106,18 +106,18 @@ namespace ITToolbelt.WinForms.Forms.Computers
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            if (dataGridViewGroups.SelectedRows.Count == 0 || !(dataGridViewGroups.SelectedRows[0].DataBoundItem is Group))
+            if (dataGridViewGroups.SelectedRows.Count == 0 || !(dataGridViewGroups.SelectedRows[0].DataBoundItem is Computer))
             {
                 return;
             }
 
-            Group group = dataGridViewGroups.SelectedRows[0].DataBoundItem as Group;
-            if (group == null)
+            Computer computer = dataGridViewGroups.SelectedRows[0].DataBoundItem as Computer;
+            if (computer == null)
             {
                 return;
             }
 
-            FormComputer formUser = new FormComputer(group);
+            FormComputer formUser = new FormComputer(computer);
             formUser.ShowDialog();
 
             wStatus = WorkerStatus.RefreshData;
@@ -127,22 +127,22 @@ namespace ITToolbelt.WinForms.Forms.Computers
 
         private void buttonRemove_Click(object sender, EventArgs e)
         {
-            if (dataGridViewGroups.SelectedRows.Count == 0 || !(dataGridViewGroups.SelectedRows[0].DataBoundItem is Group))
+            if (dataGridViewGroups.SelectedRows.Count == 0 || !(dataGridViewGroups.SelectedRows[0].DataBoundItem is Computer))
             {
                 return;
             }
 
-            Group group = dataGridViewGroups.SelectedRows[0].DataBoundItem as Group;
-            if (group == null)
+            Computer computer = dataGridViewGroups.SelectedRows[0].DataBoundItem as Computer;
+            if (computer == null)
             {
                 return;
             }
-            if (GlobalMethods.DeleteConfirm(group.Name) != DialogResult.Yes)
+            if (GlobalMethods.DeleteConfirm(computer.Name) != DialogResult.Yes)
             {
                 return;
             }
-            GroupManager groupManager = new GroupManager(GlobalVariables.ConnectInfo);
-            Tuple<bool, List<string>> delete = groupManager.Delete(group.Id);
+            ComputerManager groupManager = new ComputerManager(GlobalVariables.ConnectInfo);
+            Tuple<bool, List<string>> delete = groupManager.Delete(computer.Id);
             delete.ShowDialog();
             if (delete.Item1)
             {
@@ -159,10 +159,10 @@ namespace ITToolbelt.WinForms.Forms.Computers
             backgroundWorkerWorker.RunWorkerAsync();
         }
 
-        void SyncUsersWithAd()
+        void SyncComputersWithAd()
         {
-            GroupManager groupManager = new GroupManager(GlobalVariables.ConnectInfo);
-            Tuple<bool, List<string>> syncUsersWithAd = groupManager.SyncUsersWithAd();
+            ComputerManager groupManager = new ComputerManager(GlobalVariables.ConnectInfo);
+            Tuple<bool, List<string>> syncUsersWithAd = groupManager.SyncComputersWithAd();
             syncUsersWithAd.ShowDialog();
 
             if (syncUsersWithAd.Item1)

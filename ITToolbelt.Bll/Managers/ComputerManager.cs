@@ -24,7 +24,7 @@ namespace ITToolbelt.Bll.Managers
 
         public List<Computer> GetAll()
         {
-            return iComputerDal.GelAll();
+            return iComputerDal.GelAll().OrderBy(c => c.Name).ToList();
         }
 
         public List<Computer> GetUserComputers(int userId)
@@ -69,7 +69,7 @@ namespace ITToolbelt.Bll.Managers
             return new Tuple<bool, List<string>>(result, null);
         }
 
-        public Tuple<bool, List<string>> SyncUsersWithAd(string domain = null, string userName = null, string password = null)
+        public Tuple<bool, List<string>> SyncComputersWithAd(string domain = null, string userName = null, string password = null)
         {
             List<Computer> groups = new List<Computer>();
 

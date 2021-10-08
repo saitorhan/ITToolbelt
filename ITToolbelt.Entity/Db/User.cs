@@ -43,5 +43,10 @@ namespace ITToolbelt.Entity.Db
         public string Fullname => $"{Firstname} {Surname}";
 
         public List<Computer> Computers { get; set; }
+
+        public override string ToString()
+        {
+            return Fullname;
+        }
     }
 }

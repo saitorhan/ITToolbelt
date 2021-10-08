@@ -21,7 +21,7 @@ namespace ITToolbelt.Dal.Contract.MySql
         {
             using (ItToolbeltContextMySql context = new ItToolbeltContextMySql(ConnectInfo.ConnectionString))
             {
-                List<Computer> computers = context.Computers.OrderBy(g => g.Name).ToList();
+                List<Computer> computers = context.Computers.Include("User").OrderBy(g => g.Name).ToList();
                 return computers;
             }
         }

@@ -339,22 +339,19 @@
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="ıdDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Id</value>
-  </data>
   <data name="nameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Name</value>
+    <value>Computer Name</value>
+  </data>
+  <metadata name="UserMail.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="UserMail.HeaderText" xml:space="preserve">
+    <value>User Mail</value>
   </data>
   <data name="descDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Description</value>
   </data>
-  <data name="userIdDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>UserId</value>
-  </data>
   <data name="userDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>User</value>
-  </data>
-  <data name="userNameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>User</value>
   </data>
   <metadata name="computerBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -1585,11 +1582,14 @@
         //////////////////////////////////8=
 </value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Computers</value>
+  </data>
+  <data name="&gt;&gt;computerBindingSource.Name" xml:space="preserve">
+    <value>computerBindingSource</value>
+  </data>
+  <data name="&gt;&gt;computerBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripProgressBarStatus.Name" xml:space="preserve">
     <value>toolStripProgressBarStatus</value>
@@ -1603,22 +1603,16 @@
   <data name="&gt;&gt;backgroundWorkerWorker.Type" xml:space="preserve">
     <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;computerBindingSource.Name" xml:space="preserve">
-    <value>computerBindingSource</value>
-  </data>
-  <data name="&gt;&gt;computerBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ıdDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>ıdDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;ıdDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;nameDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>nameDataGridViewTextBoxColumn</value>
   </data>
   <data name="&gt;&gt;nameDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;UserMail.Name" xml:space="preserve">
+    <value>UserMail</value>
+  </data>
+  <data name="&gt;&gt;UserMail.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;descDataGridViewTextBoxColumn.Name" xml:space="preserve">
@@ -1627,22 +1621,10 @@
   <data name="&gt;&gt;descDataGridViewTextBoxColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;userIdDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>userIdDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;userIdDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;userDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>userDataGridViewTextBoxColumn</value>
   </data>
   <data name="&gt;&gt;userDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;userNameDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>userNameDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;userNameDataGridViewTextBoxColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

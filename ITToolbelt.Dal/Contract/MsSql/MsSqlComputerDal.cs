@@ -20,7 +20,7 @@ namespace ITToolbelt.Dal.Contract.MsSql
         {
             using (ItToolbeltContext context = new ItToolbeltContext(ConnectInfo.ConnectionString))
             {
-                List<Computer> computers = context.Computers.OrderBy(g => g.Name).ToList();
+                List<Computer> computers = context.Computers.Include("User").OrderBy(g => g.Name).ToList();
                 return computers;
             }
         }

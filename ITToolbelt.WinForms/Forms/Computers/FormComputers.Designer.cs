@@ -40,21 +40,19 @@ namespace ITToolbelt.WinForms.Forms.Computers
             this.buttonAdd = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridViewGroups = new System.Windows.Forms.DataGridView();
+            this.computerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripProgressBarStatus = new System.Windows.Forms.ToolStripProgressBar();
             this.backgroundWorkerWorker = new System.ComponentModel.BackgroundWorker();
-            this.computerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ıdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserMail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGroups)).BeginInit();
-            this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.computerBindingSource)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -131,17 +129,19 @@ namespace ITToolbelt.WinForms.Forms.Computers
             this.dataGridViewGroups.AutoGenerateColumns = false;
             this.dataGridViewGroups.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewGroups.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ıdDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn,
+            this.UserMail,
             this.descDataGridViewTextBoxColumn,
-            this.userIdDataGridViewTextBoxColumn,
-            this.userDataGridViewTextBoxColumn,
-            this.userNameDataGridViewTextBoxColumn});
+            this.userDataGridViewTextBoxColumn});
             this.dataGridViewGroups.DataSource = this.computerBindingSource;
             resources.ApplyResources(this.dataGridViewGroups, "dataGridViewGroups");
             this.dataGridViewGroups.Name = "dataGridViewGroups";
             this.dataGridViewGroups.ReadOnly = true;
             this.dataGridViewGroups.Tag = "03369A61DCEE42D99BEE7BE68FC52BCF";
+            // 
+            // computerBindingSource
+            // 
+            this.computerBindingSource.DataSource = typeof(ITToolbelt.Entity.Db.Computer);
             // 
             // statusStrip1
             // 
@@ -160,23 +160,19 @@ namespace ITToolbelt.WinForms.Forms.Computers
             this.backgroundWorkerWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerWorker_DoWork);
             this.backgroundWorkerWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerWorker_RunWorkerCompleted);
             // 
-            // computerBindingSource
-            // 
-            this.computerBindingSource.DataSource = typeof(ITToolbelt.Entity.Db.Computer);
-            // 
-            // ıdDataGridViewTextBoxColumn
-            // 
-            this.ıdDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            resources.ApplyResources(this.ıdDataGridViewTextBoxColumn, "ıdDataGridViewTextBoxColumn");
-            this.ıdDataGridViewTextBoxColumn.Name = "ıdDataGridViewTextBoxColumn";
-            this.ıdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
             resources.ApplyResources(this.nameDataGridViewTextBoxColumn, "nameDataGridViewTextBoxColumn");
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // UserMail
+            // 
+            this.UserMail.DataPropertyName = "User.Mail";
+            resources.ApplyResources(this.UserMail, "UserMail");
+            this.UserMail.Name = "UserMail";
+            this.UserMail.ReadOnly = true;
             // 
             // descDataGridViewTextBoxColumn
             // 
@@ -185,26 +181,12 @@ namespace ITToolbelt.WinForms.Forms.Computers
             this.descDataGridViewTextBoxColumn.Name = "descDataGridViewTextBoxColumn";
             this.descDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // userIdDataGridViewTextBoxColumn
-            // 
-            this.userIdDataGridViewTextBoxColumn.DataPropertyName = "UserId";
-            resources.ApplyResources(this.userIdDataGridViewTextBoxColumn, "userIdDataGridViewTextBoxColumn");
-            this.userIdDataGridViewTextBoxColumn.Name = "userIdDataGridViewTextBoxColumn";
-            this.userIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // userDataGridViewTextBoxColumn
             // 
             this.userDataGridViewTextBoxColumn.DataPropertyName = "User";
             resources.ApplyResources(this.userDataGridViewTextBoxColumn, "userDataGridViewTextBoxColumn");
             this.userDataGridViewTextBoxColumn.Name = "userDataGridViewTextBoxColumn";
             this.userDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // userNameDataGridViewTextBoxColumn
-            // 
-            this.userNameDataGridViewTextBoxColumn.DataPropertyName = "UserName";
-            resources.ApplyResources(this.userNameDataGridViewTextBoxColumn, "userNameDataGridViewTextBoxColumn");
-            this.userNameDataGridViewTextBoxColumn.Name = "userNameDataGridViewTextBoxColumn";
-            this.userNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // FormComputers
             // 
@@ -219,9 +201,9 @@ namespace ITToolbelt.WinForms.Forms.Computers
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGroups)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.computerBindingSource)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.computerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,11 +224,9 @@ namespace ITToolbelt.WinForms.Forms.Computers
         private System.ComponentModel.BackgroundWorker backgroundWorkerWorker;
         private System.Windows.Forms.Button buttonColumnSelection;
         private System.Windows.Forms.Button buttonfromAd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ıdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserMail;
         private System.Windows.Forms.DataGridViewTextBoxColumn descDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userNameDataGridViewTextBoxColumn;
     }
 }
