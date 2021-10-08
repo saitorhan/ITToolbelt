@@ -169,7 +169,7 @@ namespace ITToolbelt.WinForms.Forms.Computers
             // 
             // UserMail
             // 
-            this.UserMail.DataPropertyName = "User.Mail";
+            this.UserMail.DataPropertyName = "UserMail";
             resources.ApplyResources(this.UserMail, "UserMail");
             this.UserMail.Name = "UserMail";
             this.UserMail.ReadOnly = true;

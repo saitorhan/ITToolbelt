@@ -20,5 +20,7 @@ namespace ITToolbelt.Entity.Db
         public string Desc { get; set; }
         public int? UserId { get; set; }
         public User User { get; set; }
+
+        [NotMapped] public string UserMail => User?.Mail;
     }
 }
