@@ -66,6 +66,8 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
+            User.Computers = new List<Computer>();
+
             User.Firstname = textBoxName.Text;
             User.Surname = textBoxSurname.Text;
             User.Mail = textBoxMail.Text;
@@ -84,6 +86,15 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
                     }
                     User.UserGroups.Add(userGroup);
                 }
+            }
+
+            foreach (DataGridViewRow row in dataGridViewComputers.Rows)
+            {
+                Computer computer = new Computer
+                {
+                    Id = (int)row.Cells[0].Value
+                };
+                User.Computers.Add(computer);
             }
 
             UserManager userManager = new UserManager(GlobalVariables.ConnectInfo);

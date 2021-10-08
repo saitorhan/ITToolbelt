@@ -47,7 +47,13 @@ namespace ITToolbelt.Dal.Contract.MySql
             {
                 List<UserGroup> userGroups = user.UserGroups;
                 user.UserGroups = null;
+                List<int> userIds = null;
+                if (user.Computers != null)
+                {
+                    userIds = user.Computers.Select(c => c.Id).ToList();
+                }
 
+                user.Computers = null;
                 context.Entry(user).State = EntityState.Modified;
                 User user1 = context.SaveChanges() ? user : null;
 
@@ -60,6 +66,21 @@ namespace ITToolbelt.Dal.Contract.MySql
                         context.UserGroups.AddRange(userGroups);
                         context.SaveChanges();
                     }
+
+                    foreach (Computer computer in context.Computers.Where(c => c.UserId == user.Id))
+                    {
+                        computer.UserId = null;
+                    }
+
+                    if (userIds != null)
+                    {
+                        foreach (Computer computer in context.Computers.Where(c => userIds.Contains(c.Id)))
+                        {
+                            computer.UserId = user.Id;
+                        }
+                    }
+
+                    context.SaveChanges();
                 }
 
                 return user1;

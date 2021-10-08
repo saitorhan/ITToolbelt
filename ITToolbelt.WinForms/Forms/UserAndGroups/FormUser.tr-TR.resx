@@ -154,18 +154,26 @@
   <data name="label4.Text" xml:space="preserve">
     <value>Kullanıcı Adı:</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="dataGridViewGroups.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="dataGridViewGroups.Size" type="System.Drawing.Size, System.Drawing">
-    <value>392, 446</value>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Üye Olduğu Gruplar</value>
   </data>
   <data name="nameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Grup Adı</value>
   </data>
   <data name="descriptionDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Açıklama</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Bilgisayarlar</value>
+  </data>
+  <data name="buttonRemove.Text" xml:space="preserve">
+    <value>Kaldır</value>
+  </data>
+  <data name="buttonAdd.Text" xml:space="preserve">
+    <value>Ekle</value>
+  </data>
+  <data name="CName.HeaderText" xml:space="preserve">
+    <value>Bilgisayar Adı</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

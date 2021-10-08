@@ -51,12 +51,12 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             this.groupBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridViewComputers = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonRemove = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.comboBoxComputers = new System.Windows.Forms.ComboBox();
             this.computerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGroups)).BeginInit();
@@ -68,41 +68,41 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this.buttonRemoveGroup);
             this.panel1.Controls.Add(this.buttonGroupAdd);
             this.panel1.Controls.Add(this.buttonCancel);
             this.panel1.Controls.Add(this.buttonSave);
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // buttonRemoveGroup
             // 
-            this.buttonRemoveGroup.Image = global::ITToolbelt.WinForms.Properties.Resources.delete_user;
             resources.ApplyResources(this.buttonRemoveGroup, "buttonRemoveGroup");
+            this.buttonRemoveGroup.Image = global::ITToolbelt.WinForms.Properties.Resources.delete_user;
             this.buttonRemoveGroup.Name = "buttonRemoveGroup";
             this.buttonRemoveGroup.UseVisualStyleBackColor = true;
             this.buttonRemoveGroup.Click += new System.EventHandler(this.buttonRemoveGroup_Click);
             // 
             // buttonGroupAdd
             // 
-            this.buttonGroupAdd.Image = global::ITToolbelt.WinForms.Properties.Resources.add_user;
             resources.ApplyResources(this.buttonGroupAdd, "buttonGroupAdd");
+            this.buttonGroupAdd.Image = global::ITToolbelt.WinForms.Properties.Resources.add_user;
             this.buttonGroupAdd.Name = "buttonGroupAdd";
             this.buttonGroupAdd.UseVisualStyleBackColor = true;
             this.buttonGroupAdd.Click += new System.EventHandler(this.buttonGroupAdd_Click);
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Image = global::ITToolbelt.WinForms.Properties.Resources.delete;
             resources.ApplyResources(this.buttonCancel, "buttonCancel");
+            this.buttonCancel.Image = global::ITToolbelt.WinForms.Properties.Resources.delete;
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonSave
             // 
-            this.buttonSave.Image = global::ITToolbelt.WinForms.Properties.Resources.accept;
             resources.ApplyResources(this.buttonSave, "buttonSave");
+            this.buttonSave.Image = global::ITToolbelt.WinForms.Properties.Resources.accept;
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
@@ -149,13 +149,14 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridViewGroups);
             resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Controls.Add(this.dataGridViewGroups);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
             // dataGridViewGroups
             // 
+            resources.ApplyResources(this.dataGridViewGroups, "dataGridViewGroups");
             this.dataGridViewGroups.AllowUserToAddRows = false;
             this.dataGridViewGroups.AllowUserToDeleteRows = false;
             this.dataGridViewGroups.AllowUserToOrderColumns = true;
@@ -165,7 +166,6 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             this.nameDataGridViewTextBoxColumn,
             this.descriptionDataGridViewTextBoxColumn});
             this.dataGridViewGroups.DataSource = this.groupBindingSource;
-            resources.ApplyResources(this.dataGridViewGroups, "dataGridViewGroups");
             this.dataGridViewGroups.Name = "dataGridViewGroups";
             this.dataGridViewGroups.ReadOnly = true;
             // 
@@ -189,37 +189,25 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             // 
             // groupBox2
             // 
+            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Controls.Add(this.dataGridViewComputers);
             this.groupBox2.Controls.Add(this.buttonRemove);
             this.groupBox2.Controls.Add(this.buttonAdd);
             this.groupBox2.Controls.Add(this.comboBoxComputers);
-            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
             // 
             // dataGridViewComputers
             // 
+            resources.ApplyResources(this.dataGridViewComputers, "dataGridViewComputers");
             this.dataGridViewComputers.AllowUserToAddRows = false;
             this.dataGridViewComputers.AllowUserToDeleteRows = false;
             this.dataGridViewComputers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewComputers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.CName});
-            resources.ApplyResources(this.dataGridViewComputers, "dataGridViewComputers");
             this.dataGridViewComputers.Name = "dataGridViewComputers";
             this.dataGridViewComputers.ReadOnly = true;
-            // 
-            // Id
-            // 
-            resources.ApplyResources(this.Id, "Id");
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
-            // CName
-            // 
-            this.CName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CName.Name = "CName";
-            this.CName.ReadOnly = true;
             // 
             // buttonRemove
             // 
@@ -237,17 +225,30 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             // 
             // comboBoxComputers
             // 
+            resources.ApplyResources(this.comboBoxComputers, "comboBoxComputers");
             this.comboBoxComputers.DataSource = this.computerBindingSource;
             this.comboBoxComputers.DisplayMember = "Name";
             this.comboBoxComputers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxComputers.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBoxComputers, "comboBoxComputers");
             this.comboBoxComputers.Name = "comboBoxComputers";
             this.comboBoxComputers.ValueMember = "Id";
             // 
             // computerBindingSource
             // 
             this.computerBindingSource.DataSource = typeof(ITToolbelt.Entity.Db.Computer);
+            // 
+            // Id
+            // 
+            resources.ApplyResources(this.Id, "Id");
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // CName
+            // 
+            this.CName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.CName, "CName");
+            this.CName.Name = "CName";
+            this.CName.ReadOnly = true;
             // 
             // FormUser
             // 
@@ -304,9 +305,9 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
         private System.Windows.Forms.ComboBox comboBoxComputers;
         private System.Windows.Forms.BindingSource computerBindingSource;
         private System.Windows.Forms.DataGridView dataGridViewComputers;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CName;
         private System.Windows.Forms.Button buttonRemove;
         private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CName;
     }
 }
