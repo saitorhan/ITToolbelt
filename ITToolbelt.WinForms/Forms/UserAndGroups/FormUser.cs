@@ -21,7 +21,27 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             InitializeComponent();
 
             User = new User();
+            GetComputers();
         }
+
+        private void GetComputers()
+        {
+            ComputerManager computerManager = new ComputerManager(GlobalVariables.ConnectInfo);
+            List<Computer> computers = computerManager.GetFreeComputers();
+            computerBindingSource.DataSource = computers;
+
+            if (User == null)
+            {
+                return;
+            }
+
+            List<Computer> userComputers = computerManager.GetUserComputers(User.Id);
+            foreach (Computer computer in userComputers)
+            {
+                dataGridViewComputers.Rows.Add(computer.Id, computer.Name);
+            }
+        }
+
         public FormUser(User user)
         {
             InitializeComponent();
@@ -35,6 +55,8 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             GroupManager groupManager = new GroupManager(GlobalVariables.ConnectInfo);
             List<Group> userGroups = groupManager.GetUserGroups(user.Id);
             groupBindingSource.DataSource = userGroups;
+
+            GetComputers();
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -116,6 +138,36 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             groupBindingSource.DataSource = groups;
             dataGridViewGroups.DataSource = null;
             dataGridViewGroups.DataSource = groupBindingSource;
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            Computer selectedItem = comboBoxComputers.SelectedItem as Computer;
+            if (selectedItem == null)
+            {
+                return;
+            }
+
+            foreach (DataGridViewRow row in dataGridViewComputers.Rows)
+            {
+                int id = (int)row.Cells[0].Value;
+                if (selectedItem.Id == id)
+                {
+                    return;
+                }
+            }
+
+            dataGridViewComputers.Rows.Add(selectedItem.Id, selectedItem.Name);
+        }
+
+        private void buttonRemove_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewComputers.SelectedRows.Count != 1)
+            {
+                return;
+            }
+
+            dataGridViewComputers.Rows.Remove(dataGridViewComputers.SelectedRows[0]);
         }
     }
 }

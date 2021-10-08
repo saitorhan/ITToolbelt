@@ -103,5 +103,11 @@ namespace ITToolbelt.Bll.Managers
             bool result = iComputerDal.SyncGroupsWithAd(groups);
             return new Tuple<bool, List<string>>(result, null);
         }
+
+        public List<Computer> GetFreeComputers()
+        {
+            List<Computer> computers = iComputerDal.GetFreeComputers();
+            return computers;
+        }
     }
 }

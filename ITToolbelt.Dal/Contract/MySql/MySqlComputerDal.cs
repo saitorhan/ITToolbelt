@@ -106,5 +106,14 @@ namespace ITToolbelt.Dal.Contract.MySql
                 return context.SaveChanges();
             }
         }
+
+        public List<Computer> GetFreeComputers()
+        {
+            using (ItToolbeltContextMySql context = new ItToolbeltContextMySql(ConnectInfo.ConnectionString))
+            {
+                List<Computer> computers = context.Computers.Where(ug => ug.UserId == null).ToList();
+                return computers;
+            }
+        }
     }
 }

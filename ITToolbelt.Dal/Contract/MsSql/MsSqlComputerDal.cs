@@ -105,5 +105,14 @@ namespace ITToolbelt.Dal.Contract.MsSql
                 return context.SaveChanges();
             }
         }
+
+        public List<Computer> GetFreeComputers()
+        {
+            using (ItToolbeltContext context = new ItToolbeltContext(ConnectInfo.ConnectionString))
+            {
+                List<Computer> computers = context.Computers.Where(ug => ug.UserId == null).ToList();
+                return computers;
+            }
+        }
     }
 }

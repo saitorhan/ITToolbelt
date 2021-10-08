@@ -14,5 +14,6 @@ namespace ITToolbelt.Dal.Abstract
 
         List<Computer> GetUserComputers(int userId);
         bool SyncGroupsWithAd(List<Computer> computers);
+        List<Computer> GetFreeComputers();
     }
 }
