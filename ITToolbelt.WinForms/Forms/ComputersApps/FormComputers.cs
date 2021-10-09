@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ITToolbelt.Bll.Managers;
 using ITToolbelt.Entity.Db;
@@ -13,7 +8,7 @@ using ITToolbelt.Shared;
 using ITToolbelt.WinForms.ExtensionMethods;
 using ITToolbelt.WinForms.Forms.ControlSpesifications;
 
-namespace ITToolbelt.WinForms.Forms.Computers
+namespace ITToolbelt.WinForms.Forms.ComputersApps
 {
     public partial class FormComputers : Form
     {

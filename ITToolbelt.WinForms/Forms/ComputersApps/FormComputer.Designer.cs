@@ -1,5 +1,5 @@
 ﻿
-namespace ITToolbelt.WinForms.Forms.Computers
+namespace ITToolbelt.WinForms.Forms.ComputersApps
 {
     partial class FormComputer
     {

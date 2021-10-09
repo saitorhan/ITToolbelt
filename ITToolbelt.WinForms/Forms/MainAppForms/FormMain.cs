@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Windows.Forms;
 using ITToolbelt.Shared;
-using ITToolbelt.WinForms.Forms.Computers;
+using ITToolbelt.WinForms.Forms.ComputersApps;
 using ITToolbelt.WinForms.Forms.DBAForms;
 using ITToolbelt.WinForms.Forms.UserAndGroups;
 using ITToolbelt.WinForms.Properties;
@@ -72,6 +72,11 @@ namespace ITToolbelt.WinForms.Forms.MainAppForms
         {
             Form form = new FormComputers();
             OpenForm(form);
+        }
+
+        private void applicationsToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+
         }
     }
 }

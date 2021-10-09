@@ -121,16 +121,16 @@
   <ItemGroup>
     <Compile Include="ExtensionMethods\ObjectExtensions.cs" />
     <Compile Include="ExtensionMethods\VisualControls.cs" />
-    <Compile Include="Forms\Computers\FormComputers.cs">
+    <Compile Include="Forms\ComputersApps\FormComputers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Computers\FormComputers.Designer.cs">
+    <Compile Include="Forms\ComputersApps\FormComputers.Designer.cs">
       <DependentUpon>FormComputers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Computers\FormComputer.cs">
+    <Compile Include="Forms\ComputersApps\FormComputer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Computers\FormComputer.Designer.cs">
+    <Compile Include="Forms\ComputersApps\FormComputer.Designer.cs">
       <DependentUpon>FormComputer.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ControlSpesifications\FormGridColumnSelection.cs">
@@ -215,16 +215,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\Computers\FormComputers.resx">
+    <EmbeddedResource Include="Forms\ComputersApps\FormComputers.resx">
       <DependentUpon>FormComputers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Computers\FormComputers.tr-TR.resx">
+    <EmbeddedResource Include="Forms\ComputersApps\FormComputers.tr-TR.resx">
       <DependentUpon>FormComputers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Computers\FormComputer.resx">
+    <EmbeddedResource Include="Forms\ComputersApps\FormComputer.resx">
       <DependentUpon>FormComputer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Computers\FormComputer.tr-TR.resx">
+    <EmbeddedResource Include="Forms\ComputersApps\FormComputer.tr-TR.resx">
       <DependentUpon>FormComputer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ControlSpesifications\FormGridColumnSelection.resx">
