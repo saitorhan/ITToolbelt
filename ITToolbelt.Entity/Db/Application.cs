@@ -9,8 +9,17 @@ namespace ITToolbelt.Entity.Db
         [MaxLength(50)]
         [Required]
         public string Name { get; set; }
+
+        [MaxLength(100)]
+        [Required]
         public string Publisher { get; set; }
+
+        [Required]
+        [MaxLength(20)]
         public string Version { get; set; }
+
+        [Required]
+        [MaxLength(6)]
         public string BuiltType { get; set; }
     }
 }
