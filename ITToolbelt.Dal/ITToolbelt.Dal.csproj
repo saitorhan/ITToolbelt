@@ -269,6 +269,7 @@
     <Compile Include="Abstract\ISystemDal.cs" />
     <Compile Include="Abstract\IUserDal.cs" />
     <Compile Include="Contract\MsSql\ITToolbeltContext.cs" />
+    <Compile Include="Contract\MsSql\MsSqlApplicationDal.cs" />
     <Compile Include="Contract\MsSql\MsSqlComputerDal.cs" />
     <Compile Include="Contract\MsSql\MsSqlConnectionDal.cs" />
     <Compile Include="Contract\MsSql\MsSqlGroupDal.cs" />
