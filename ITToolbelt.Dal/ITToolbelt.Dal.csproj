@@ -277,6 +277,7 @@
     <Compile Include="Contract\MsSql\MsSqlSystemDal.cs" />
     <Compile Include="Contract\MsSql\MsSqlUserDal.cs" />
     <Compile Include="Contract\MySql\ItToolbeltContextMySql.cs" />
+    <Compile Include="Contract\MySql\MySqlApplicationDal.cs" />
     <Compile Include="Contract\MySql\MySqlComputerDal.cs" />
     <Compile Include="Contract\MySql\MySqlGroupDal.cs" />
     <Compile Include="Contract\MySql\MySqlSystemDal.cs" />
