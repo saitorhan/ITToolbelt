@@ -261,6 +261,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IApplicationDal.cs" />
     <Compile Include="Abstract\IComputerDal.cs" />
     <Compile Include="Abstract\IConnectionDal.cs" />
     <Compile Include="Abstract\IGroupDal.cs" />
