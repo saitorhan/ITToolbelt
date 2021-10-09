@@ -356,5 +356,77 @@ namespace ITToolbelt.Shared {
                 return ResourceManager.GetString("033", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uygulama adı boş bırakılamaz.
+        /// </summary>
+        public static string _034 {
+            get {
+                return ResourceManager.GetString("034", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uygulama adı en fazla 100 karakter olabilir.
+        /// </summary>
+        public static string _035 {
+            get {
+                return ResourceManager.GetString("035", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uygulama yayınlayıcısı boş bırakılamaz.
+        /// </summary>
+        public static string _036 {
+            get {
+                return ResourceManager.GetString("036", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uygulama versiyonu boş bırakılamaz.
+        /// </summary>
+        public static string _037 {
+            get {
+                return ResourceManager.GetString("037", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uygulama mimarisi boş bırakılamaz.
+        /// </summary>
+        public static string _038 {
+            get {
+                return ResourceManager.GetString("038", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uygulama yayıncısı en fazla 100 karakter olabilir.
+        /// </summary>
+        public static string _039 {
+            get {
+                return ResourceManager.GetString("039", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uygulama versiyonu en fazla 20 karakter olabilir.
+        /// </summary>
+        public static string _040 {
+            get {
+                return ResourceManager.GetString("040", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uygulama mimarisi \&quot;32 Bit\&quot; veya \&quot;64 Bit\&quot; olabilir.
+        /// </summary>
+        public static string _041 {
+            get {
+                return ResourceManager.GetString("041", resourceCulture);
+            }
+        }
     }
 }

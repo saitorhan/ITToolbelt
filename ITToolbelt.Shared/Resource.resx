@@ -216,4 +216,28 @@
   <data name="033" xml:space="preserve">
     <value>{0} bilgisayarından {1} isimli kullanıcı kaldırılacak. Bu işlem geri alınamaz. Onaylıyor musunuz?</value>
   </data>
+  <data name="034" xml:space="preserve">
+    <value>Uygulama adı boş bırakılamaz</value>
+  </data>
+  <data name="035" xml:space="preserve">
+    <value>Uygulama adı en fazla 100 karakter olabilir</value>
+  </data>
+  <data name="036" xml:space="preserve">
+    <value>Uygulama yayınlayıcısı boş bırakılamaz</value>
+  </data>
+  <data name="037" xml:space="preserve">
+    <value>Uygulama versiyonu boş bırakılamaz</value>
+  </data>
+  <data name="038" xml:space="preserve">
+    <value>Uygulama mimarisi boş bırakılamaz</value>
+  </data>
+  <data name="039" xml:space="preserve">
+    <value>Uygulama yayıncısı en fazla 100 karakter olabilir</value>
+  </data>
+  <data name="040" xml:space="preserve">
+    <value>Uygulama versiyonu en fazla 20 karakter olabilir</value>
+  </data>
+  <data name="041" xml:space="preserve">
+    <value>Uygulama mimarisi \"32 Bit\" veya \"64 Bit\" olabilir</value>
+  </data>
 </root>

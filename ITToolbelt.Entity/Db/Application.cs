@@ -6,7 +6,7 @@ namespace ITToolbelt.Entity.Db
     {
         public int Id { get; set; }
 
-        [MaxLength(50)]
+        [MaxLength(100)]
         [Required]
         public string Name { get; set; }
 
