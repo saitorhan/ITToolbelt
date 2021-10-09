@@ -25,6 +25,7 @@ namespace ITToolbelt.Dal.Contract.MySql
         public DbSet<Group> Groups { get; set; }
         public DbSet<UserGroup> UserGroups { get; set; }
         public DbSet<Computer> Computers { get; set; }
+        public DbSet<Application> Applications { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
