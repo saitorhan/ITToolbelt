@@ -6,6 +6,8 @@ using ITToolbelt.Bll.Managers;
 using ITToolbelt.Entity.Db;
 using ITToolbelt.WinForms.ExtensionMethods;
 using ITToolbelt.WinForms.Forms.ControlSpesifications;
+using ITToolbelt.WinForms.Forms.UserAndGroups;
+using Application = ITToolbelt.Entity.Db.Application;
 
 namespace ITToolbelt.WinForms.Forms.ComputersApps
 {
@@ -39,19 +41,19 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
 
         private void RefreshData()
         {
-            GroupManager groupManager = new GroupManager(GlobalVariables.ConnectInfo);
-            List<Group> groups = groupManager.GetAll();
+            ApplicationManeger applicationManeger = new ApplicationManeger(GlobalVariables.ConnectInfo);
+            List<Application> applications = applicationManeger.GetAll();
 
-            if (dataGridViewGroups.InvokeRequired)
+            if (dataGridViewApplications.InvokeRequired)
             {
-                dataGridViewGroups.Invoke(new Action(delegate
+                dataGridViewApplications.Invoke(new Action(delegate
                 {
-                    applicationBindingSource.DataSource = groups;
+                    applicationBindingSource.DataSource = applications;
                 }));
             }
             else
             {
-                applicationBindingSource.DataSource = groups;
+                applicationBindingSource.DataSource = applications;
             }
         }
 
@@ -63,7 +65,7 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
 
         private void FormUsers_Load(object sender, EventArgs e)
         {
-            dataGridViewGroups.LoadGridColumnStatus();
+            dataGridViewApplications.LoadGridColumnStatus();
 
             wStatus = WorkerStatus.RefreshData;
             toolStripProgressBarStatus.StartStopMarque();
@@ -79,12 +81,12 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
 
         private void FormUsers_FormClosing(object sender, FormClosingEventArgs e)
         {
-            dataGridViewGroups.SaveGridColumnStatus();
+            dataGridViewApplications.SaveGridColumnStatus();
         }
 
         private void buttonColumnSelection_Click(object sender, EventArgs e)
         {
-            FormGridColumnSelection formGridColumn = new FormGridColumnSelection(dataGridViewGroups.Columns);
+            FormGridColumnSelection formGridColumn = new FormGridColumnSelection(dataGridViewApplications.Columns);
             formGridColumn.ShowDialog();
         }
 
@@ -101,18 +103,18 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            if (dataGridViewGroups.SelectedRows.Count == 0 || !(dataGridViewGroups.SelectedRows[0].DataBoundItem is Group))
+            if (dataGridViewApplications.SelectedRows.Count == 0 || !(dataGridViewApplications.SelectedRows[0].DataBoundItem is Application))
             {
                 return;
             }
 
-            Group group = dataGridViewGroups.SelectedRows[0].DataBoundItem as Group;
-            if (group == null)
+            Application application = dataGridViewApplications.SelectedRows[0].DataBoundItem as Application;
+            if (application == null)
             {
                 return;
             }
 
-            FormGroup formUser = new FormGroup(group);
+            FormApplication formUser = new FormApplication(application);
             formUser.ShowDialog();
 
             wStatus = WorkerStatus.RefreshData;
@@ -122,22 +124,22 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
 
         private void buttonRemove_Click(object sender, EventArgs e)
         {
-            if (dataGridViewGroups.SelectedRows.Count == 0 || !(dataGridViewGroups.SelectedRows[0].DataBoundItem is Group))
+            if (dataGridViewApplications.SelectedRows.Count == 0 || !(dataGridViewApplications.SelectedRows[0].DataBoundItem is Application))
             {
                 return;
             }
 
-            Group group = dataGridViewGroups.SelectedRows[0].DataBoundItem as Group;
-            if (group == null)
+            Application application = dataGridViewApplications.SelectedRows[0].DataBoundItem as Application;
+            if (application == null)
             {
                 return;
             }
-            if (GlobalMethods.DeleteConfirm(group.Name) != DialogResult.Yes)
+            if (GlobalMethods.DeleteConfirm(application.Name) != DialogResult.Yes)
             {
                 return;
             }
-            GroupManager groupManager = new GroupManager(GlobalVariables.ConnectInfo);
-            Tuple<bool, List<string>> delete = groupManager.Delete(group.Id);
+            ApplicationManeger applicationManeger = new ApplicationManeger(GlobalVariables.ConnectInfo);
+            Tuple<bool, List<string>> delete = applicationManeger.Delete(application.Id);
             delete.ShowDialog();
             if (delete.Item1)
             {

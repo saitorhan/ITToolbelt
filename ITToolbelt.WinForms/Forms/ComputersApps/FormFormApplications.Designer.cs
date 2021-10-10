@@ -40,7 +40,7 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridViewGroups = new System.Windows.Forms.DataGridView();
+            this.dataGridViewApplications = new System.Windows.Forms.DataGridView();
             this.applicationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripProgressBarStatus = new System.Windows.Forms.ToolStripProgressBar();
@@ -51,7 +51,7 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
             this.builtTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGroups)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewApplications)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationBindingSource)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -108,28 +108,28 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridViewGroups);
+            this.groupBox1.Controls.Add(this.dataGridViewApplications);
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
-            // dataGridViewGroups
+            // dataGridViewApplications
             // 
-            this.dataGridViewGroups.AllowUserToAddRows = false;
-            this.dataGridViewGroups.AllowUserToDeleteRows = false;
-            this.dataGridViewGroups.AllowUserToOrderColumns = true;
-            this.dataGridViewGroups.AutoGenerateColumns = false;
-            this.dataGridViewGroups.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewGroups.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewApplications.AllowUserToAddRows = false;
+            this.dataGridViewApplications.AllowUserToDeleteRows = false;
+            this.dataGridViewApplications.AllowUserToOrderColumns = true;
+            this.dataGridViewApplications.AutoGenerateColumns = false;
+            this.dataGridViewApplications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewApplications.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nameDataGridViewTextBoxColumn,
             this.publisherDataGridViewTextBoxColumn,
             this.versionDataGridViewTextBoxColumn,
             this.builtTypeDataGridViewTextBoxColumn});
-            this.dataGridViewGroups.DataSource = this.applicationBindingSource;
-            resources.ApplyResources(this.dataGridViewGroups, "dataGridViewGroups");
-            this.dataGridViewGroups.Name = "dataGridViewGroups";
-            this.dataGridViewGroups.ReadOnly = true;
-            this.dataGridViewGroups.Tag = "03369A61DCEE42D99BEE7BE68FC52BCF";
+            this.dataGridViewApplications.DataSource = this.applicationBindingSource;
+            resources.ApplyResources(this.dataGridViewApplications, "dataGridViewApplications");
+            this.dataGridViewApplications.Name = "dataGridViewApplications";
+            this.dataGridViewApplications.ReadOnly = true;
+            this.dataGridViewApplications.Tag = "60CC88BD16444FDF8DB1C84C9E7C23D4";
             // 
             // applicationBindingSource
             // 
@@ -192,7 +192,7 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
             this.Load += new System.EventHandler(this.FormUsers_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGroups)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewApplications)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationBindingSource)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
@@ -208,7 +208,7 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
         private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridViewGroups;
+        private System.Windows.Forms.DataGridView dataGridViewApplications;
         private System.Windows.Forms.BindingSource applicationBindingSource;
         private System.Windows.Forms.Button buttonResfresh;
         private System.Windows.Forms.StatusStrip statusStrip1;

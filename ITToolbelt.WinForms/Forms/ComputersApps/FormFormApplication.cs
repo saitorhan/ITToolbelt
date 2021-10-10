@@ -16,22 +16,22 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
 {
     public partial class FormApplication : Form
     {
-        private Application Group;
+        private Application Application;
         public FormApplication()
         {
             InitializeComponent();
 
-            Group = new Application();
+            Application = new Application();
         }
-        public FormApplication(Application group)
+        public FormApplication(Application application)
         {
             InitializeComponent();
 
-            Group = group;
-            textBoxName.Text = group.Name;
+            Application = application;
+            textBoxName.Text = application.Name;
 
             UserManager groupManager = new UserManager(GlobalVariables.ConnectInfo);
-            List<User> userGroups = groupManager.GetUserGroups(group.Id);
+            List<User> userGroups = groupManager.GetUserGroups(application.Id);
             userBindingSource.DataSource = userGroups;
         }
 
@@ -42,11 +42,11 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            Group.Name = textBoxName.Text;
+            Application.Name = textBoxName.Text;
             
 
-            GroupManager userManager = new (GlobalVariables.ConnectInfo);
-            Tuple<bool, List<string>> add = Group.Id > 0 ? userManager.Update(Group) : userManager.Add(Group);
+            ApplicationManeger userManager = new ApplicationManeger(GlobalVariables.ConnectInfo);
+            Tuple<bool, List<string>> add = Application.Id > 0 ? userManager.Update(Application) : userManager.Add(Application);
             add.ShowDialog();
             if (add.Item1)
             {
