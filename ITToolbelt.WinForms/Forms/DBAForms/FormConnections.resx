@@ -126,6 +126,9 @@
   <data name="&gt;&gt;connectionBindingSource.Name" xml:space="preserve">
     <value>connectionBindingSource</value>
   </data>
+  <data name="&gt;&gt;buttonEdit.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="buttonRefresh.Location" type="System.Drawing.Point, System.Drawing">
     <value>963, 12</value>
@@ -135,9 +138,6 @@
   </data>
   <data name="&gt;&gt;toolStripProgressBarConnections.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;productVersionDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>productVersionDataGridViewTextBoxColumn</value>
   </data>
   <data name="&gt;&gt;buttonColumnSelection.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -150,6 +150,10 @@
   </data>
   <data name="&gt;&gt;dbServerTypeCodeDataGridViewTextBoxColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="buttonAddMsSql.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;statusStrip1.Name" xml:space="preserve">
     <value>statusStrip1</value>
@@ -208,8 +212,9 @@
   <data name="&gt;&gt;dbServerTypeCodeDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>dbServerTypeCodeDataGridViewTextBoxColumn</value>
   </data>
-  <data name="&gt;&gt;buttonAddMsSql.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="groupBoxConnections.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="&gt;&gt;buttonAddMsSql.Name" xml:space="preserve">
     <value>buttonAddMsSql</value>
@@ -247,7 +252,6 @@
   <data name="&gt;&gt;productLevelDataGridViewTextBoxColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="buttonDelete.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -262,6 +266,9 @@
   </data>
   <data name="&gt;&gt;serverNameDataGridViewTextBoxColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonColumnSelection.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomCenter</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1449,31 +1456,6 @@
   <data name="&gt;&gt;statusStrip1.Parent" xml:space="preserve">
     <value>groupBoxConnections</value>
   </data>
-  <data name="buttonAddMsSql.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EgAACxIB0t1+/AAABGFJREFUSEuNlW1MW1UYx9vRQl9G6ctteS2UsVAxoy6TxImiMU3ndDgShmCYI9kE
-        nRhIGUWpwOQlQsdkMsqYYUBhqUzGgvIqQm1dU17alVpoaenKHCV+8aMf/Dyfc1PILb0QTvLLuefp/zn/
-        e57nnpTyrjL3QGBQgUxAEFzLgJTgcwxRSwZpEAEjIjh/CswDhUAecAtoBSqBKqKWDNIgAsaR4CwHvgeU
-        wA8ABrwBPAKuBjVUYi4R0iACxo5BAdBJpVJvw3wBGAIWgTqgH7gC8Pbm70AaJCKVSqNgg1NAJFrDSAey
-        gGNAGnASwH8jgzSI0F/5LOTYT2w2cVFR0b613g/SYP9Hl/DNc1cs7O86O8/39vS8NffL+Hvm8Qkpilcp
-        ztJPUCPQ14VDzN0LaRAxlnEK67pY0tKludF97/59xbRr9bI58LycqHFGJxxZiUnEe7UfpEFEk1JJc7Bi
-        lfYkqc4pfqnWnS2/5S374mff+/kf+CkUzl79Ii+Z1CgsgDClZOwe2xOFVfsYQvXfFFrxNoXduslJKNxg
-        ivTr7DgdnODzFU5izo7Wwg83CVkQ+ZMnxsWrghSBjyWy/cUSlW9FYZXP6PxzGyyR3MOK/RAMssGgz8oV
-        jy7wk19HephDehKy6V68rFjcxMcU5m1FCpSBSIH3GUPYAQZt6+zYxtWj8dn2mMRCGzdJaeGnlJgFKQqk
-        h3nXJGxTIn6GEDd4yhSqn0cKqrbp/PJNhnDAx477Z/1ofMMyXUCDJlfZYpKwBZ6Y8wcmqTdikldQjgmT
-        4CakGxOxR8dFPGWKuqE8MwEa7xMwUAcoFIabzq9Z5SQsrHAS1Mtc8cdQmtzHAkmaEUsN+QBCNiPi4Ilp
-        aHZHx2f7GFg/lKcrwBTd26RwKjYU579df+2dUifc5pXEdPbeXCKkQSs/Gb+xYCJxM4R6L1fcs02JrnLn
-        FQ3ZWzRn1j2epo0XL/BLh1jmiamouVCisEsXskCMZr2J130x9liagyn6zfpy1vhsbX379Oij05P//Xt6
-        YTsgdbtc4xtP7CeQzj0wFPZpEglZ6N5W4G+ALtKvWTltP5ZeVd01GfJbt/zY9PS01jg3Z7CYTGlej6fA
-        4/FkIi3MYW9NZPfhq5oaXFhb93VqV15BesuQTny7t9ei6+3teqjXn5uamrpjMBiKbTab3O12t3m93iSk
-        P7QBorKigqmqrm6oa246267RlN7Rak19fX1lMzMzgomJiWsmkynDarXmu1yum36/n07M3Y+QBRhwVSrV
-        Q/W16uib7e25HR0dybqBgaaRkZGtycnJu78bDKkOh0PidDovI/3a2tqB9UfsPqhra3HxlzU1F765fv3x
-        DY1GpdVqMwcHB4uHh4dLZmdnZYb5+UtQon4oz0mkhdMc3gDR0tyM17OpsTFHo9E0d2u1hXCCtp8ePMiH
-        HiiMRuOrS0tLZQqFgkXMO4iwQEN9/e5bgUEaGMihRBehB3Kz2XxmbGzsOPzJHJfJZIfoQS7lf6lRvRMT
-        A54/AAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -1489,12 +1471,8 @@
   <data name="&gt;&gt;panel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="buttonColumnSelection.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>BottomCenter</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="groupBoxConnections.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="buttonAddMsSql.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
   </data>
   <data name="&gt;&gt;buttonRefresh.Name" xml:space="preserve">
     <value>buttonRefresh</value>
@@ -1507,9 +1485,6 @@
   </data>
   <data name="&gt;&gt;productUpdateLevelDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>productUpdateLevelDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="nameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Connection Name</value>
   </data>
   <data name="&gt;&gt;serverNameDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>serverNameDataGridViewTextBoxColumn</value>
@@ -1528,6 +1503,9 @@
   </data>
   <data name="&gt;&gt;productMajorVersionDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>productMajorVersionDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;createDateDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;buttonAddMySql.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1643,8 +1621,8 @@
   <data name="buttonRefresh.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="productVersionDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Product Version</value>
+  <data name="&gt;&gt;buttonAddMsSql.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
   <data name="&gt;&gt;buttonEdit.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -1655,14 +1633,17 @@
   <data name="&gt;&gt;dataGridViewConnections.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="productVersionDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Product Version</value>
+  </data>
   <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1044, 22</value>
   </data>
+  <data name="buttonDelete.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
   <data name="buttonColumnSelection.Location" type="System.Drawing.Point, System.Drawing">
     <value>882, 12</value>
-  </data>
-  <data name="buttonAddMsSql.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
   </data>
   <data name="buttonDelete.Text" xml:space="preserve">
     <value>Delete Connection</value>
@@ -1732,14 +1713,11 @@
   <data name="collationDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Collation</value>
   </data>
-  <data name="&gt;&gt;buttonEdit.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <data name="&gt;&gt;productVersionDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>productVersionDataGridViewTextBoxColumn</value>
   </data>
   <data name="dataGridViewConnections.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;groupBoxConnections.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="connectionStringDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Connection String</value>
@@ -1747,11 +1725,33 @@
   <data name="&gt;&gt;groupBoxConnections.Name" xml:space="preserve">
     <value>groupBoxConnections</value>
   </data>
-  <data name="&gt;&gt;createDateDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;groupBoxConnections.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="buttonDelete.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
+  <data name="buttonAddMsSql.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EgAACxIB0t1+/AAABGFJREFUSEuNlW1MW1UYx9vRQl9G6ctteS2UsVAxoy6TxImiMU3ndDgShmCYI9kE
+        nRhIGUWpwOQlQsdkMsqYYUBhqUzGgvIqQm1dU17alVpoaenKHCV+8aMf/Dyfc1PILb0QTvLLuefp/zn/
+        e57nnpTyrjL3QGBQgUxAEFzLgJTgcwxRSwZpEAEjIjh/CswDhUAecAtoBSqBKqKWDNIgAsaR4CwHvgeU
+        wA8ABrwBPAKuBjVUYi4R0iACxo5BAdBJpVJvw3wBGAIWgTqgH7gC8Pbm70AaJCKVSqNgg1NAJFrDSAey
+        gGNAGnASwH8jgzSI0F/5LOTYT2w2cVFR0b613g/SYP9Hl/DNc1cs7O86O8/39vS8NffL+Hvm8Qkpilcp
+        ztJPUCPQ14VDzN0LaRAxlnEK67pY0tKludF97/59xbRr9bI58LycqHFGJxxZiUnEe7UfpEFEk1JJc7Bi
+        lfYkqc4pfqnWnS2/5S374mff+/kf+CkUzl79Ii+Z1CgsgDClZOwe2xOFVfsYQvXfFFrxNoXduslJKNxg
+        ivTr7DgdnODzFU5izo7Wwg83CVkQ+ZMnxsWrghSBjyWy/cUSlW9FYZXP6PxzGyyR3MOK/RAMssGgz8oV
+        jy7wk19HephDehKy6V68rFjcxMcU5m1FCpSBSIH3GUPYAQZt6+zYxtWj8dn2mMRCGzdJaeGnlJgFKQqk
+        h3nXJGxTIn6GEDd4yhSqn0cKqrbp/PJNhnDAx477Z/1ofMMyXUCDJlfZYpKwBZ6Y8wcmqTdikldQjgmT
+        4CakGxOxR8dFPGWKuqE8MwEa7xMwUAcoFIabzq9Z5SQsrHAS1Mtc8cdQmtzHAkmaEUsN+QBCNiPi4Ilp
+        aHZHx2f7GFg/lKcrwBTd26RwKjYU579df+2dUifc5pXEdPbeXCKkQSs/Gb+xYCJxM4R6L1fcs02JrnLn
+        FQ3ZWzRn1j2epo0XL/BLh1jmiamouVCisEsXskCMZr2J130x9liagyn6zfpy1vhsbX379Oij05P//Xt6
+        YTsgdbtc4xtP7CeQzj0wFPZpEglZ6N5W4G+ALtKvWTltP5ZeVd01GfJbt/zY9PS01jg3Z7CYTGlej6fA
+        4/FkIi3MYW9NZPfhq5oaXFhb93VqV15BesuQTny7t9ei6+3teqjXn5uamrpjMBiKbTab3O12t3m93iSk
+        P7QBorKigqmqrm6oa246267RlN7Rak19fX1lMzMzgomJiWsmkynDarXmu1yum36/n07M3Y+QBRhwVSrV
+        Q/W16uib7e25HR0dybqBgaaRkZGtycnJu78bDKkOh0PidDovI/3a2tqB9UfsPqhra3HxlzU1F765fv3x
+        DY1GpdVqMwcHB4uHh4dLZmdnZYb5+UtQon4oz0mkhdMc3gDR0tyM17OpsTFHo9E0d2u1hXCCtp8ePMiH
+        HiiMRuOrS0tLZQqFgkXMO4iwQEN9/e5bgUEaGMihRBehB3Kz2XxmbGzsOPzJHJfJZIfoQS7lf6lRvRMT
+        A54/AAAAAElFTkSuQmCC
+</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FormConnections</value>
@@ -1774,8 +1774,8 @@
   <data name="buttonRefresh.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="buttonAddMsSql.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="nameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Connection Name</value>
   </data>
   <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>

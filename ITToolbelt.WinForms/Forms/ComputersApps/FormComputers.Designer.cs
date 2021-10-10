@@ -147,7 +147,7 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
             resources.ApplyResources(this.dataGridViewComputers, "dataGridViewComputers");
             this.dataGridViewComputers.Name = "dataGridViewComputers";
             this.dataGridViewComputers.ReadOnly = true;
-            this.dataGridViewComputers.Tag = "E01F15FB18A04944B3D1AC91644AF077";
+            this.dataGridViewComputers.Tag = "D18BB5E5FA3A4D078F812F673C017920";
             this.dataGridViewComputers.SelectionChanged += new System.EventHandler(this.dataGridViewGroups_SelectionChanged);
             // 
             // nameDataGridViewTextBoxColumn

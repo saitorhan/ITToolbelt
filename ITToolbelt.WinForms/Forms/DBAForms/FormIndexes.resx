@@ -132,6 +132,9 @@
   <data name="&gt;&gt;dataGridViewIndexes.Name" xml:space="preserve">
     <value>dataGridViewIndexes</value>
   </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;Sort.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -191,8 +194,8 @@
   <data name="listViewColumns.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1145, 695</value>
+  <data name="&gt;&gt;Sort.Name" xml:space="preserve">
+    <value>Sort</value>
   </data>
   <data name="&gt;&gt;groupBoxColumns.Parent" xml:space="preserve">
     <value>$this</value>
@@ -218,17 +221,14 @@
   <data name="buttonDisable.Text" xml:space="preserve">
     <value>Set Disable</value>
   </data>
-  <data name="&gt;&gt;indexBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pageCountDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;listViewColumns.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="groupBoxInclude.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 350</value>
+  </data>
+  <data name="groupBoxColumns.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
   </data>
   <data name="&gt;&gt;indexBindingSource.Name" xml:space="preserve">
     <value>indexBindingSource</value>
@@ -252,287 +252,8 @@
   <data name="groupBoxIndexColumns.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 16</value>
   </data>
-  <data name="statusStrip.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
   <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
     <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;groupBoxIndex.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonDisable.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>BottomCenter</value>
-  </data>
-  <data name="&gt;&gt;toolStripProgressBarStatus.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ındexNameDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="listViewColumns.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;groupBoxInclude.Parent" xml:space="preserve">
-    <value>groupBoxColumns</value>
-  </data>
-  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>262, 695</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>262, 0</value>
-  </data>
-  <data name="buttonDisable.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="treeViewConnections.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="dataGridViewIndexes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>568, 555</value>
-  </data>
-  <data name="groupBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="buttonDisable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 75</value>
-  </data>
-  <data name="ındexNameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Index Name</value>
-  </data>
-  <data name="groupBoxColumns.Size" type="System.Drawing.Size, System.Drawing">
-    <value>309, 574</value>
-  </data>
-  <data name="treeViewConnections.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 16</value>
-  </data>
-  <data name="buttonGetColumns.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 75</value>
-  </data>
-  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;treeViewConnections.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="groupBoxInclude.Text" xml:space="preserve">
-    <value>Include Columns</value>
-  </data>
-  <data name="&gt;&gt;groupBoxInclude.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="stateDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>State</value>
-  </data>
-  <data name="&gt;&gt;schemaDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>schemaDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewIndexes.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;groupBoxColumns.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;tableDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>tableDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;columnHeaderInclude.Name" xml:space="preserve">
-    <value>columnHeaderInclude</value>
-  </data>
-  <data name="&gt;&gt;columnHeaderInclude.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="groupBoxColumns.Text" xml:space="preserve">
-    <value>Index Columns</value>
-  </data>
-  <data name="groupBoxColumns.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewIndexes.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="schemaDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Schema Name</value>
-  </data>
-  <data name="columnHeaderInclude.Width" type="System.Int32, mscorlib">
-    <value>120</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FormIndexes</value>
-  </data>
-  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;buttonRefresh.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="dataGridViewIndexes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 16</value>
-  </data>
-  <data name="&gt;&gt;buttonRefresh.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 99</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;columnHeaderColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonRefresh.Text" xml:space="preserve">
-    <value>Refresh</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;groupBoxIndex.Name" xml:space="preserve">
-    <value>groupBoxIndex</value>
-  </data>
-  <data name="&gt;&gt;buttonRefresh.Name" xml:space="preserve">
-    <value>buttonRefresh</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;listViewIncludes.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;buttonRefresh.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="listViewIncludes.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="listViewIncludes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 16</value>
-  </data>
-  <data name="&gt;&gt;buttonDisable.Name" xml:space="preserve">
-    <value>buttonDisable</value>
-  </data>
-  <data name="treeViewConnections.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;groupBoxInclude.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBoxIndexColumns.Parent" xml:space="preserve">
-    <value>groupBoxColumns</value>
-  </data>
-  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;schemaDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonGetColumns.Text" xml:space="preserve">
-    <value>GetColumns</value>
-  </data>
-  <data name="groupBoxInclude.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="buttonDisable.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="columnHeaderColumn.Text" xml:space="preserve">
-    <value>Column</value>
-  </data>
-  <data name="&gt;&gt;listViewColumns.Parent" xml:space="preserve">
-    <value>groupBoxIndexColumns</value>
-  </data>
-  <data name="fragmantationDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>AVG Fragmantation</value>
-  </data>
-  <data name="&gt;&gt;buttonDisable.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="columnHeaderColumn.Width" type="System.Int32, mscorlib">
-    <value>120</value>
-  </data>
-  <data name="buttonRefresh.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>BottomCenter</value>
-  </data>
-  <data name="&gt;&gt;columnHeaderIType.Name" xml:space="preserve">
-    <value>columnHeaderIType</value>
-  </data>
-  <data name="&gt;&gt;treeViewConnections.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonGetColumns.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="groupBoxIndex.Size" type="System.Drawing.Size, System.Drawing">
-    <value>574, 574</value>
-  </data>
-  <data name="&gt;&gt;groupBoxColumns.Name" xml:space="preserve">
-    <value>groupBoxColumns</value>
-  </data>
-  <data name="buttonGetColumns.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>BottomCenter</value>
-  </data>
-  <data name="groupBoxIndexColumns.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;columnHeaderColumn.Name" xml:space="preserve">
-    <value>columnHeaderColumn</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="statusStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>262, 673</value>
-  </data>
-  <data name="&gt;&gt;fragmantationDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>fragmantationDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="groupBoxIndex.Location" type="System.Drawing.Point, System.Drawing">
-    <value>262, 99</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="buttonRefresh.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 75</value>
-  </data>
-  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="groupBoxIndex.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;statusStrip.Name" xml:space="preserve">
-    <value>statusStrip</value>
-  </data>
-  <data name="&gt;&gt;statusStrip.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="groupBoxIndex.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;buttonDisable.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="groupBoxInclude.Size" type="System.Drawing.Size, System.Drawing">
-    <value>303, 221</value>
-  </data>
-  <data name="&gt;&gt;treeViewConnections.Name" xml:space="preserve">
-    <value>treeViewConnections</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1666,8 +1387,278 @@
         //////////////////////////////////8=
 </value>
   </data>
+  <data name="buttonDisable.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomCenter</value>
+  </data>
+  <data name="&gt;&gt;columnHeaderInclude.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ındexNameDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="listViewColumns.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>262, 695</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>262, 0</value>
+  </data>
+  <data name="buttonDisable.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="treeViewConnections.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dataGridViewIndexes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>568, 555</value>
+  </data>
+  <data name="&gt;&gt;indexBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="buttonDisable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 75</value>
+  </data>
+  <data name="ındexNameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Index Name</value>
+  </data>
+  <data name="groupBoxInclude.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="groupBoxColumns.Size" type="System.Drawing.Size, System.Drawing">
+    <value>309, 574</value>
+  </data>
+  <data name="buttonGetColumns.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 75</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;treeViewConnections.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupBoxInclude.Text" xml:space="preserve">
+    <value>Include Columns</value>
+  </data>
+  <data name="&gt;&gt;groupBoxInclude.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="stateDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="buttonRefresh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 75</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewIndexes.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;groupBoxColumns.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tableDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>tableDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;columnHeaderInclude.Name" xml:space="preserve">
+    <value>columnHeaderInclude</value>
+  </data>
+  <data name="groupBoxColumns.Text" xml:space="preserve">
+    <value>Index Columns</value>
+  </data>
+  <data name="groupBoxColumns.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewIndexes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="schemaDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Schema Name</value>
+  </data>
+  <data name="buttonDisable.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormIndexes</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;buttonRefresh.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="dataGridViewIndexes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 16</value>
+  </data>
+  <data name="&gt;&gt;buttonRefresh.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;columnHeaderColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonRefresh.Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;groupBoxIndex.Name" xml:space="preserve">
+    <value>groupBoxIndex</value>
+  </data>
+  <data name="&gt;&gt;pageCountDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;listViewIncludes.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;buttonRefresh.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listViewIncludes.Name" xml:space="preserve">
+    <value>listViewIncludes</value>
+  </data>
+  <data name="listViewIncludes.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="listViewIncludes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 16</value>
+  </data>
+  <data name="&gt;&gt;buttonDisable.Name" xml:space="preserve">
+    <value>buttonDisable</value>
+  </data>
+  <data name="treeViewConnections.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;groupBoxInclude.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxIndexColumns.Parent" xml:space="preserve">
+    <value>groupBoxColumns</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;treeViewConnections.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="buttonGetColumns.Text" xml:space="preserve">
+    <value>GetColumns</value>
+  </data>
+  <data name="&gt;&gt;groupBoxInclude.Parent" xml:space="preserve">
+    <value>groupBoxColumns</value>
+  </data>
+  <data name="&gt;&gt;schemaDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="columnHeaderColumn.Text" xml:space="preserve">
+    <value>Column</value>
+  </data>
+  <data name="&gt;&gt;listViewColumns.Parent" xml:space="preserve">
+    <value>groupBoxIndexColumns</value>
+  </data>
+  <data name="fragmantationDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>AVG Fragmantation</value>
+  </data>
+  <data name="&gt;&gt;buttonDisable.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="columnHeaderColumn.Width" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="buttonRefresh.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomCenter</value>
+  </data>
+  <data name="dataGridViewIndexes.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;treeViewConnections.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonGetColumns.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="groupBoxIndex.Size" type="System.Drawing.Size, System.Drawing">
+    <value>574, 574</value>
+  </data>
+  <data name="&gt;&gt;groupBoxColumns.Name" xml:space="preserve">
+    <value>groupBoxColumns</value>
+  </data>
+  <data name="buttonGetColumns.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomCenter</value>
+  </data>
+  <data name="groupBoxIndexColumns.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;columnHeaderColumn.Name" xml:space="preserve">
+    <value>columnHeaderColumn</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="statusStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>262, 673</value>
+  </data>
+  <data name="&gt;&gt;fragmantationDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>fragmantationDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="groupBoxIndex.Location" type="System.Drawing.Point, System.Drawing">
+    <value>262, 99</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="columnHeaderInclude.Width" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="groupBoxIndex.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;statusStrip.Name" xml:space="preserve">
+    <value>statusStrip</value>
+  </data>
+  <data name="&gt;&gt;statusStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="groupBoxIndex.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;buttonDisable.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBoxInclude.Size" type="System.Drawing.Size, System.Drawing">
+    <value>303, 221</value>
+  </data>
+  <data name="&gt;&gt;treeViewConnections.Name" xml:space="preserve">
+    <value>treeViewConnections</value>
+  </data>
   <data name="pageCountDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Page Count</value>
+  </data>
+  <data name="&gt;&gt;groupBoxIndex.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="treeViewConnections.Size" type="System.Drawing.Size, System.Drawing">
     <value>256, 676</value>
@@ -1675,8 +1666,8 @@
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
-  <data name="toolStripProgressBarStatus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 16</value>
+  <data name="statusStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;buttonGetColumns.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -1693,14 +1684,14 @@
   <data name="tableDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Table Name</value>
   </data>
-  <data name="&gt;&gt;treeViewConnections.Parent" xml:space="preserve">
-    <value>groupBox1</value>
+  <data name="&gt;&gt;columnHeaderIType.Name" xml:space="preserve">
+    <value>columnHeaderIType</value>
   </data>
   <data name="&gt;&gt;groupBoxIndex.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;listViewIncludes.Name" xml:space="preserve">
-    <value>listViewIncludes</value>
+  <data name="toolStripProgressBarStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 16</value>
   </data>
   <data name="buttonGetColumns.Location" type="System.Drawing.Point, System.Drawing">
     <value>93, 12</value>
@@ -1708,14 +1699,14 @@
   <data name="buttonRefresh.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>Connections</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1145, 695</value>
   </data>
   <data name="buttonRefresh.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;Sort.Name" xml:space="preserve">
-    <value>Sort</value>
+  <data name="buttonGetColumns.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>262, 695</value>
@@ -1738,11 +1729,11 @@
   <data name="dataGridViewIndexes.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="dataGridViewIndexes.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;schemaDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>schemaDataGridViewTextBoxColumn</value>
   </data>
-  <data name="statusStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>883, 22</value>
+  <data name="treeViewConnections.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 16</value>
   </data>
   <data name="&gt;&gt;stateDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>stateDataGridViewTextBoxColumn</value>
@@ -1759,14 +1750,23 @@
   <data name="Sort.Text" xml:space="preserve">
     <value>Sort</value>
   </data>
+  <data name="buttonDisable.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
   <data name="&gt;&gt;fragmantationDataGridViewTextBoxColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="buttonDisable.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
+  <data name="statusStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>883, 22</value>
   </data>
   <data name="&gt;&gt;buttonDisable.Parent" xml:space="preserve">
     <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;buttonRefresh.Name" xml:space="preserve">
+    <value>buttonRefresh</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Connections</value>
   </data>
   <data name="&gt;&gt;pageCountDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>pageCountDataGridViewTextBoxColumn</value>
@@ -1774,18 +1774,15 @@
   <data name="&gt;&gt;ındexNameDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>ındexNameDataGridViewTextBoxColumn</value>
   </data>
-  <data name="buttonGetColumns.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="&gt;&gt;toolStripProgressBarStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="groupBoxColumns.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Right</value>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>883, 99</value>
   </data>
-  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
   </data>
-  <metadata name="indexBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>126, 17</value>
-  </metadata>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>tr-TR</value>
   </metadata>
@@ -1794,5 +1791,8 @@
   </metadata>
   <metadata name="statusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="indexBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>126, 17</value>
   </metadata>
 </root>

@@ -42,7 +42,6 @@ namespace ITToolbelt.WinForms.Forms.DBAForms
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripProgressBarConnections = new System.Windows.Forms.ToolStripProgressBar();
             this.dataGridViewConnections = new System.Windows.Forms.DataGridView();
-            this.connectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ıdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dbServerTypeCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,6 +60,7 @@ namespace ITToolbelt.WinForms.Forms.DBAForms
             this.productMinorVersionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dbServerTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.connectionInfoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.connectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.groupBoxConnections.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -176,12 +176,8 @@ namespace ITToolbelt.WinForms.Forms.DBAForms
             this.dataGridViewConnections.DataSource = this.connectionBindingSource;
             this.dataGridViewConnections.Name = "dataGridViewConnections";
             this.dataGridViewConnections.ReadOnly = true;
-            this.dataGridViewConnections.Tag = "D95F4EAE6C5946C98A1E34E717EEE2AA";
+            this.dataGridViewConnections.Tag = "93ACC9322D75453D8B4BC4B7121C63EE";
             this.dataGridViewConnections.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridViewConnections_RowPrePaint);
-            // 
-            // connectionBindingSource
-            // 
-            this.connectionBindingSource.DataSource = typeof(ITToolbelt.Entity.Db.Connection);
             // 
             // ıdDataGridViewTextBoxColumn
             // 
@@ -308,6 +304,10 @@ namespace ITToolbelt.WinForms.Forms.DBAForms
             resources.ApplyResources(this.connectionInfoDataGridViewTextBoxColumn, "connectionInfoDataGridViewTextBoxColumn");
             this.connectionInfoDataGridViewTextBoxColumn.Name = "connectionInfoDataGridViewTextBoxColumn";
             this.connectionInfoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // connectionBindingSource
+            // 
+            this.connectionBindingSource.DataSource = typeof(ITToolbelt.Entity.Db.Connection);
             // 
             // FormConnections
             // 

@@ -41,14 +41,14 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
             this.buttonAdd = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridViewApplications = new System.Windows.Forms.DataGridView();
-            this.applicationBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripProgressBarStatus = new System.Windows.Forms.ToolStripProgressBar();
-            this.backgroundWorkerWorker = new System.ComponentModel.BackgroundWorker();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.publisherDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.versionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.builtTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.applicationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripProgressBarStatus = new System.Windows.Forms.ToolStripProgressBar();
+            this.backgroundWorkerWorker = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewApplications)).BeginInit();
@@ -129,28 +129,7 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
             resources.ApplyResources(this.dataGridViewApplications, "dataGridViewApplications");
             this.dataGridViewApplications.Name = "dataGridViewApplications";
             this.dataGridViewApplications.ReadOnly = true;
-            this.dataGridViewApplications.Tag = "60CC88BD16444FDF8DB1C84C9E7C23D4";
-            // 
-            // applicationBindingSource
-            // 
-            this.applicationBindingSource.DataSource = typeof(ITToolbelt.Entity.Db.Application);
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripProgressBarStatus});
-            resources.ApplyResources(this.statusStrip1, "statusStrip1");
-            this.statusStrip1.Name = "statusStrip1";
-            // 
-            // toolStripProgressBarStatus
-            // 
-            this.toolStripProgressBarStatus.Name = "toolStripProgressBarStatus";
-            resources.ApplyResources(this.toolStripProgressBarStatus, "toolStripProgressBarStatus");
-            // 
-            // backgroundWorkerWorker
-            // 
-            this.backgroundWorkerWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerWorker_DoWork);
-            this.backgroundWorkerWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerWorker_RunWorkerCompleted);
+            this.dataGridViewApplications.Tag = "9F2C783FB9F947EE834A9ABBB56B5373";
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -179,6 +158,27 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
             resources.ApplyResources(this.builtTypeDataGridViewTextBoxColumn, "builtTypeDataGridViewTextBoxColumn");
             this.builtTypeDataGridViewTextBoxColumn.Name = "builtTypeDataGridViewTextBoxColumn";
             this.builtTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // applicationBindingSource
+            // 
+            this.applicationBindingSource.DataSource = typeof(ITToolbelt.Entity.Db.Application);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripProgressBarStatus});
+            resources.ApplyResources(this.statusStrip1, "statusStrip1");
+            this.statusStrip1.Name = "statusStrip1";
+            // 
+            // toolStripProgressBarStatus
+            // 
+            this.toolStripProgressBarStatus.Name = "toolStripProgressBarStatus";
+            resources.ApplyResources(this.toolStripProgressBarStatus, "toolStripProgressBarStatus");
+            // 
+            // backgroundWorkerWorker
+            // 
+            this.backgroundWorkerWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerWorker_DoWork);
+            this.backgroundWorkerWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerWorker_RunWorkerCompleted);
             // 
             // FormApplications
             // 

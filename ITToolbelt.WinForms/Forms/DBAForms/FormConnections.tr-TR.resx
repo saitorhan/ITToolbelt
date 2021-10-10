@@ -1386,7 +1386,4 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Bağlantılar</value>
   </data>
-  <data name="buttonColumnSelection.Text1" xml:space="preserve">
-    <value>Kolon Seçici</value>
-  </data>
 </root>
