@@ -6,7 +6,6 @@ using ITToolbelt.Bll.Managers;
 using ITToolbelt.Entity.Db;
 using ITToolbelt.WinForms.ExtensionMethods;
 using ITToolbelt.WinForms.Forms.ControlSpesifications;
-using ITToolbelt.WinForms.Forms.UserAndGroups;
 
 namespace ITToolbelt.WinForms.Forms.ComputersApps
 {
@@ -91,7 +90,7 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            FormGroup formUser = new FormGroup();
+            FormApplication formUser = new FormApplication();
             formUser.ShowDialog();
 
             wStatus = WorkerStatus.RefreshData;
