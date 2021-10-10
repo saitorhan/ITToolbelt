@@ -1,5 +1,5 @@
 ﻿
-namespace ITToolbelt.WinForms.Forms.UserAndGroups
+namespace ITToolbelt.WinForms.Forms.ComputersApps
 {
     partial class FormApplication
     {
@@ -37,19 +37,22 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
-            this.textBoxDesc = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridViewGroups = new System.Windows.Forms.DataGridView();
-            this.fullnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.groupsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBoxBuiltType = new System.Windows.Forms.ComboBox();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGroups)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -98,20 +101,10 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            // 
             // textBoxName
             // 
             resources.ApplyResources(this.textBoxName, "textBoxName");
             this.textBoxName.Name = "textBoxName";
-            // 
-            // textBoxDesc
-            // 
-            resources.ApplyResources(this.textBoxDesc, "textBoxDesc");
-            this.textBoxDesc.Name = "textBoxDesc";
             // 
             // groupBox1
             // 
@@ -127,47 +120,78 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             this.dataGridViewGroups.AutoGenerateColumns = false;
             this.dataGridViewGroups.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewGroups.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.fullnameDataGridViewTextBoxColumn,
-            this.usernameDataGridViewTextBoxColumn,
-            this.mailDataGridViewTextBoxColumn});
-            this.dataGridViewGroups.DataSource = this.userBindingSource;
+            this.nameDataGridViewTextBoxColumn,
+            this.descriptionDataGridViewTextBoxColumn});
+            this.dataGridViewGroups.DataSource = this.groupsBindingSource;
             resources.ApplyResources(this.dataGridViewGroups, "dataGridViewGroups");
             this.dataGridViewGroups.Name = "dataGridViewGroups";
             this.dataGridViewGroups.ReadOnly = true;
             // 
-            // fullnameDataGridViewTextBoxColumn
+            // groupsBindingSource
             // 
-            this.fullnameDataGridViewTextBoxColumn.DataPropertyName = "Fullname";
-            resources.ApplyResources(this.fullnameDataGridViewTextBoxColumn, "fullnameDataGridViewTextBoxColumn");
-            this.fullnameDataGridViewTextBoxColumn.Name = "fullnameDataGridViewTextBoxColumn";
-            this.fullnameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.groupsBindingSource.DataSource = typeof(ITToolbelt.Entity.Db.Group);
             // 
-            // usernameDataGridViewTextBoxColumn
+            // label2
             // 
-            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "Username";
-            resources.ApplyResources(this.usernameDataGridViewTextBoxColumn, "usernameDataGridViewTextBoxColumn");
-            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
-            this.usernameDataGridViewTextBoxColumn.ReadOnly = true;
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
             // 
-            // mailDataGridViewTextBoxColumn
+            // textBox1
             // 
-            this.mailDataGridViewTextBoxColumn.DataPropertyName = "Mail";
-            resources.ApplyResources(this.mailDataGridViewTextBoxColumn, "mailDataGridViewTextBoxColumn");
-            this.mailDataGridViewTextBoxColumn.Name = "mailDataGridViewTextBoxColumn";
-            this.mailDataGridViewTextBoxColumn.ReadOnly = true;
+            resources.ApplyResources(this.textBox1, "textBox1");
+            this.textBox1.Name = "textBox1";
             // 
-            // userBindingSource
+            // label3
             // 
-            this.userBindingSource.DataSource = typeof(ITToolbelt.Entity.Db.User);
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // textBox2
+            // 
+            resources.ApplyResources(this.textBox2, "textBox2");
+            this.textBox2.Name = "textBox2";
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // comboBoxBuiltType
+            // 
+            this.comboBoxBuiltType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxBuiltType.FormattingEnabled = true;
+            this.comboBoxBuiltType.Items.AddRange(new object[] {
+            resources.GetString("comboBoxBuiltType.Items"),
+            resources.GetString("comboBoxBuiltType.Items1")});
+            resources.ApplyResources(this.comboBoxBuiltType, "comboBoxBuiltType");
+            this.comboBoxBuiltType.Name = "comboBoxBuiltType";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            resources.ApplyResources(this.nameDataGridViewTextBoxColumn, "nameDataGridViewTextBoxColumn");
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            resources.ApplyResources(this.descriptionDataGridViewTextBoxColumn, "descriptionDataGridViewTextBoxColumn");
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // FormApplication
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.comboBoxBuiltType);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBoxDesc);
-            this.Controls.Add(this.textBoxName);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -177,7 +201,7 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGroups)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,16 +213,19 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxName;
-        private System.Windows.Forms.TextBox textBoxDesc;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridViewGroups;
-        private System.Windows.Forms.BindingSource userBindingSource;
+        private System.Windows.Forms.BindingSource groupsBindingSource;
         private System.Windows.Forms.Button buttonGroupAdd;
         private System.Windows.Forms.Button buttonRemoveGroup;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fullnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBoxBuiltType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
     }
 }

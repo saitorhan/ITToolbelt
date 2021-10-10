@@ -1,18 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ITToolbelt.Bll.Managers;
 using ITToolbelt.Entity.Db;
 using ITToolbelt.WinForms.ExtensionMethods;
+using ITToolbelt.WinForms.Forms.UserAndGroups;
 using Application = ITToolbelt.Entity.Db.Application;
 
-namespace ITToolbelt.WinForms.Forms.UserAndGroups
+namespace ITToolbelt.WinForms.Forms.ComputersApps
 {
     public partial class FormApplication : Form
     {
@@ -32,7 +28,7 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
 
             UserManager groupManager = new UserManager(GlobalVariables.ConnectInfo);
             List<User> userGroups = groupManager.GetUserGroups(application.Id);
-            userBindingSource.DataSource = userGroups;
+            groupsBindingSource.DataSource = userGroups;
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -56,7 +52,7 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
 
         private void buttonGroupAdd_Click(object sender, EventArgs e)
         {
-            List<User> users = userBindingSource.DataSource as List<User> ?? new List<User>();
+            List<User> users = groupsBindingSource.DataSource as List<User> ?? new List<User>();
 
             List<int> list = users.Select(g => g.Id).ToList();
 
@@ -72,9 +68,9 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
                 }
             }
 
-            userBindingSource.DataSource = users;
+            groupsBindingSource.DataSource = users;
             dataGridViewGroups.DataSource = null;
-            dataGridViewGroups.DataSource = userBindingSource;
+            dataGridViewGroups.DataSource = groupsBindingSource;
         }
 
         private void buttonRemoveGroup_Click(object sender, EventArgs e)
@@ -90,13 +86,13 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
                 return;
             }
 
-            List<User> users = userBindingSource.DataSource as List<User>;
+            List<User> users = groupsBindingSource.DataSource as List<User>;
 
             users.Remove(user);
 
-            userBindingSource.DataSource = users;
+            groupsBindingSource.DataSource = users;
             dataGridViewGroups.DataSource = null;
-            dataGridViewGroups.DataSource = userBindingSource;
+            dataGridViewGroups.DataSource = groupsBindingSource;
         }
     }
 }
