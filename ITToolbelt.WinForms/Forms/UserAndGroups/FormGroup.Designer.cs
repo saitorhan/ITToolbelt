@@ -47,17 +47,19 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             this.mailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewApplications = new System.Windows.Forms.DataGridView();
             this.applicationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.versionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.builtTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonAddApp = new System.Windows.Forms.Button();
+            this.buttonRemoveApp = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGroups)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewApplications)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -171,26 +173,26 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Controls.Add(this.dataGridViewApplications);
             resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
             // 
-            // dataGridView1
+            // dataGridViewApplications
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewApplications.AllowUserToAddRows = false;
+            this.dataGridViewApplications.AllowUserToDeleteRows = false;
+            this.dataGridViewApplications.AllowUserToOrderColumns = true;
+            this.dataGridViewApplications.AutoGenerateColumns = false;
+            this.dataGridViewApplications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewApplications.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nameDataGridViewTextBoxColumn,
             this.versionDataGridViewTextBoxColumn,
             this.builtTypeDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.applicationBindingSource;
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
+            this.dataGridViewApplications.DataSource = this.applicationBindingSource;
+            resources.ApplyResources(this.dataGridViewApplications, "dataGridViewApplications");
+            this.dataGridViewApplications.Name = "dataGridViewApplications";
+            this.dataGridViewApplications.ReadOnly = true;
             // 
             // applicationBindingSource
             // 
@@ -217,10 +219,25 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             this.builtTypeDataGridViewTextBoxColumn.Name = "builtTypeDataGridViewTextBoxColumn";
             this.builtTypeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // buttonAddApp
+            // 
+            resources.ApplyResources(this.buttonAddApp, "buttonAddApp");
+            this.buttonAddApp.Name = "buttonAddApp";
+            this.buttonAddApp.UseVisualStyleBackColor = true;
+            // 
+            // buttonRemoveApp
+            // 
+            resources.ApplyResources(this.buttonRemoveApp, "buttonRemoveApp");
+            this.buttonRemoveApp.Name = "buttonRemoveApp";
+            this.buttonRemoveApp.UseVisualStyleBackColor = true;
+            this.buttonRemoveApp.Click += new System.EventHandler(this.buttonRemoveApp_Click);
+            // 
             // FormGroup
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.buttonRemoveApp);
+            this.Controls.Add(this.buttonAddApp);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBoxDesc);
@@ -237,7 +254,7 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGroups)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewApplications)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -262,10 +279,12 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
         private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mailDataGridViewTextBoxColumn;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewApplications;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn versionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn builtTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource applicationBindingSource;
+        private System.Windows.Forms.Button buttonAddApp;
+        private System.Windows.Forms.Button buttonRemoveApp;
     }
 }

@@ -117,5 +117,27 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             dataGridViewGroups.DataSource = null;
             dataGridViewGroups.DataSource = userBindingSource;
         }
+
+        private void buttonRemoveApp_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewApplications.SelectedRows.Count == 0)
+            {
+                return;
+            }
+
+            Application application = dataGridViewApplications.SelectedRows[0].DataBoundItem as Application;
+            if (application == null)
+            {
+                return;
+            }
+
+            List<Application> applications = applicationBindingSource.DataSource as List<Application>;
+
+            applications.Remove(application);
+
+            applicationBindingSource.DataSource = applications;
+            dataGridViewApplications.DataSource = null;
+            dataGridViewApplications.DataSource = applicationBindingSource;
+        }
     }
 }
