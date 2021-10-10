@@ -39,7 +39,21 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
         private void buttonSave_Click(object sender, EventArgs e)
         {
             Application.Name = textBoxName.Text;
-            
+
+            List<Group> groups = groupsBindingSource.DataSource as List<Group>;
+            if (groups != null)
+            {
+                Application.GroupApplications = new List<GroupApplication>();
+                foreach (Group group in groups)
+                {
+                    GroupApplication groupApplication = new GroupApplication() { GroupId = group.Id };
+                    if (Application.Id > 0)
+                    {
+                        groupApplication.ApplicationId = Application.Id;
+                    }
+                    Application.GroupApplications.Add(groupApplication);
+                }
+            }
 
             ApplicationManeger userManager = new ApplicationManeger(GlobalVariables.ConnectInfo);
             Tuple<bool, List<string>> add = Application.Id > 0 ? userManager.Update(Application) : userManager.Add(Application);
