@@ -238,6 +238,6 @@
     <value>Uygulama versiyonu en fazla 20 karakter olabilir</value>
   </data>
   <data name="041" xml:space="preserve">
-    <value>Uygulama mimarisi \"32 Bit\" veya \"64 Bit\" olabilir</value>
+    <value>Uygulama mimarisi "32 Bit" veya "64 Bit" olabilir</value>
   </data>
 </root>

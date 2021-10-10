@@ -421,7 +421,7 @@ namespace ITToolbelt.Shared {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Uygulama mimarisi \&quot;32 Bit\&quot; veya \&quot;64 Bit\&quot; olabilir.
+        ///   Looks up a localized string similar to Uygulama mimarisi &quot;32 Bit&quot; veya &quot;64 Bit&quot; olabilir.
         /// </summary>
         public static string _041 {
             get {

@@ -40,8 +40,6 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridViewGroups = new System.Windows.Forms.DataGridView();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxPublisher = new System.Windows.Forms.TextBox();
@@ -49,6 +47,8 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
             this.textBoxVersion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBoxBuiltType = new System.Windows.Forms.ComboBox();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGroups)).BeginInit();
@@ -57,41 +57,41 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this.buttonRemoveGroup);
             this.panel1.Controls.Add(this.buttonGroupAdd);
             this.panel1.Controls.Add(this.buttonCancel);
             this.panel1.Controls.Add(this.buttonSave);
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // buttonRemoveGroup
             // 
-            this.buttonRemoveGroup.Image = global::ITToolbelt.WinForms.Properties.Resources.delete_user;
             resources.ApplyResources(this.buttonRemoveGroup, "buttonRemoveGroup");
+            this.buttonRemoveGroup.Image = global::ITToolbelt.WinForms.Properties.Resources.delete_user;
             this.buttonRemoveGroup.Name = "buttonRemoveGroup";
             this.buttonRemoveGroup.UseVisualStyleBackColor = true;
             this.buttonRemoveGroup.Click += new System.EventHandler(this.buttonRemoveGroup_Click);
             // 
             // buttonGroupAdd
             // 
-            this.buttonGroupAdd.Image = global::ITToolbelt.WinForms.Properties.Resources.add_user;
             resources.ApplyResources(this.buttonGroupAdd, "buttonGroupAdd");
+            this.buttonGroupAdd.Image = global::ITToolbelt.WinForms.Properties.Resources.add_user;
             this.buttonGroupAdd.Name = "buttonGroupAdd";
             this.buttonGroupAdd.UseVisualStyleBackColor = true;
             this.buttonGroupAdd.Click += new System.EventHandler(this.buttonGroupAdd_Click);
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Image = global::ITToolbelt.WinForms.Properties.Resources.delete;
             resources.ApplyResources(this.buttonCancel, "buttonCancel");
+            this.buttonCancel.Image = global::ITToolbelt.WinForms.Properties.Resources.delete;
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonSave
             // 
-            this.buttonSave.Image = global::ITToolbelt.WinForms.Properties.Resources.accept;
             resources.ApplyResources(this.buttonSave, "buttonSave");
+            this.buttonSave.Image = global::ITToolbelt.WinForms.Properties.Resources.accept;
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
@@ -108,13 +108,14 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridViewGroups);
             resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Controls.Add(this.dataGridViewGroups);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
             // dataGridViewGroups
             // 
+            resources.ApplyResources(this.dataGridViewGroups, "dataGridViewGroups");
             this.dataGridViewGroups.AllowUserToAddRows = false;
             this.dataGridViewGroups.AllowUserToDeleteRows = false;
             this.dataGridViewGroups.AutoGenerateColumns = false;
@@ -123,23 +124,8 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
             this.nameDataGridViewTextBoxColumn,
             this.descriptionDataGridViewTextBoxColumn});
             this.dataGridViewGroups.DataSource = this.groupsBindingSource;
-            resources.ApplyResources(this.dataGridViewGroups, "dataGridViewGroups");
             this.dataGridViewGroups.Name = "dataGridViewGroups";
             this.dataGridViewGroups.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            resources.ApplyResources(this.nameDataGridViewTextBoxColumn, "nameDataGridViewTextBoxColumn");
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descriptionDataGridViewTextBoxColumn
-            // 
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
-            resources.ApplyResources(this.descriptionDataGridViewTextBoxColumn, "descriptionDataGridViewTextBoxColumn");
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
-            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // groupsBindingSource
             // 
@@ -172,13 +158,27 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
             // 
             // comboBoxBuiltType
             // 
+            resources.ApplyResources(this.comboBoxBuiltType, "comboBoxBuiltType");
             this.comboBoxBuiltType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxBuiltType.FormattingEnabled = true;
             this.comboBoxBuiltType.Items.AddRange(new object[] {
             resources.GetString("comboBoxBuiltType.Items"),
             resources.GetString("comboBoxBuiltType.Items1")});
-            resources.ApplyResources(this.comboBoxBuiltType, "comboBoxBuiltType");
             this.comboBoxBuiltType.Name = "comboBoxBuiltType";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            resources.ApplyResources(this.nameDataGridViewTextBoxColumn, "nameDataGridViewTextBoxColumn");
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            resources.ApplyResources(this.descriptionDataGridViewTextBoxColumn, "descriptionDataGridViewTextBoxColumn");
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // FormApplication
             // 
