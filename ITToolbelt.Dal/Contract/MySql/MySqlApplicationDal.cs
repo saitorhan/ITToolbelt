@@ -2,7 +2,6 @@
 using System.Data.Entity;
 using System.Linq;
 using ITToolbelt.Dal.Abstract;
-using ITToolbelt.Dal.Contract.MsSql;
 using ITToolbelt.Entity.Db;
 using ITToolbelt.Entity.EntityClass;
 
@@ -56,6 +55,16 @@ namespace ITToolbelt.Dal.Contract.MySql
 
                 context.Applications.Remove(application);
                 return context.SaveChanges();
+            }
+        }
+
+        public List<Group> GetApplicationGroups(int applicationId)
+        {
+            using (ItToolbeltContextMySql context = new ItToolbeltContextMySql(ConnectInfo.ConnectionString))
+            {
+                List<Group> groups = context.GroupApplications.Include("Group").Where(ga => ga.ApplicationId == applicationId)
+                    .Select(ga => ga.Group).ToList();
+                return groups;
             }
         }
     }

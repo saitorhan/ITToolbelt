@@ -57,5 +57,15 @@ namespace ITToolbelt.Dal.Contract.MsSql
                 return context.SaveChanges();
             }
         }
+
+        public List<Group> GetApplicationGroups(int applicationId)
+        {
+            using (ItToolbeltContext context = new ItToolbeltContext(ConnectInfo.ConnectionString))
+            {
+                List<Group> groups = context.GroupApplications.Include("Group").Where(ga => ga.ApplicationId == applicationId)
+                    .Select(ga => ga.Group).ToList();
+                return groups;
+            }
+        }
     }
 }

@@ -26,6 +26,7 @@ namespace ITToolbelt.Dal.Contract.MySql
         public DbSet<UserGroup> UserGroups { get; set; }
         public DbSet<Computer> Computers { get; set; }
         public DbSet<Application> Applications { get; set; }
+        public DbSet<GroupApplication> GroupApplications { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -37,6 +38,10 @@ namespace ITToolbelt.Dal.Contract.MySql
                 .HasForeignKey(ug => ug.GroupId);
             modelBuilder.Entity<User>().HasMany(u => u.Computers).WithOptional(c => c.User)
                 .HasForeignKey(c => c.UserId);
+            modelBuilder.Entity<Group>().HasMany(g => g.GroupApplications).WithRequired(ga => ga.Group)
+                .HasForeignKey(ga => ga.GroupId);
+            modelBuilder.Entity<Application>().HasMany(g => g.GroupApplications).WithRequired(ga => ga.Application)
+                .HasForeignKey(ga => ga.ApplicationId);
 
             base.OnModelCreating(modelBuilder);
         }

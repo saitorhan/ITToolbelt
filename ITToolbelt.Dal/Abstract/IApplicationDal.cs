@@ -9,5 +9,6 @@ namespace ITToolbelt.Dal.Abstract
         Application Add(Application application);
         Application Update(Application application);
         bool Delete(int appId);
+        List<Group> GetApplicationGroups(int applicationId);
     }
 }

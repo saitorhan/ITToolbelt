@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace ITToolbelt.Entity.Db
 {
@@ -21,5 +22,7 @@ namespace ITToolbelt.Entity.Db
         [Required]
         [MaxLength(6)]
         public string BuiltType { get; set; }
+
+        public List<GroupApplication> GroupApplications { get; set; }
     }
 }

@@ -20,5 +20,6 @@ namespace ITToolbelt.Entity.Db
         public string Description { get; set; }
 
         public List<UserGroup> UserGroups { get; set; }
+        public List<GroupApplication> GroupApplications { get; set; }
     }
 }

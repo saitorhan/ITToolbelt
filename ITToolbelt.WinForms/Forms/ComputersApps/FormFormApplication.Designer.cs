@@ -40,15 +40,15 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridViewGroups = new System.Windows.Forms.DataGridView();
-            this.groupsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBoxBuiltType = new System.Windows.Forms.ComboBox();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxPublisher = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxVersion = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBoxBuiltType = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGroups)).BeginInit();
@@ -127,6 +127,20 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
             this.dataGridViewGroups.Name = "dataGridViewGroups";
             this.dataGridViewGroups.ReadOnly = true;
             // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            resources.ApplyResources(this.nameDataGridViewTextBoxColumn, "nameDataGridViewTextBoxColumn");
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            resources.ApplyResources(this.descriptionDataGridViewTextBoxColumn, "descriptionDataGridViewTextBoxColumn");
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // groupsBindingSource
             // 
             this.groupsBindingSource.DataSource = typeof(ITToolbelt.Entity.Db.Group);
@@ -136,20 +150,20 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
             // 
-            // textBox1
+            // textBoxPublisher
             // 
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
+            resources.ApplyResources(this.textBoxPublisher, "textBoxPublisher");
+            this.textBoxPublisher.Name = "textBoxPublisher";
             // 
             // label3
             // 
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
             // 
-            // textBox2
+            // textBoxVersion
             // 
-            resources.ApplyResources(this.textBox2, "textBox2");
-            this.textBox2.Name = "textBox2";
+            resources.ApplyResources(this.textBoxVersion, "textBoxVersion");
+            this.textBoxVersion.Name = "textBoxVersion";
             // 
             // label4
             // 
@@ -166,20 +180,6 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
             resources.ApplyResources(this.comboBoxBuiltType, "comboBoxBuiltType");
             this.comboBoxBuiltType.Name = "comboBoxBuiltType";
             // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            resources.ApplyResources(this.nameDataGridViewTextBoxColumn, "nameDataGridViewTextBoxColumn");
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descriptionDataGridViewTextBoxColumn
-            // 
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
-            resources.ApplyResources(this.descriptionDataGridViewTextBoxColumn, "descriptionDataGridViewTextBoxColumn");
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
-            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // FormApplication
             // 
             resources.ApplyResources(this, "$this");
@@ -187,9 +187,9 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
             this.Controls.Add(this.comboBoxBuiltType);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxVersion);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxPublisher);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.label1);
@@ -220,9 +220,9 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
         private System.Windows.Forms.Button buttonGroupAdd;
         private System.Windows.Forms.Button buttonRemoveGroup;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxPublisher;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxVersion;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBoxBuiltType;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;

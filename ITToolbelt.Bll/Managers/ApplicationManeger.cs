@@ -61,5 +61,11 @@ namespace ITToolbelt.Bll.Managers
             bool result = iApplicationDal.Delete(appId);
             return new Tuple<bool, List<string>>(result, null);
         }
+
+        public List<Group> GetApplicationGroups(int applicationId)
+        {
+            List<Group> groups = iApplicationDal.GetApplicationGroups(applicationId);
+            return groups;
+        }
     }
 }

@@ -55,6 +55,7 @@
     <Compile Include="Db\Computer.cs" />
     <Compile Include="Db\Connection.cs" />
     <Compile Include="Db\Group.cs" />
+    <Compile Include="Db\GroupApplication.cs" />
     <Compile Include="Db\SystemUser.cs" />
     <Compile Include="Db\User.cs" />
     <Compile Include="Db\UserGroup.cs" />

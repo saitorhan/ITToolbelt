@@ -26,9 +26,9 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
             Application = application;
             textBoxName.Text = application.Name;
 
-            UserManager groupManager = new UserManager(GlobalVariables.ConnectInfo);
-            List<User> userGroups = groupManager.GetUserGroups(application.Id);
-            groupsBindingSource.DataSource = userGroups;
+            ApplicationManeger applicationManeger = new ApplicationManeger(GlobalVariables.ConnectInfo);
+            List<Group> applicationGroups = applicationManeger.GetApplicationGroups(application.Id);
+            groupsBindingSource.DataSource = applicationGroups;
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -52,23 +52,23 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
 
         private void buttonGroupAdd_Click(object sender, EventArgs e)
         {
-            List<User> users = groupsBindingSource.DataSource as List<User> ?? new List<User>();
+            List<Group> groups = groupsBindingSource.DataSource as List<Group> ?? new List<Group>();
 
-            List<int> list = users.Select(g => g.Id).ToList();
+            List<int> list = groups.Select(g => g.Id).ToList();
 
-            FormGetUsers formGetGroups = new FormGetUsers(list);
+            FormGetGroups formGetGroups = new FormGetGroups(list);
             formGetGroups.ShowDialog();
 
 
-            foreach (User user in formGetGroups.Users)
+            foreach (Group @group in formGetGroups.Groups)
             {
-                if (users.All(g => g.Id != user.Id))
+                if (groups.All(g => g.Id != @group.Id))
                 {
-                    users.Add(user);
+                    groups.Add(@group);
                 }
             }
 
-            groupsBindingSource.DataSource = users;
+            groupsBindingSource.DataSource = groups;
             dataGridViewGroups.DataSource = null;
             dataGridViewGroups.DataSource = groupsBindingSource;
         }
@@ -80,17 +80,17 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
                 return;
             }
 
-            User user = dataGridViewGroups.SelectedRows[0].DataBoundItem as User;
-            if (user == null)
+            Group @group = dataGridViewGroups.SelectedRows[0].DataBoundItem as Group;
+            if (@group == null)
             {
                 return;
             }
 
-            List<User> users = groupsBindingSource.DataSource as List<User>;
+            List<Group> groups = groupsBindingSource.DataSource as List<Group>;
 
-            users.Remove(user);
+            groups.Remove(@group);
 
-            groupsBindingSource.DataSource = users;
+            groupsBindingSource.DataSource = groups;
             dataGridViewGroups.DataSource = null;
             dataGridViewGroups.DataSource = groupsBindingSource;
         }
