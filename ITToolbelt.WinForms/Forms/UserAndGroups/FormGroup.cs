@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using ITToolbelt.Bll.Managers;
 using ITToolbelt.Entity.Db;
 using ITToolbelt.WinForms.ExtensionMethods;
+using Application = ITToolbelt.Entity.Db.Application;
 
 namespace ITToolbelt.WinForms.Forms.UserAndGroups
 {
@@ -30,9 +31,13 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             textBoxName.Text = group.Name;
             textBoxDesc.Text = group.Description;
 
-            UserManager groupManager = new UserManager(GlobalVariables.ConnectInfo);
-            List<User> userGroups = groupManager.GetUserGroups(group.Id);
+            UserManager userManager = new UserManager(GlobalVariables.ConnectInfo);
+            List<User> userGroups = userManager.GetUserGroups(group.Id);
             userBindingSource.DataSource = userGroups;
+
+            GroupManager groupManager = new GroupManager(GlobalVariables.ConnectInfo);
+            List<Application> applications = groupManager.GetGroupApplications(Group.Id);
+            applicationBindingSource.DataSource = applications;
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -45,8 +50,7 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             Group.Name = textBoxName.Text;
             Group.Description = textBoxDesc.Text;
 
-            List<User> users = userBindingSource.DataSource as List<User>;
-            if (users != null)
+            if (userBindingSource.DataSource is List<User> users)
             {
                 Group.UserGroups = new List<UserGroup>();
                 foreach (User group in users)

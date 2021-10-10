@@ -102,5 +102,11 @@ namespace ITToolbelt.Bll.Managers
             bool result = iGroupDal.SyncGroupsWithAd(groups);
             return new Tuple<bool, List<string>>(result, null);
         }
+
+        public List<Application> GetGroupApplications(int groupId)
+        {
+            List<Application> applications = iGroupDal.GetGroupApplications(groupId);
+            return applications;
+        }
     }
 }

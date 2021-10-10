@@ -14,5 +14,6 @@ namespace ITToolbelt.Dal.Abstract
 
         List<Group> GetUserGroups(int userId);
         bool SyncGroupsWithAd(List<Group> groups);
+        List<Application> GetGroupApplications(int groupId);
     }
 }

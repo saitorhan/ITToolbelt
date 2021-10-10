@@ -120,5 +120,15 @@ namespace ITToolbelt.Dal.Contract.MsSql
                 return context.SaveChanges();
             }
         }
+
+        public List<Application> GetGroupApplications(int groupId)
+        {
+            using (ItToolbeltContext context = new ItToolbeltContext(ConnectInfo.ConnectionString))
+            {
+                List<Application> applications = context.GroupApplications.Include("Application").Where(ug => ug.GroupId == groupId)
+                    .Select(ug => ug.Application).OrderBy(g => g.Name).ToList();
+                return applications;
+            }
+        }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using ITToolbelt.Dal.Abstract;
+using ITToolbelt.Dal.Contract.MsSql;
 using ITToolbelt.Entity.Db;
 using ITToolbelt.Entity.EntityClass;
 
@@ -118,6 +119,16 @@ namespace ITToolbelt.Dal.Contract.MySql
                 }
 
                 return context.SaveChanges();
+            }
+        }
+
+        public List<Application> GetGroupApplications(int groupId)
+        {
+            using (ItToolbeltContextMySql context = new ItToolbeltContextMySql(ConnectInfo.ConnectionString))
+            {
+                List<Application> applications = context.GroupApplications.Include("Application").Where(ug => ug.GroupId == groupId)
+                    .Select(ug => ug.Application).OrderBy(g => g.Name).ToList();
+                return applications;
             }
         }
     }
