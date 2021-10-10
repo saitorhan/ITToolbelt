@@ -238,6 +238,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExternalLibraries\NinjectModules.cs" />
+    <Compile Include="Managers\ApplicationManeger.cs" />
     <Compile Include="Managers\ComputerManager.cs" />
     <Compile Include="Managers\ConnectionManager.cs" />
     <Compile Include="Managers\GroupManager.cs" />
