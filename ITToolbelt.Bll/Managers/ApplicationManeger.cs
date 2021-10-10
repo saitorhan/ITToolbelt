@@ -22,7 +22,7 @@ namespace ITToolbelt.Bll.Managers
 
         public List<Application> GetAll()
         {
-            return iApplicationDal.GelAll();
+            return iApplicationDal.GelAll().OrderBy(a => a.Name).ThenBy(a => a.Version).ToList();
         }
 
         public Tuple<bool, List<string>> Add(Application application)

@@ -76,7 +76,8 @@ namespace ITToolbelt.WinForms.Forms.MainAppForms
 
         private void applicationsToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-
+            Form form = new FormApplications();
+            OpenForm(form);
         }
     }
 }
