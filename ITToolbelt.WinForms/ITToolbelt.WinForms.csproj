@@ -145,6 +145,12 @@
     <Compile Include="Forms\ComputersApps\FormFormApplications.Designer.cs">
       <DependentUpon>FormFormApplications.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ComputersApps\FormGetApplications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ComputersApps\FormGetApplications.Designer.cs">
+      <DependentUpon>FormGetApplications.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ControlSpesifications\FormGridColumnSelection.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -250,6 +256,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ComputersApps\FormFormApplications.tr-TR.resx">
       <DependentUpon>FormFormApplications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ComputersApps\FormGetApplications.resx">
+      <DependentUpon>FormGetApplications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ComputersApps\FormGetApplications.tr-TR.resx">
+      <DependentUpon>FormGetApplications.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ControlSpesifications\FormGridColumnSelection.resx">
       <DependentUpon>FormGridColumnSelection.cs</DependentUpon>

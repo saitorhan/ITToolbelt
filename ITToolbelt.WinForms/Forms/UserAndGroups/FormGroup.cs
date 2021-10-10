@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using ITToolbelt.Bll.Managers;
 using ITToolbelt.Entity.Db;
 using ITToolbelt.WinForms.ExtensionMethods;
+using ITToolbelt.WinForms.Forms.ComputersApps;
 using Application = ITToolbelt.Entity.Db.Application;
 
 namespace ITToolbelt.WinForms.Forms.UserAndGroups
@@ -148,6 +149,29 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             List<Application> applications = applicationBindingSource.DataSource as List<Application>;
 
             applications.Remove(application);
+
+            applicationBindingSource.DataSource = applications;
+            dataGridViewApplications.DataSource = null;
+            dataGridViewApplications.DataSource = applicationBindingSource;
+        }
+
+        private void buttonAddApp_Click(object sender, EventArgs e)
+        {
+            List<Application> applications = applicationBindingSource.DataSource as List<Application> ?? new List<Application>();
+
+            List<int> list = applications.Select(g => g.Id).ToList();
+
+            FormGetApplications formGetGroups = new FormGetApplications(list);
+            formGetGroups.ShowDialog();
+
+
+            foreach (Application application in formGetGroups.Applications)
+            {
+                if (applications.All(g => g.Id != application.Id))
+                {
+                    applications.Add(application);
+                }
+            }
 
             applicationBindingSource.DataSource = applications;
             dataGridViewApplications.DataSource = null;
