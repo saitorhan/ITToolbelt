@@ -64,6 +64,20 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
                 }
             }
 
+            if (applicationBindingSource.DataSource is List<Application> applications)
+            {
+                Group.GroupApplications = new List<GroupApplication>();
+                foreach (Application application in applications)
+                {
+                    GroupApplication groupApplication = new GroupApplication { ApplicationId = application.Id };
+                    if (Group.Id > 0)
+                    {
+                        groupApplication.GroupId = Group.Id;
+                    }
+                    Group.GroupApplications.Add(groupApplication);
+                }
+            }
+
             GroupManager userManager = new GroupManager(GlobalVariables.ConnectInfo);
             Tuple<bool, List<string>> add = Group.Id > 0 ? userManager.Update(Group) : userManager.Add(Group);
             add.ShowDialog();

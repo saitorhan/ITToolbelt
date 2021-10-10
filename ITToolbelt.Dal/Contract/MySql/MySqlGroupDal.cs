@@ -41,6 +41,8 @@ namespace ITToolbelt.Dal.Contract.MySql
             {
                 List<UserGroup> userGroups = group.UserGroups;
                 group.UserGroups = null;
+                List<GroupApplication> groupApplications = group.GroupApplications;
+                group.GroupApplications = null;
 
                 context.Entry(group).State = EntityState.Modified;
                 Group group1 = context.SaveChanges() ? group : null;
@@ -52,6 +54,15 @@ namespace ITToolbelt.Dal.Contract.MySql
                     if (context.SaveChanges() && userGroups != null)
                     {
                         context.UserGroups.AddRange(userGroups);
+                        context.SaveChanges();
+                    }
+
+
+                    IQueryable<GroupApplication> queryable1 = context.GroupApplications.Where(ug => ug.GroupId == group.Id);
+                    context.GroupApplications.RemoveRange(queryable1);
+                    if (context.SaveChanges() && groupApplications != null)
+                    {
+                        context.GroupApplications.AddRange(groupApplications);
                         context.SaveChanges();
                     }
                 }
