@@ -18,6 +18,7 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
             InitializeComponent();
 
             Application = new Application();
+            comboBoxBuiltType.SelectedIndex = 0;
         }
         public FormApplication(Application application)
         {
@@ -25,6 +26,9 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
 
             Application = application;
             textBoxName.Text = application.Name;
+            textBoxPublisher.Text = application.Publisher;
+            textBoxVersion.Text = application.Version;
+            comboBoxBuiltType.SelectedIndex = application.BuiltType == "32 Bit" ? 0 : 1;
 
             ApplicationManeger applicationManeger = new ApplicationManeger(GlobalVariables.ConnectInfo);
             List<Group> applicationGroups = applicationManeger.GetApplicationGroups(application.Id);
@@ -39,6 +43,9 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
         private void buttonSave_Click(object sender, EventArgs e)
         {
             Application.Name = textBoxName.Text;
+            Application.Publisher = textBoxPublisher.Text;
+            Application.Version = textBoxVersion.Text;
+            Application.BuiltType = comboBoxBuiltType.SelectedItem.ToString();
 
             List<Group> groups = groupsBindingSource.DataSource as List<Group>;
             if (groups != null)

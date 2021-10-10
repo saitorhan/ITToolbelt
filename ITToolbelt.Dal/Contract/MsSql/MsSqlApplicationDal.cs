@@ -37,9 +37,24 @@ namespace ITToolbelt.Dal.Contract.MsSql
         {
             using (ItToolbeltContext context = new ItToolbeltContext(ConnectInfo.ConnectionString))
             {
+                List<GroupApplication> groupApplications = application.GroupApplications;
+                application.GroupApplications = null;
+
                 context.Entry(application).State = EntityState.Modified;
-                Application group1 = context.SaveChanges() ? application : null;
-                return group1;
+                Application update = context.SaveChanges() ? application : null;
+
+                if (update != null)
+                {
+                    IQueryable<GroupApplication> queryable = context.GroupApplications.Where(ug => ug.ApplicationId == application.Id);
+                    context.GroupApplications.RemoveRange(queryable);
+                    if (context.SaveChanges() && groupApplications != null)
+                    {
+                        context.GroupApplications.AddRange(groupApplications);
+                        context.SaveChanges();
+                    }
+                }
+
+                return update;
             }
         }
 
