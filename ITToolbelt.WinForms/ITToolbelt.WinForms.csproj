@@ -133,6 +133,18 @@
     <Compile Include="Forms\ComputersApps\FormComputer.Designer.cs">
       <DependentUpon>FormComputer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ComputersApps\FormFormApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ComputersApps\FormFormApplication.Designer.cs">
+      <DependentUpon>FormFormApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ComputersApps\FormFormApplications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ComputersApps\FormFormApplications.Designer.cs">
+      <DependentUpon>FormFormApplications.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ControlSpesifications\FormGridColumnSelection.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +239,18 @@
     <EmbeddedResource Include="Forms\ComputersApps\FormComputer.tr-TR.resx">
       <DependentUpon>FormComputer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ComputersApps\FormFormApplication.resx">
+      <DependentUpon>FormFormApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ComputersApps\FormFormApplication.tr-TR.resx">
+      <DependentUpon>FormFormApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ComputersApps\FormFormApplications.resx">
+      <DependentUpon>FormFormApplications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ComputersApps\FormFormApplications.tr-TR.resx">
+      <DependentUpon>FormFormApplications.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ControlSpesifications\FormGridColumnSelection.resx">
       <DependentUpon>FormGridColumnSelection.cs</DependentUpon>
     </EmbeddedResource>
@@ -314,6 +338,7 @@
     </Compile>
     <EmbeddedResource Include="Properties\Resources.tr.resx" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\ITToolbelt.Entity.Db.Application.datasource" />
     <None Include="Properties\DataSources\ITToolbelt.Entity.Db.Computer.datasource" />
     <None Include="Properties\DataSources\ITToolbelt.Entity.Db.Connection.datasource" />
     <None Include="Properties\DataSources\ITToolbelt.Entity.Db.Group.datasource" />
