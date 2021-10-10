@@ -30,7 +30,7 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGroup));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormApplication));
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonRemoveGroup = new System.Windows.Forms.Button();
             this.buttonGroupAdd = new System.Windows.Forms.Button();
@@ -160,7 +160,7 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             // 
             this.userBindingSource.DataSource = typeof(ITToolbelt.Entity.Db.User);
             // 
-            // FormGroup
+            // FormApplication
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -173,7 +173,7 @@ namespace ITToolbelt.WinForms.Forms.UserAndGroups
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FormGroup";
+            this.Name = "FormApplication";
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGroups)).EndInit();
