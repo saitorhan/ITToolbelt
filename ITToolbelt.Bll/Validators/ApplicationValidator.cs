@@ -29,7 +29,7 @@ namespace ITToolbelt.Bll.Validators
 
         private bool CheckBuiltType(string builtType)
         {
-            return builtType == "64 Bir" || builtType == "32 Bit";
+            return builtType == "64 Bit" || builtType == "32 Bit";
         }
     }
 }
