@@ -41,6 +41,8 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxUser = new System.Windows.Forms.ComboBox();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxSerialNumber = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -107,6 +109,16 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
             // 
             this.userBindingSource.DataSource = typeof(ITToolbelt.Entity.Db.User);
             // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // textBoxSerialNumber
+            // 
+            resources.ApplyResources(this.textBoxSerialNumber, "textBoxSerialNumber");
+            this.textBoxSerialNumber.Name = "textBoxSerialNumber";
+            // 
             // FormComputer
             // 
             resources.ApplyResources(this, "$this");
@@ -114,7 +126,9 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
             this.Controls.Add(this.comboBoxUser);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxDesc);
+            this.Controls.Add(this.textBoxSerialNumber);
             this.Controls.Add(this.textBoxName);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -141,5 +155,7 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxUser;
         private System.Windows.Forms.BindingSource userBindingSource;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBoxSerialNumber;
     }
 }

@@ -7,6 +7,7 @@ using ITToolbelt.Dal.Contract.MsSql;
 using ITToolbelt.Dal.Contract.MySql;
 using ITToolbelt.Entity.Db;
 using ITToolbelt.Entity.EntityClass;
+using ITToolbelt.Entity.Enum;
 
 namespace ITToolbelt.Dal.Contract.MySql
 {
@@ -47,13 +48,13 @@ namespace ITToolbelt.Dal.Contract.MySql
             }
         }
 
-        public bool Get(int id, string name)
+        public bool Get(int id, string name, ComputerProperty computerProperty)
         {
             using (ItToolbeltContextMySql context = new ItToolbeltContextMySql(ConnectInfo.ConnectionString))
             {
                 try
                 {
-                    bool any = context.Computers.Any(u => u.Id != id && u.Name == name);
+                    bool any = context.Computers.Any(u => u.Id != id && (computerProperty == ComputerProperty.Name ? u.Name == name : u.SerialNumber == name));
                     return !any;
                 }
                 catch (Exception e)

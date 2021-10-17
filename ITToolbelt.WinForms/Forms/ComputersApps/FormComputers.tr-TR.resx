@@ -117,11 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="buttonfromAd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>880, 12</value>
+  </data>
   <data name="buttonfromAd.Text" xml:space="preserve">
     <value>AD'den Bilgisayar Al</value>
   </data>
+  <data name="buttonResfresh.Location" type="System.Drawing.Point, System.Drawing">
+    <value>961, 12</value>
+  </data>
   <data name="buttonResfresh.Text" xml:space="preserve">
     <value>Yenile</value>
+  </data>
+  <data name="buttonColumnSelection.Location" type="System.Drawing.Point, System.Drawing">
+    <value>799, 12</value>
   </data>
   <data name="buttonColumnSelection.Text" xml:space="preserve">
     <value>Kolon Seçici</value>
@@ -138,8 +148,32 @@
   <data name="buttonAdd.Text" xml:space="preserve">
     <value>Ekle</value>
   </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1048, 100</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1048, 537</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Kullanıcılar</value>
+  </data>
+  <data name="dataGridViewComputers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1042, 518</value>
+  </data>
+  <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 615</value>
+  </data>
+  <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1048, 22</value>
+  </data>
   <data name="nameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Bilgisayar Adı</value>
+  </data>
+  <data name="SerialNumber.HeaderText" xml:space="preserve">
+    <value>Seri Numarası</value>
+  </data>
+  <data name="UserMail.HeaderText" xml:space="preserve">
+    <value>Kullanıcı Maili</value>
   </data>
   <data name="descDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Açıklama</value>
@@ -147,10 +181,9 @@
   <data name="userDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Kullanıcı</value>
   </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>Kullanıcılar</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1048, 637</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAgIAAAAEAIAAoCAEAFgAAACgAAACAAAAAAAEAAAEAIAAAAAAAAAgBAAAAAAAAAAAAAAAAAAAA

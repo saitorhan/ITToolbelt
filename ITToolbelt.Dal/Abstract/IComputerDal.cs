@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using ITToolbelt.Entity.Db;
+using ITToolbelt.Entity.Enum;
 
 namespace ITToolbelt.Dal.Abstract
 {
@@ -9,7 +10,7 @@ namespace ITToolbelt.Dal.Abstract
         Computer Add(Computer computer);
         Computer Update(Computer computer);
 
-        bool Get(int id, string name);
+        bool Get(int id, string name, ComputerProperty property);
         bool Delete(int computerId);
 
         List<Computer> GetUserComputers(int userId);

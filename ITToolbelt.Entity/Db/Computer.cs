@@ -11,9 +11,14 @@ namespace ITToolbelt.Entity.Db
 
         [Required]
         [Index(IsUnique = true)]
-        [MaxLength(20)]
+        [MaxLength(50)]
         [DisplayName("Name")]
         public string Name { get; set; }
+        
+        // [Index(IsUnique = true)] Validator sınıfında uniq sağlanıyor
+        [MaxLength(30)]
+        [DisplayName("Serial Number")]
+        public string SerialNumber { get; set; }    
 
         [MaxLength(250)]
         [DisplayName("Description")]

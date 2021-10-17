@@ -240,4 +240,10 @@
   <data name="041" xml:space="preserve">
     <value>Uygulama mimarisi "32 Bit" veya "64 Bit" olabilir</value>
   </data>
+  <data name="042" xml:space="preserve">
+    <value>Seri numarası en fazla 30 karakter olabilir</value>
+  </data>
+  <data name="043" xml:space="preserve">
+    <value>Seri numarası daha önce kaydedilmiş</value>
+  </data>
 </root>

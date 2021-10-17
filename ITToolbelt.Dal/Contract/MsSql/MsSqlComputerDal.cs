@@ -5,6 +5,7 @@ using System.Linq;
 using ITToolbelt.Dal.Abstract;
 using ITToolbelt.Entity.Db;
 using ITToolbelt.Entity.EntityClass;
+using ITToolbelt.Entity.Enum;
 
 namespace ITToolbelt.Dal.Contract.MsSql
 {
@@ -45,13 +46,13 @@ namespace ITToolbelt.Dal.Contract.MsSql
             }
         }
 
-        public bool Get(int id, string name)
+        public bool Get(int id, string name, ComputerProperty computerProperty)
         {
             using (ItToolbeltContext context = new ItToolbeltContext(ConnectInfo.ConnectionString))
             {
                 try
                 {
-                    bool any = context.Computers.Any(u => u.Id != id && u.Name == name);
+                    bool any = context.Computers.Any(u => u.Id != id && (computerProperty == ComputerProperty.Name ? u.Name == name : u.SerialNumber == name));
                     return !any;
                 }
                 catch (Exception e)

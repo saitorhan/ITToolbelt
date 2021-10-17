@@ -428,5 +428,23 @@ namespace ITToolbelt.Shared {
                 return ResourceManager.GetString("041", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Seri numarası en fazla 30 karakter olabilir.
+        /// </summary>
+        public static string _042 {
+            get {
+                return ResourceManager.GetString("042", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Seri numarası daha önce kaydedilmiş.
+        /// </summary>
+        public static string _043 {
+            get {
+                return ResourceManager.GetString("043", resourceCulture);
+            }
+        }
     }
 }
