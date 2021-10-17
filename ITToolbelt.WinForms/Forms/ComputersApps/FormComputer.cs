@@ -24,6 +24,7 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
             Computer = computer;
             textBoxName.Text = computer.Name;
             textBoxDesc.Text = computer.Desc;
+            textBoxSerialNumber.Text = computer.SerialNumber;
 
             GetUsers();
         }
@@ -37,6 +38,7 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
         {
             Computer.Name = textBoxName.Text;
             Computer.Desc = textBoxDesc.Text;
+            Computer.SerialNumber = textBoxSerialNumber.Text;
             User user = comboBoxUser.SelectedItem as User;
             Computer.UserId = user == null || user.Id < 0 ? (int?)null : user.Id;
 

@@ -49,23 +49,23 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this.buttonCancel);
             this.panel1.Controls.Add(this.buttonSave);
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Image = global::ITToolbelt.WinForms.Properties.Resources.delete;
             resources.ApplyResources(this.buttonCancel, "buttonCancel");
+            this.buttonCancel.Image = global::ITToolbelt.WinForms.Properties.Resources.delete;
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonSave
             // 
-            this.buttonSave.Image = global::ITToolbelt.WinForms.Properties.Resources.accept;
             resources.ApplyResources(this.buttonSave, "buttonSave");
+            this.buttonSave.Image = global::ITToolbelt.WinForms.Properties.Resources.accept;
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
@@ -97,11 +97,11 @@ namespace ITToolbelt.WinForms.Forms.ComputersApps
             // 
             // comboBoxUser
             // 
+            resources.ApplyResources(this.comboBoxUser, "comboBoxUser");
             this.comboBoxUser.DataSource = this.userBindingSource;
             this.comboBoxUser.DisplayMember = "Fullname";
             this.comboBoxUser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxUser.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBoxUser, "comboBoxUser");
             this.comboBoxUser.Name = "comboBoxUser";
             this.comboBoxUser.ValueMember = "Id";
             // 
