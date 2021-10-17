@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using ITToolbelt.Bll.Managers;
 using ITToolbelt.Entity.Db;
-using ITToolbelt.Shared;
+using ITToolbelt.Entity.Enum;
 using ITToolbelt.WinForms.ExtensionMethods;
 using ITToolbelt.WinForms.Forms.ControlSpesifications;
 
@@ -25,9 +25,6 @@ namespace ITToolbelt.WinForms.Forms.MainAppForms
                 case WorkerStatus.RefreshData:
                     RefreshData();
                     break;
-                case WorkerStatus.GetFromDc:
-                    SyncComputersWithAd();
-                    break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
@@ -40,26 +37,25 @@ namespace ITToolbelt.WinForms.Forms.MainAppForms
 
         private void RefreshData()
         {
-            ComputerManager computerManager = new ComputerManager(GlobalVariables.ConnectInfo);
-            List<Computer> groups = computerManager.GetAll();
+            MetadataManager metadataManager = new MetadataManager(GlobalVariables.ConnectInfo);
+            List<Metadata> metadatas = metadataManager.GetAll();
 
             if (dataGridViewMetadatas.InvokeRequired)
             {
                 dataGridViewMetadatas.Invoke(new Action(delegate
                 {
-                    metadataBindingSource.DataSource = groups;
+                    metadataBindingSource.DataSource = metadatas;
                 }));
             }
             else
             {
-                metadataBindingSource.DataSource = groups;
+                metadataBindingSource.DataSource = metadatas;
             }
         }
 
         enum WorkerStatus
         {
-            RefreshData,
-            GetFromDc
+            RefreshData
         }
 
         private void FormUsers_Load(object sender, EventArgs e)
@@ -102,12 +98,12 @@ namespace ITToolbelt.WinForms.Forms.MainAppForms
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            if (dataGridViewMetadatas.SelectedRows.Count == 0 || !(dataGridViewMetadatas.SelectedRows[0].DataBoundItem is Computer))
+            if (dataGridViewMetadatas.SelectedRows.Count == 0 || !(dataGridViewMetadatas.SelectedRows[0].DataBoundItem is Metadata))
             {
                 return;
             }
 
-            Computer computer = dataGridViewMetadatas.SelectedRows[0].DataBoundItem as Computer;
+            Metadata computer = dataGridViewMetadatas.SelectedRows[0].DataBoundItem as Metadata;
             if (computer == null)
             {
                 return;
@@ -123,70 +119,23 @@ namespace ITToolbelt.WinForms.Forms.MainAppForms
 
         private void buttonRemove_Click(object sender, EventArgs e)
         {
-            if (dataGridViewMetadatas.SelectedRows.Count == 0 || !(dataGridViewMetadatas.SelectedRows[0].DataBoundItem is Computer))
+            if (dataGridViewMetadatas.SelectedRows.Count == 0 || !(dataGridViewMetadatas.SelectedRows[0].DataBoundItem is Metadata))
             {
                 return;
             }
 
-            Computer computer = dataGridViewMetadatas.SelectedRows[0].DataBoundItem as Computer;
+            Metadata computer = dataGridViewMetadatas.SelectedRows[0].DataBoundItem as Metadata;
             if (computer == null)
             {
                 return;
             }
-            if (GlobalMethods.DeleteConfirm(computer.Name) != DialogResult.Yes)
+            if (GlobalMethods.DeleteConfirm($"{computer.MetadataType.ToString()} - {computer.Value} ") != DialogResult.Yes)
             {
                 return;
             }
 
-            ComputerManager computerManager = new ComputerManager(GlobalVariables.ConnectInfo);
+            MetadataManager computerManager = new MetadataManager(GlobalVariables.ConnectInfo);
             Tuple<bool, List<string>> delete = computerManager.Delete(computer.Id);
-            delete.ShowDialog();
-            if (delete.Item1)
-            {
-                wStatus = WorkerStatus.RefreshData;
-                toolStripProgressBarStatus.StartStopMarque();
-                backgroundWorkerWorker.RunWorkerAsync();
-            }
-        }
-
-        private void buttonfromAd_Click(object sender, EventArgs e)
-        {
-            wStatus = WorkerStatus.GetFromDc;
-            toolStripProgressBarStatus.StartStopMarque();
-            backgroundWorkerWorker.RunWorkerAsync();
-        }
-
-        void SyncComputersWithAd()
-        {
-            ComputerManager computerManager = new ComputerManager(GlobalVariables.ConnectInfo);
-            Tuple<bool, List<string>> syncUsersWithAd = computerManager.SyncComputersWithAd();
-            syncUsersWithAd.ShowDialog();
-
-            if (syncUsersWithAd.Item1)
-            {
-                RefreshData();
-            }
-        }
-
-        private void buttonFreeComputer_Click(object sender, EventArgs e)
-        {
-            if (dataGridViewMetadatas.SelectedRows.Count == 0 || !(dataGridViewMetadatas.SelectedRows[0].DataBoundItem is Computer))
-            {
-                return;
-            }
-
-            Computer computer = dataGridViewMetadatas.SelectedRows[0].DataBoundItem as Computer;
-            if (computer == null)
-            {
-                return;
-            }
-            if (MessageBox.Show(String.Format(Resource._033, computer.Name, computer.User?.Fullname), Resource._009, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) != DialogResult.Yes)
-            {
-                return;
-            }
-
-            ComputerManager computerManager = new ComputerManager(GlobalVariables.ConnectInfo);
-            Tuple<bool, List<string>> delete = computerManager.RemoveUserFromComputer(computer.Id);
             delete.ShowDialog();
             if (delete.Item1)
             {

@@ -25,6 +25,10 @@ namespace ITToolbelt.Bll.Managers
         {
             return iMetadataDal.GetList(type);
         }
+        public List<Metadata> GetAll()
+        {
+            return iMetadataDal.GetList();
+        }
 
         public Tuple<bool, List<string>> Add(Metadata metadata)
         {
