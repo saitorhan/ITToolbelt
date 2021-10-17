@@ -128,7 +128,7 @@
     <value>72, 13</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Bilgisayar Adı:</value>
+    <value>Değer:</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 13</value>
@@ -140,7 +140,7 @@
     <value>49, 13</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Kullanıcı:</value>
+    <value>Ana Veri Türü:</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 13</value>
@@ -1281,6 +1281,6 @@
 </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Bilgisayar</value>
+    <value>Ana Veri</value>
   </data>
 </root>

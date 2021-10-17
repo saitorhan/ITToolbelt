@@ -1,32 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using ITToolbelt.Bll.Managers;
 using ITToolbelt.Entity.Db;
+using ITToolbelt.Entity.Enum;
 using ITToolbelt.WinForms.ExtensionMethods;
 
 namespace ITToolbelt.WinForms.Forms.MainAppForms
 {
     public partial class FormMetadata : Form
     {
-        private Computer Computer;
+        private Metadata Metadata;
         public FormMetadata()
         {
             InitializeComponent();
 
-            Computer = new Computer();
-            GetUsers();
+            Metadata = new Metadata();
+            GetMetaTypes();
         }
-        public FormMetadata(Computer computer)
+        public FormMetadata(Metadata metadata)
         {
             InitializeComponent();
 
-            Computer = computer;
-            textBoxName.Text = computer.Name;
-            textBoxDesc.Text = computer.Desc;
-            textBoxSerialNumber.Text = computer.SerialNumber;
+            Metadata = metadata;
+            textBoxValue.Text = metadata.Value;
 
-            GetUsers();
+            GetMetaTypes();
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -36,14 +36,11 @@ namespace ITToolbelt.WinForms.Forms.MainAppForms
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            Computer.Name = textBoxName.Text;
-            Computer.Desc = textBoxDesc.Text;
-            Computer.SerialNumber = textBoxSerialNumber.Text;
-            User user = comboBoxUser.SelectedItem as User;
-            Computer.UserId = user == null || user.Id < 0 ? (int?)null : user.Id;
+            Metadata.Value = textBoxValue.Text;
+            Metadata.MetadataType = (MetadataType)comboBoxType.SelectedItem;
 
-            ComputerManager userManager = new ComputerManager(GlobalVariables.ConnectInfo);
-            Tuple<bool, List<string>> add = Computer.Id > 0 ? userManager.Update(Computer) : userManager.Add(Computer);
+            MetadataManager metadataManager = new MetadataManager(GlobalVariables.ConnectInfo);
+            Tuple<bool, List<string>> add = Metadata.Id > 0 ? metadataManager.Update(Metadata) : metadataManager.Add(Metadata);
             add.ShowDialog();
             if (add.Item1)
             {
@@ -51,18 +48,15 @@ namespace ITToolbelt.WinForms.Forms.MainAppForms
             }
         }
 
-        private void GetUsers()
+        private void GetMetaTypes()
         {
-            UserManager userManager = new UserManager(GlobalVariables.ConnectInfo);
-            List<User> users = userManager.GetAll();
-            users.Insert(0, new User{Id = -1, Firstname = String.Empty, Surname = String.Empty});
-            userBindingSource.DataSource = users;
+            List<Metadata> metadatas = Enum.GetValues(typeof(MetadataType)).Cast<Metadata>().ToList();
+            comboBoxType.DataSource = metadatas;
 
-            if (Computer?.UserId == null) return;
-            foreach (User item in comboBoxUser.Items)
+            foreach (MetadataType item in comboBoxType.Items)
             {
-                if (item.Id != Computer.UserId) continue;
-                comboBoxUser.SelectedItem = item;
+                if (item != Metadata.MetadataType) continue;
+                comboBoxType.SelectedItem = item;
                 return;
             }
         }

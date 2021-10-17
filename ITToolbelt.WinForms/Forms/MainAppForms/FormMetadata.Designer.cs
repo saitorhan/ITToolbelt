@@ -29,43 +29,36 @@ namespace ITToolbelt.WinForms.Forms.MainAppForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMetadata));
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBoxName = new System.Windows.Forms.TextBox();
-            this.textBoxDesc = new System.Windows.Forms.TextBox();
+            this.textBoxValue = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBoxUser = new System.Windows.Forms.ComboBox();
-            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBoxSerialNumber = new System.Windows.Forms.TextBox();
+            this.comboBoxType = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this.buttonCancel);
             this.panel1.Controls.Add(this.buttonSave);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // buttonCancel
             // 
-            resources.ApplyResources(this.buttonCancel, "buttonCancel");
             this.buttonCancel.Image = global::ITToolbelt.WinForms.Properties.Resources.delete;
+            resources.ApplyResources(this.buttonCancel, "buttonCancel");
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonSave
             // 
-            resources.ApplyResources(this.buttonSave, "buttonSave");
             this.buttonSave.Image = global::ITToolbelt.WinForms.Properties.Resources.accept;
+            resources.ApplyResources(this.buttonSave, "buttonSave");
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
@@ -75,61 +68,31 @@ namespace ITToolbelt.WinForms.Forms.MainAppForms
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // label3
+            // textBoxValue
             // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            // 
-            // textBoxName
-            // 
-            resources.ApplyResources(this.textBoxName, "textBoxName");
-            this.textBoxName.Name = "textBoxName";
-            // 
-            // textBoxDesc
-            // 
-            resources.ApplyResources(this.textBoxDesc, "textBoxDesc");
-            this.textBoxDesc.Name = "textBoxDesc";
+            resources.ApplyResources(this.textBoxValue, "textBoxValue");
+            this.textBoxValue.Name = "textBoxValue";
             // 
             // label2
             // 
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
             // 
-            // comboBoxUser
+            // comboBoxType
             // 
-            resources.ApplyResources(this.comboBoxUser, "comboBoxUser");
-            this.comboBoxUser.DataSource = this.userBindingSource;
-            this.comboBoxUser.DisplayMember = "Fullname";
-            this.comboBoxUser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxUser.FormattingEnabled = true;
-            this.comboBoxUser.Name = "comboBoxUser";
-            this.comboBoxUser.ValueMember = "Id";
+            this.comboBoxType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxType.FormattingEnabled = true;
+            resources.ApplyResources(this.comboBoxType, "comboBoxType");
+            this.comboBoxType.Name = "comboBoxType";
+            this.comboBoxType.ValueMember = "Id";
             // 
-            // userBindingSource
-            // 
-            this.userBindingSource.DataSource = typeof(ITToolbelt.Entity.Db.User);
-            // 
-            // label4
-            // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
-            // 
-            // textBoxSerialNumber
-            // 
-            resources.ApplyResources(this.textBoxSerialNumber, "textBoxSerialNumber");
-            this.textBoxSerialNumber.Name = "textBoxSerialNumber";
-            // 
-            // FormComputer
+            // FormMetadata
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.comboBoxUser);
+            this.Controls.Add(this.comboBoxType);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBoxDesc);
-            this.Controls.Add(this.textBoxSerialNumber);
-            this.Controls.Add(this.textBoxName);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBoxValue);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -137,7 +100,6 @@ namespace ITToolbelt.WinForms.Forms.MainAppForms
             this.MinimizeBox = false;
             this.Name = "FormMetadata";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,13 +111,8 @@ namespace ITToolbelt.WinForms.Forms.MainAppForms
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxName;
-        private System.Windows.Forms.TextBox textBoxDesc;
+        private System.Windows.Forms.TextBox textBoxValue;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBoxUser;
-        private System.Windows.Forms.BindingSource userBindingSource;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBoxSerialNumber;
+        private System.Windows.Forms.ComboBox comboBoxType;
     }
 }
