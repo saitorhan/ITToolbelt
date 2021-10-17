@@ -50,7 +50,7 @@ namespace ITToolbelt.WinForms.Forms.MainAppForms
 
         private void GetMetaTypes()
         {
-            List<Metadata> metadatas = Enum.GetValues(typeof(MetadataType)).Cast<Metadata>().ToList();
+            List<MetadataType> metadatas = Enum.GetValues(typeof(MetadataType)).Cast<MetadataType>().ToList();
             comboBoxType.DataSource = metadatas;
 
             foreach (MetadataType item in comboBoxType.Items)

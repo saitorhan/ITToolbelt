@@ -65,7 +65,7 @@ namespace ITToolbelt.Dal.Contract.MsSql
             using (ItToolbeltContext context = new ItToolbeltContext(ConnectInfo.ConnectionString))
             {
                 bool any = context.Metadatas.Any(m =>
-                    m.Id != metadata.Id && m.MetadataType != metadata.MetadataType && m.Value != metadata.Value);
+                    m.Id != metadata.Id && m.MetadataType == metadata.MetadataType && m.Value == metadata.Value);
                 return any;
             }
         }

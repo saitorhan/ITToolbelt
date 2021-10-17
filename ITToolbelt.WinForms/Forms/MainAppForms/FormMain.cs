@@ -79,5 +79,11 @@ namespace ITToolbelt.WinForms.Forms.MainAppForms
             Form form = new FormApplications();
             OpenForm(form);
         }
+
+        private void metadataToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            Form form = new FormMetadatas();
+            OpenForm(form);
+        }
     }
 }

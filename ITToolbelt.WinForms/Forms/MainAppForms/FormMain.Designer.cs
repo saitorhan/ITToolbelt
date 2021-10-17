@@ -44,107 +44,115 @@ namespace ITToolbelt.WinForms.Forms.MainAppForms
             this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.turkishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.metadataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.userGoupsToolStripMenuItem,
             this.computersAndAppsToolStripMenuItem,
             this.dBACockpitToolStripMenuItem,
             this.settingsToolStripMenuItem});
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             // 
             // userGoupsToolStripMenuItem
             // 
+            resources.ApplyResources(this.userGoupsToolStripMenuItem, "userGoupsToolStripMenuItem");
             this.userGoupsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usersToolStripMenuItem,
             this.groupsToolStripMenuItem});
             this.userGoupsToolStripMenuItem.Name = "userGoupsToolStripMenuItem";
-            resources.ApplyResources(this.userGoupsToolStripMenuItem, "userGoupsToolStripMenuItem");
             // 
             // usersToolStripMenuItem
             // 
-            this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
             resources.ApplyResources(this.usersToolStripMenuItem, "usersToolStripMenuItem");
+            this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
             this.usersToolStripMenuItem.Click += new System.EventHandler(this.usersToolStripMenuItem_Click);
             // 
             // groupsToolStripMenuItem
             // 
-            this.groupsToolStripMenuItem.Name = "groupsToolStripMenuItem";
             resources.ApplyResources(this.groupsToolStripMenuItem, "groupsToolStripMenuItem");
+            this.groupsToolStripMenuItem.Name = "groupsToolStripMenuItem";
             this.groupsToolStripMenuItem.Click += new System.EventHandler(this.groupsToolStripMenuItem_Click);
             // 
             // computersAndAppsToolStripMenuItem
             // 
+            resources.ApplyResources(this.computersAndAppsToolStripMenuItem, "computersAndAppsToolStripMenuItem");
             this.computersAndAppsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.computersToolStripMenuItem,
             this.applicationsToolStripMenuItem});
             this.computersAndAppsToolStripMenuItem.Name = "computersAndAppsToolStripMenuItem";
-            resources.ApplyResources(this.computersAndAppsToolStripMenuItem, "computersAndAppsToolStripMenuItem");
             // 
             // computersToolStripMenuItem
             // 
-            this.computersToolStripMenuItem.Name = "computersToolStripMenuItem";
             resources.ApplyResources(this.computersToolStripMenuItem, "computersToolStripMenuItem");
+            this.computersToolStripMenuItem.Name = "computersToolStripMenuItem";
             this.computersToolStripMenuItem.Click += new System.EventHandler(this.computersToolStripMenuItem_Click);
             // 
             // applicationsToolStripMenuItem
             // 
-            this.applicationsToolStripMenuItem.Name = "applicationsToolStripMenuItem";
             resources.ApplyResources(this.applicationsToolStripMenuItem, "applicationsToolStripMenuItem");
+            this.applicationsToolStripMenuItem.Name = "applicationsToolStripMenuItem";
             this.applicationsToolStripMenuItem.Click += new System.EventHandler(this.applicationsToolStripMenuItem_Click);
             // 
             // dBACockpitToolStripMenuItem
             // 
+            resources.ApplyResources(this.dBACockpitToolStripMenuItem, "dBACockpitToolStripMenuItem");
             this.dBACockpitToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.connectionsToolStripMenuItem,
             this.indexToolStripMenuItem});
             this.dBACockpitToolStripMenuItem.Name = "dBACockpitToolStripMenuItem";
-            resources.ApplyResources(this.dBACockpitToolStripMenuItem, "dBACockpitToolStripMenuItem");
             // 
             // connectionsToolStripMenuItem
             // 
-            this.connectionsToolStripMenuItem.Name = "connectionsToolStripMenuItem";
             resources.ApplyResources(this.connectionsToolStripMenuItem, "connectionsToolStripMenuItem");
+            this.connectionsToolStripMenuItem.Name = "connectionsToolStripMenuItem";
             this.connectionsToolStripMenuItem.Click += new System.EventHandler(this.connectionsToolStripMenuItem_Click);
             // 
             // indexToolStripMenuItem
             // 
-            this.indexToolStripMenuItem.Name = "indexToolStripMenuItem";
             resources.ApplyResources(this.indexToolStripMenuItem, "indexToolStripMenuItem");
+            this.indexToolStripMenuItem.Name = "indexToolStripMenuItem";
             this.indexToolStripMenuItem.Click += new System.EventHandler(this.indexToolStripMenuItem_Click);
             // 
             // settingsToolStripMenuItem
             // 
-            this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.languageToolStripMenuItem});
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             resources.ApplyResources(this.settingsToolStripMenuItem, "settingsToolStripMenuItem");
+            this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.languageToolStripMenuItem,
+            this.metadataToolStripMenuItem});
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             // 
             // languageToolStripMenuItem
             // 
+            resources.ApplyResources(this.languageToolStripMenuItem, "languageToolStripMenuItem");
             this.languageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.englishToolStripMenuItem,
             this.turkishToolStripMenuItem});
             this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
-            resources.ApplyResources(this.languageToolStripMenuItem, "languageToolStripMenuItem");
             // 
             // englishToolStripMenuItem
             // 
-            this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
             resources.ApplyResources(this.englishToolStripMenuItem, "englishToolStripMenuItem");
+            this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
             this.englishToolStripMenuItem.Tag = "en-EN";
             this.englishToolStripMenuItem.Click += new System.EventHandler(this.setLanguageMenu_Click);
             // 
             // turkishToolStripMenuItem
             // 
-            this.turkishToolStripMenuItem.Name = "turkishToolStripMenuItem";
             resources.ApplyResources(this.turkishToolStripMenuItem, "turkishToolStripMenuItem");
+            this.turkishToolStripMenuItem.Name = "turkishToolStripMenuItem";
             this.turkishToolStripMenuItem.Tag = "tr-Tr";
             this.turkishToolStripMenuItem.Click += new System.EventHandler(this.setLanguageMenu_Click);
+            // 
+            // metadataToolStripMenuItem
+            // 
+            resources.ApplyResources(this.metadataToolStripMenuItem, "metadataToolStripMenuItem");
+            this.metadataToolStripMenuItem.Name = "metadataToolStripMenuItem";
+            this.metadataToolStripMenuItem.Click += new System.EventHandler(this.metadataToolStripMenuItem_Click);
             // 
             // FormMain
             // 
@@ -178,6 +186,7 @@ namespace ITToolbelt.WinForms.Forms.MainAppForms
         private System.Windows.Forms.ToolStripMenuItem computersAndAppsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem computersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem applicationsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem metadataToolStripMenuItem;
     }
 }
 

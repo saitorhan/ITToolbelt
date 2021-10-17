@@ -136,8 +136,14 @@
   <data name="userGoupsToolStripMenuItem.Text" xml:space="preserve">
     <value>Kullanıcı &amp;&amp; Gruplar</value>
   </data>
+  <data name="computersToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 22</value>
+  </data>
   <data name="computersToolStripMenuItem.Text" xml:space="preserve">
     <value>Bilgisayarlar</value>
+  </data>
+  <data name="applicationsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 22</value>
   </data>
   <data name="applicationsToolStripMenuItem.Text" xml:space="preserve">
     <value>Uygulamalar</value>
@@ -178,11 +184,11 @@
   <data name="turkishToolStripMenuItem.Text" xml:space="preserve">
     <value>Türkçe</value>
   </data>
-  <data name="languageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 22</value>
-  </data>
   <data name="languageToolStripMenuItem.Text" xml:space="preserve">
     <value>Dil</value>
+  </data>
+  <data name="metadataToolStripMenuItem.Text" xml:space="preserve">
+    <value>Ana Veri</value>
   </data>
   <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 20</value>
