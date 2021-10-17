@@ -246,4 +246,10 @@
   <data name="043" xml:space="preserve">
     <value>Seri numarası daha önce kaydedilmiş</value>
   </data>
+  <data name="044" xml:space="preserve">
+    <value>Disk Tipi</value>
+  </data>
+  <data name="045" xml:space="preserve">
+    <value>Disk Kapasitesi</value>
+  </data>
 </root>

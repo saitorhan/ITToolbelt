@@ -56,6 +56,7 @@
     <Compile Include="Db\Connection.cs" />
     <Compile Include="Db\Group.cs" />
     <Compile Include="Db\GroupApplication.cs" />
+    <Compile Include="Db\Metadata.cs" />
     <Compile Include="Db\SystemUser.cs" />
     <Compile Include="Db\User.cs" />
     <Compile Include="Db\UserGroup.cs" />
@@ -66,10 +67,17 @@
     <Compile Include="EntityClass\Table.cs" />
     <Compile Include="Enum\ComputerProperty.cs" />
     <Compile Include="Enum\DbServerType.cs" />
+    <Compile Include="Enum\EnumExtensionMethods.cs" />
+    <Compile Include="Enum\MetadataType.cs" />
     <Compile Include="Enum\TreeNodeType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\ITToolbelt.Shared\ITToolbelt.Shared.csproj">
+      <Project>{14f9f453-f472-43f9-a514-0e892345c2dd}</Project>
+      <Name>ITToolbelt.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

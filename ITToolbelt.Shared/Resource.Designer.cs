@@ -446,5 +446,23 @@ namespace ITToolbelt.Shared {
                 return ResourceManager.GetString("043", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Disk Tipi.
+        /// </summary>
+        public static string _044 {
+            get {
+                return ResourceManager.GetString("044", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Disk Kapasitesi.
+        /// </summary>
+        public static string _045 {
+            get {
+                return ResourceManager.GetString("045", resourceCulture);
+            }
+        }
     }
 }

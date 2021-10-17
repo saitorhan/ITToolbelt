@@ -25,6 +25,7 @@ namespace ITToolbelt.Dal.Contract.MsSql
         public DbSet<Computer> Computers { get; set; }
         public DbSet<Application> Applications { get; set; }
         public DbSet<GroupApplication> GroupApplications { get; set; }
+        public DbSet<Metadata> Metadatas { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
