@@ -181,6 +181,18 @@
     <Compile Include="Forms\DBAForms\FormMySqlLogin.Designer.cs">
       <DependentUpon>FormMySqlLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MainAppForms\FormMetadata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainAppForms\FormMetadata.Designer.cs">
+      <DependentUpon>FormMetadata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainAppForms\FormMetadatas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainAppForms\FormMetadatas.Designer.cs">
+      <DependentUpon>FormMetadatas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainAppForms\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -293,6 +305,18 @@
     <EmbeddedResource Include="Forms\DBAForms\FormMySqlLogin.tr-TR.resx">
       <DependentUpon>FormMySqlLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainAppForms\FormMetadata.resx">
+      <DependentUpon>FormMetadata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainAppForms\FormMetadata.tr-TR.resx">
+      <DependentUpon>FormMetadata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainAppForms\FormMetadatas.resx">
+      <DependentUpon>FormMetadatas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainAppForms\FormMetadatas.tr-TR.resx">
+      <DependentUpon>FormMetadatas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainAppForms\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -354,6 +378,7 @@
     <None Include="Properties\DataSources\ITToolbelt.Entity.Db.Computer.datasource" />
     <None Include="Properties\DataSources\ITToolbelt.Entity.Db.Connection.datasource" />
     <None Include="Properties\DataSources\ITToolbelt.Entity.Db.Group.datasource" />
+    <None Include="Properties\DataSources\ITToolbelt.Entity.Db.Metadata.datasource" />
     <None Include="Properties\DataSources\ITToolbelt.Entity.Db.User.datasource" />
     <None Include="Properties\DataSources\ITToolbelt.Entity.EntityClass.Index.datasource" />
     <None Include="Properties\Settings.settings">
