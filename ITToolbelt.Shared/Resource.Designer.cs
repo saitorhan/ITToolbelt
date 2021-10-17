@@ -464,5 +464,32 @@ namespace ITToolbelt.Shared {
                 return ResourceManager.GetString("045", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Metadata değeri boş geçilemez.
+        /// </summary>
+        public static string _046 {
+            get {
+                return ResourceManager.GetString("046", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Metadata değeri en fazla 500 karakter olabilir.
+        /// </summary>
+        public static string _047 {
+            get {
+                return ResourceManager.GetString("047", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bu metadata değeri daha önce kaydedilmiş.
+        /// </summary>
+        public static string _048 {
+            get {
+                return ResourceManager.GetString("048", resourceCulture);
+            }
+        }
     }
 }

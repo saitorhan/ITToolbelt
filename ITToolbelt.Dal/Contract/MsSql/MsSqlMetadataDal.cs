@@ -59,5 +59,15 @@ namespace ITToolbelt.Dal.Contract.MsSql
                 return context.SaveChanges();
             }
         }
+
+        public bool IsUnique(Metadata metadata)
+        {
+            using (ItToolbeltContext context = new ItToolbeltContext(ConnectInfo.ConnectionString))
+            {
+                bool any = context.Metadatas.Any(m =>
+                    m.Id != metadata.Id && m.MetadataType != metadata.MetadataType && m.Value != metadata.Value);
+                return any;
+            }
+        }
     }
 }

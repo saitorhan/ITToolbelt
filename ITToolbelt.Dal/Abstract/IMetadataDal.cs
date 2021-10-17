@@ -10,5 +10,6 @@ namespace ITToolbelt.Dal.Abstract
         Metadata Add(Metadata metadata);
         Metadata Update(Metadata metadata);
         bool Delete(int id);
+        bool IsUnique(Metadata metadata);
     }
 }

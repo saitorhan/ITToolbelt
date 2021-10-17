@@ -252,4 +252,13 @@
   <data name="045" xml:space="preserve">
     <value>Disk Kapasitesi</value>
   </data>
+  <data name="046" xml:space="preserve">
+    <value>Metadata değeri boş geçilemez</value>
+  </data>
+  <data name="047" xml:space="preserve">
+    <value>Metadata değeri en fazla 500 karakter olabilir</value>
+  </data>
+  <data name="048" xml:space="preserve">
+    <value>Bu metadata değeri daha önce kaydedilmiş</value>
+  </data>
 </root>
