@@ -69,5 +69,14 @@ namespace ITToolbelt.Dal.Contract.MySql
                 return any;
             }
         }
+
+        public List<Metadata> GetList()
+        {
+            using (ItToolbeltContextMySql context = new ItToolbeltContextMySql(ConnectInfo.ConnectionString))
+            {
+                List<Metadata> metadatas = context.Metadatas.ToList();
+                return metadatas;
+            }
+        }
     }
 }

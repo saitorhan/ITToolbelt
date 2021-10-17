@@ -69,5 +69,14 @@ namespace ITToolbelt.Dal.Contract.MsSql
                 return any;
             }
         }
+
+        public List<Metadata> GetList()
+        {
+            using (ItToolbeltContext context = new ItToolbeltContext(ConnectInfo.ConnectionString))
+            {
+                List<Metadata> metadatas = context.Metadatas.ToList();
+                return metadatas;
+            }
+        }
     }
 }
