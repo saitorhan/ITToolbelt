@@ -26,6 +26,8 @@ namespace ITToolbelt.Dal.Contract.MsSql
         public DbSet<Application> Applications { get; set; }
         public DbSet<GroupApplication> GroupApplications { get; set; }
         public DbSet<Metadata> Metadatas { get; set; }
+        public DbSet<MaintenanceRequest> MaintenanceRequests { get; set; }
+        public DbSet<MaintenanceRequestItem> MaintenanceRequestItems { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -41,6 +43,16 @@ namespace ITToolbelt.Dal.Contract.MsSql
                 .HasForeignKey(ga => ga.GroupId);
             modelBuilder.Entity<Application>().HasMany(g => g.GroupApplications).WithRequired(ga => ga.Application)
                 .HasForeignKey(ga => ga.ApplicationId);
+            modelBuilder.Entity<Application>().HasMany(a => a.MaintenanceRequestItems).WithRequired(mi => mi.Application)
+                .HasForeignKey(mi => mi.ApplicationId);
+            modelBuilder.Entity<Computer>().HasMany(c => c.MaintenanceRequests).WithRequired(mi => mi.Computer)
+                .HasForeignKey(mi => mi.ComputerId);
+            modelBuilder.Entity<MaintenanceRequest>().HasMany(mr => mr.MaintenanceRequestItems).WithRequired(mi => mi.MaintenanceRequest)
+                .HasForeignKey(mi => mi.MaintenanceRequestId);
+            modelBuilder.Entity<SystemUser>().HasMany(mr => mr.MaintenanceRequests).WithOptional(mi => mi.ClosedByUser)
+                .HasForeignKey(mi => mi.ClosedBy);
+            modelBuilder.Entity<SystemUser>().HasMany(mr => mr.MaintenanceRequestItems).WithOptional(mi => mi.InstalledByUser)
+                .HasForeignKey(mi => mi.InstalledBy);
 
             base.OnModelCreating(modelBuilder);
         }

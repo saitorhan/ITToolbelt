@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace ITToolbelt.Entity.Db
 {
@@ -12,5 +13,8 @@ namespace ITToolbelt.Entity.Db
         public string Password { get; set; }
 
         public User User { get; set; }
+
+        public List<MaintenanceRequest> MaintenanceRequests { get; set; }
+        public List<MaintenanceRequestItem> MaintenanceRequestItems { get; set; }
     }
 }

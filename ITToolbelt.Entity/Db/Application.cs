@@ -24,5 +24,6 @@ namespace ITToolbelt.Entity.Db
         public string BuiltType { get; set; }
 
         public List<GroupApplication> GroupApplications { get; set; }
+        public List<MaintenanceRequestItem> MaintenanceRequestItems { get; set; }
     }
 }

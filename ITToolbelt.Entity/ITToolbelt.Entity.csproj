@@ -57,6 +57,8 @@
     <Compile Include="Db\Connection.cs" />
     <Compile Include="Db\Group.cs" />
     <Compile Include="Db\GroupApplication.cs" />
+    <Compile Include="Db\MaintenanceRequest.cs" />
+    <Compile Include="Db\MaintenanceRequestItem.cs" />
     <Compile Include="Db\Metadata.cs" />
     <Compile Include="Db\SystemUser.cs" />
     <Compile Include="Db\User.cs" />
@@ -69,6 +71,7 @@
     <Compile Include="Enum\ComputerProperty.cs" />
     <Compile Include="Enum\DbServerType.cs" />
     <Compile Include="Enum\EnumExtensionMethods.cs" />
+    <Compile Include="Enum\MaintenanceStatus.cs" />
     <Compile Include="Enum\MetadataType.cs" />
     <Compile Include="Enum\TreeNodeType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
